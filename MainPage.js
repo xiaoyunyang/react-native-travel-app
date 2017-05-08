@@ -1,6 +1,3 @@
-
-'use strict'
-
 'use strict';
 
 import React, { Component } from 'react'
@@ -13,17 +10,8 @@ import {
   ActivityIndicator,
   Image,
   WebView,
-  Navigator
+  Button
 } from 'react-native';
-
-import { StackNavigator } from 'react-navigation';
-
-
-var ReactNative = require('react-native');
-
-var SearchPage = require('./SearchPage');
-var MainPage = require('./MainPage');
-
 
 
 var styles = StyleSheet.create({
@@ -79,12 +67,22 @@ navBar: {
 });
 
 
-const JapanApp = StackNavigator({
-  Home: { screen: MainPage },
-  Next: {screen: SearchPage},
-});
+class MainPage extends Component {
+  static navigationOptions = {
+    title: 'Welcome',
+  };
+render() {
+    const { navigate } = this.props.navigation;
+    return (
+      <View>
+        <Button style = {styles.navBar}
+          onPress={() => navigate('Next')}
+          title="Bamboo Forrest"
+        />
+      </View>
+    );
+  }
+}
 
 
-
-
-ReactNative.AppRegistry.registerComponent('JapanApp', () => JapanApp);
+module.exports = MainPage;
