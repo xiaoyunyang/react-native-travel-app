@@ -23,6 +23,8 @@ var ReactNative = require('react-native');
 
 var SearchPage = require('./SearchPage');
 var MainPage = require('./MainPage');
+var ListView = require('./ListView');
+var Anything = require('./Anything');
 
 
 
@@ -80,8 +82,10 @@ navBar: {
 
 
 const JapanApp = StackNavigator({
-  Home: { screen: MainPage },
-  Next: {screen: SearchPage},
+  MainPage: { screen: MainPage },
+  SearchPage: {screen: SearchPage},
+  ListView: {screen: ListView},
+  Anything: {screen: Anything}
 });
 
 
