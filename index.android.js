@@ -1,53 +1,94 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
-import React, { Component } from 'react';
+'use strict'
+
+'use strict';
+
+import React, { Component } from 'react'
 import {
-  AppRegistry,
   StyleSheet,
   Text,
-  View
+  TextInput,
+  View,
+  TouchableHighlight,
+  ActivityIndicator,
+  Image,
+  WebView,
+  Navigator
 } from 'react-native';
 
-export default class JapanApp extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
+import { StackNavigator } from 'react-navigation';
 
-const styles = StyleSheet.create({
+
+var ReactNative = require('react-native');
+
+var SearchPage = require('./SearchPage');
+var MainPage = require('./MainPage');
+var ListView = require('./ListView');
+var Anything = require('./Anything');
+
+
+
+var styles = StyleSheet.create({
+  description: {
+    marginBottom: 20,
+    fontSize: 18,
+    textAlign: 'center',
+    color: '#656565'
+  },
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flex: 0,
+    backgroundColor: '#374046'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  flowRight: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  alignSelf: 'stretch'
+},
+buttonText: {
+  fontSize: 18,
+  color: 'white',
+  alignSelf: 'center'
+},
+button: {
+  height: 36,
+  flex: 1,
+  flexDirection: 'row',
+  backgroundColor: '#48BBEC',
+  borderColor: '#48BBEC',
+  borderWidth: 1,
+  borderRadius: 8,
+  marginBottom: 50,
+  alignSelf: 'stretch',
+  justifyContent: 'center'
+},
+searchInput: {
+  height: 36,
+  padding: 4,
+  marginRight: 5,
+  flex: 4,
+  fontSize: 18,
+  borderWidth: 1,
+  borderColor: '#48BBEC',
+  borderRadius: 8,
+  color: '#48BBEC'
+},
+navBar: {
+  flexDirection: 'row',
+  paddingTop: 30,
+  height: 64,
+  backgroundColor: '#1EAAF1'
+},
 });
 
-AppRegistry.registerComponent('JapanApp', () => JapanApp);
+
+const JapanApp = StackNavigator({
+  MainPage: { screen: MainPage },
+  SearchPage: {screen: SearchPage},
+  ListView: {screen: ListView},
+  Anything: {screen: Anything}
+});
+
+
+
+
+ReactNative.AppRegistry.registerComponent('JapanApp', () => JapanApp);
