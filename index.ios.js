@@ -16,15 +16,23 @@ import {
   Navigator
 } from 'react-native';
 
-import { StackNavigator } from 'react-navigation';
 
-
+import { NavigationComponent } from 'react-native-material-bottom-navigation';
+import { AppRegistry } from 'react-native';
 var ReactNative = require('react-native');
+
+import { TabNavigator } from 'react-navigation';
+
+
 
 var SearchPage = require('./SearchPage');
 var MainPage = require('./MainPage');
 var ListView = require('./ListView');
 var Anything = require('./Anything');
+
+import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
+
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 
 
@@ -81,14 +89,13 @@ navBar: {
 });
 
 
-const JapanApp = StackNavigator({
+const JapanApp = TabNavigator({
   MainPage: { screen: MainPage },
   SearchPage: {screen: SearchPage},
   ListView: {screen: ListView},
-  Anything: {screen: Anything}
-});
-
-
+  Anything: {screen: Anything},
+},
+);
 
 
 ReactNative.AppRegistry.registerComponent('JapanApp', () => JapanApp);

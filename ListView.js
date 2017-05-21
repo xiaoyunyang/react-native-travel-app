@@ -123,6 +123,7 @@ export default class mylist extends Component {
     <View style={styles.contentContainer}>
         <ListView
           initialListSize={5}
+          removeClippedSubviews={false}
           enableEmptySections={true}
           dataSource={this.state.peopleDataSource}
           renderRow={(person) => { return this.renderPersonRow(person) }} />
@@ -156,14 +157,14 @@ renderPersonRow(person) {
 }
 
 componentDidMount() {
-  fetch('https://gist.githubusercontent.com/yllongboy/81de024b02f1b668818066bcafbf3c4c/raw/5a508fd580cc1c3d104a300589e7e88d895fa766/whatsapp_contacts.json')
-    .then(response => response.json())
-    .then((data) => {
-      this.setState({
-        peopleDataSource: ds.cloneWithRows(data),
-        loaded: true
-      })
-    });
+
+var japanData = require('./JapanLinks.json');
+
+this.setState({
+  peopleDataSource: ds.cloneWithRows(japanData),
+  loaded: true
+})
+
 }
 }
 
