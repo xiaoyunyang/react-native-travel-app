@@ -1,0 +1,43 @@
+{
+  "FILTERS": [
+    {
+      "tag": "eat",
+      "active": false
+    }, {
+      "tag": "visit", "active": false
+    }, {
+      "tag": "explore", "active": false
+    }, {
+      "tag": "shop", "active": false
+    }
+  ],
+  "FIELDS":
+  [
+    {
+      "title":"Tokyo",
+      "subtitle": "Shinjuku",
+      "tags": [ "eat"],
+      "active": true,
+    }, {
+      "title":"Tokyo",
+      "subtitle":"Akihabara",
+      "tags": [ "shop" ],
+      "active": true,
+    }, {
+      "title":"Kyoto",
+      "subtitle":"Temple",
+      "tags": [ "visit" ],
+      "active": true,
+    }, {
+      "title":"Tokyo",
+      "subtitle":"Ginza",
+      "tags": [ "shop, explore" ],
+      "active": true,
+    }, {
+      "title":"Kyoto",
+      "subtitle":"Geisha District",
+      "tags": [ "explore" ],
+      "active": true,
+    }
+  ]
+}

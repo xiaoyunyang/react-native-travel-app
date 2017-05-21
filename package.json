@@ -8,10 +8,14 @@
   },
   "dependencies": {
     "react": "16.0.0-alpha.6",
+<<<<<<< HEAD
+    "react-native": "^0.44.0",
+=======
     "react-native": "0.44.0",
     "react-native-material-bottom-navigation": "^0.5.1",
     "react-native-tab-navigator": "^0.3.3",
     "react-native-vector-icons": "^4.1.1",
+>>>>>>> 7af8d056e7e512645f2c124453c09d0228e4227f
     "react-navigation": "^1.0.0-beta.9"
   },
   "devDependencies": {
