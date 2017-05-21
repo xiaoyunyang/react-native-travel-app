@@ -13,76 +13,84 @@ import {
   Button
 } from 'react-native';
 
+import TabNavigator from 'react-native-tab-navigator';
 
 var styles = StyleSheet.create({
-  description: {
-    marginBottom: 20,
-    fontSize: 18,
-    textAlign: 'center',
-    color: '#656565'
-  },
-  container: {
-    flex: 0,
-    backgroundColor: '#374046'
-  },
-  flowRight: {
-  flexDirection: 'row',
-  alignItems: 'center',
-  alignSelf: 'stretch'
-},
-buttonText: {
-  fontSize: 18,
-  color: 'white',
-  alignSelf: 'center'
-},
-button: {
-  height: 36,
-  flex: 1,
-  flexDirection: 'row',
-  backgroundColor: '#48BBEC',
-  borderColor: '#48BBEC',
-  borderWidth: 1,
-  borderRadius: 8,
-  marginBottom: 50,
-  alignSelf: 'stretch',
-  justifyContent: 'center'
-},
-searchInput: {
-  height: 36,
-  padding: 4,
-  marginRight: 5,
-  flex: 4,
-  fontSize: 18,
-  borderWidth: 1,
-  borderColor: '#48BBEC',
-  borderRadius: 8,
-  color: '#48BBEC'
-},
-navBar: {
-  flexDirection: 'row',
-  paddingTop: 30,
-  height: 64,
-  backgroundColor: '#1EAAF1'
-},
-});
+   mainContainer: {
+      flex: 1,
+      backgroundColor: 'white',
+      height: 24
+   },
+   headerContainer: {
+      flex: 1 ,
+      flexDirection: "row",
+      backgroundColor: "#ed3d6c",
+      alignItems:"center",
+      paddingRight: 5
+   },
+   leftHeaderContainer: {
+      alignItems: "flex-start",
+      flexDirection: "row"
+   },
+   rightHeaderContainer: {
+      alignItems: "flex-end",
+      flexDirection: "row"
+   },
+   contentContainer: {
+      flex: 6,
+   },
+   logoText: {
+      color: "white",
+      fontWeight: "bold",
+      fontSize: 16,
+      alignItems: "flex-start",
+      marginLeft: 10
+   },
+   tabBar: {
+     flexDirection: "row",
+     flex: 1,
+     borderRadius: 30
+
+   }
+  });
 
 
 class MainPage extends Component {
+
   static navigationOptions = {
     title: 'Welcome',
   };
-render() {
-    const { navigate } = this.props.navigation;
-    return (
-      <View>
-        <Button style = {styles.navBar}
-          onPress={() => navigate('Next')}
-          title="Bamboo Forrest"
-        />
-      </View>
-    );
-  }
-}
 
+  render() {
+
+    const { navigate } = this.props.navigation;
+
+  return (
+  <View style={styles.mainContainer}>
+   <View style={styles.headerContainer}>
+   <TouchableHighlight style = {styles.tabBar} onPress = { () => navigate('ListView')}>
+    <Text style = {styles.logoText}>
+      List View
+   </Text>
+   </TouchableHighlight>
+   <TouchableHighlight style = {styles.tabBar} onPress = { () => navigate('SearchPage')} >
+    <Text style = {styles.logoText}>
+      Bamboo Forrest
+   </Text>
+   </TouchableHighlight>
+   <TouchableHighlight style = {styles.tabBar} onPress = { () => navigate('Anything')}>
+    <Text style = {styles.logoText}>
+      Anything
+   </Text>
+   </TouchableHighlight>
+  </View>
+   <View style={styles.contentContainer}>
+   </View>
+  </View>
+  );
+  }
+
+
+}
 
 module.exports = MainPage;

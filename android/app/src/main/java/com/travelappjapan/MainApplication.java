@@ -1,4 +1,4 @@
-package com.japanapp;
+package com.travelappjapan;
 
 import android.app.Application;
 

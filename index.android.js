@@ -7,25 +7,21 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  Image,
   StyleSheet,
   Text,
   View
 } from 'react-native';
 
-export default class JapanApp extends Component {
+export default class TravelAppJapan extends Component {
   render() {
+    let pic = {uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'}
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Hello World!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Image source={pic} style={{width: 193, height: 110}}/>
       </View>
     );
   }
@@ -50,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('JapanApp', () => JapanApp);
+AppRegistry.registerComponent('TravelAppJapan', () => TravelAppJapan);

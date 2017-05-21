@@ -9,6 +9,7 @@ import {
   TouchableHighlight,
   ActivityIndicator,
   Image,
+  Button,
   WebView
 } from 'react-native';
 
@@ -27,14 +28,21 @@ var styles = StyleSheet.create({
   }
 });
 
-
 class SearchPage extends Component {
+  static navigationOptions = {
+    title: "Details"
+  }
   render() {
     return (
-      <WebView
-         source={{uri: 'https://www.tripadvisor.com/Attraction_Review-g298564-d4112565-Reviews-Kyoto_Sagano_Walk-Kyoto_Kyoto_Prefecture_Kinki.html'}}
-         style={{marginTop: 20}}
-       />
+      <View style={{flex: 1}}>
+        <View style={{height: 80, backgroundColor: 'steelblue'}}>
+
+        </View>
+        <WebView
+           source={{uri: 'https://www.tripadvisor.com/Attraction_Review-g298564-d4112565-Reviews-Kyoto_Sagano_Walk-Kyoto_Kyoto_Prefecture_Kinki.html'}}
+           style={{marginTop: 0}}
+         />
+       </View>
     );
   }
 }

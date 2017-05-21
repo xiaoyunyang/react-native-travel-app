@@ -45,12 +45,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.japanapp",
+    package = "com.travelappjapan",
 )
 
 android_resource(
     name = "res",
-    package = "com.japanapp",
+    package = "com.travelappjapan",
     res = "src/main/res",
 )
 
