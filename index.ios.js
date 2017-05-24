@@ -1,16 +1,7 @@
 /**
- * Sample React Native App
+ * Travel Event App
  * https://github.com/facebook/react-native
  * @flow
- *
- * Dependencies:
- * https://github.com/expo/react-native-tab-navigator
- * https://www.npmjs.com/package/react-native-material-bottom-navigation
- *
- * Before You start react-native run-ios in terminal, do this:
- * npm install react-native-tab-navigator --save
- * npm install react-native-material-bottom-navigation --save
- * npm install react-native-vector-icons --save
  */
 
 import React, { Component } from 'react';
@@ -39,6 +30,7 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 var SearchPage = require('./SearchPage');
 var MainPage = require('./MainPage');
 var MyList = require('./MyList');
+var Calendar = require('./Calendar');
 
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -120,14 +112,12 @@ const styles = StyleSheet.create({
 
 });
 
-
-
 const TravelAppJapan = TabNavigator({
   MyList: {screen: MyList},
   MainPage: { screen: MainPage },
+  Calendar: { screen: Calendar },
   SearchPage: {screen: SearchPage},
 
 });
-
 
 AppRegistry.registerComponent('TravelAppJapan', () => TravelAppJapan);

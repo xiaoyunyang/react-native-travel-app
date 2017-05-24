@@ -130,13 +130,22 @@ const styles = StyleSheet.create({
     height: 64,
     backgroundColor: '#1EAAF1'
   },
+  tabBarIcon: {
+    width: 35,
+    height: 35
+  },
 
 });
 
 class MyList extends Component {
   static navigationOptions = {
     title: "List",
-  }
+    tabBarIcon: () => (
+      <Image style={styles.tabBarIcon}
+        source={require('./static/img/OscarTheGrouch.png')}
+      />),
+  };
+
   constructor(props) {
     super(props);
     this.state = {
