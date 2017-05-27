@@ -28,12 +28,11 @@ var ReactNative = require('react-native');
 import { TabNavigator, StackNavigator } from 'react-navigation';
 
 var SearchPage = require('./SearchPage');
-var MainPage = require('./MainPage');
+var MainPage = require('./StacksOverTabs');
 var MyList = require('./MyList');
 var Calendar = require('./Calendar');
 
-import Icon from 'react-native-vector-icons/MaterialIcons'
-
+//import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const styles = StyleSheet.create({
   container: {
@@ -109,15 +108,133 @@ const styles = StyleSheet.create({
     height: 64,
     backgroundColor: '#1EAAF1'
   },
+  tabBarIcon: {
+    width: 35,
+    height: 35
+  },
 
 });
 
+/*
 const TravelAppJapan = TabNavigator({
   MyList: {screen: MyList},
   MainPage: { screen: MainPage },
   Calendar: { screen: Calendar },
   SearchPage: {screen: SearchPage},
 
+});
+*/
+
+
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import SampleText from './SampleText';
+
+const MyNavScreen = ({ navigation, banner }) => (
+  <ScrollView>
+    <SampleText>{banner}</SampleText>
+    <Button
+      onPress={() => navigation.navigate('Profile', { name: 'Jordan' })}
+      title="Open profile screen"
+    />
+    <Button
+      onPress={() => navigation.navigate('NotifSettings')}
+      title="Open notifications screen"
+    />
+    <Button
+      onPress={() => navigation.navigate('CalendarTab')}
+      title="Go to calendar tab"
+    />
+    <Button onPress={() => navigation.goBack(null)} title="Go back" />
+  </ScrollView>
+);
+
+const HomeScreen = ({ navigation }) => (
+  <MyNavScreen banner="Home Screen" navigation={navigation} />
+);
+const TodoList = ({ navigation }) => (
+  <MyList navigation={navigation} />
+);
+
+const MyProfileScreen = ({ navigation }) => (
+  <MyNavScreen
+    banner={navigation.state.params.name}
+    navigation={navigation}
+  />
+);
+
+const MyNotificationsSettingsScreen = ({ navigation }) => (
+  <MyNavScreen banner="Notifications Screen" navigation={navigation} />
+);
+
+const MySettingsScreen = ({ navigation }) => (
+  <MyNavScreen banner="Settings Screen" navigation={navigation} />
+);
+
+const TabNav = TabNavigator(
+  {
+    MainTab: {
+      screen: HomeScreen,
+      path: '/',
+      navigationOptions: {
+        title: 'Welcome',
+        tabBarLabel: 'Home',
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require('./assets/navbar/home.png')}
+            style={[styles.tabBarIcon, {tintColor: tintColor}]}
+          />),
+      },
+    },
+    ListTab: {
+      screen: TodoList,
+      path: '/list',
+      navigationOptions: {
+        title: 'Things To Do',
+        tabBarLabel: 'To-dos',
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require('./assets/navbar/list.png')}
+            style={[styles.tabBarIcon, {tintColor: tintColor}]}
+          />),
+      },
+    },
+    CalendarTab: {
+      screen: Calendar,
+      path: '/calendar',
+      navigationOptions: {
+        title: 'Calendar',
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require('./assets/navbar/calendar.png')}
+            style={[styles.tabBarIcon, {tintColor: tintColor}]}
+          />),
+      },
+    },
+  },
+  {
+    tabBarPosition: 'bottom',
+    animationEnabled: false,
+    swipeEnabled: false,
+  }
+);
+
+const TravelAppJapan = StackNavigator({
+  Root: {
+    screen: TabNav,
+  },
+  NotifSettings: {
+    screen: MyNotificationsSettingsScreen,
+    navigationOptions: {
+      title: 'Notifications',
+    },
+  },
+  Profile: {
+    screen: MyProfileScreen,
+    path: '/people/:name',
+    navigationOptions: ({ navigation }) => {
+      title: navigation.state.params.name;
+    },
+  },
 });
 
 AppRegistry.registerComponent('TravelAppJapan', () => TravelAppJapan);

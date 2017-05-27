@@ -15,6 +15,7 @@ Before You start react-native run-ios in terminal, install the dependencies:
 ##### Bottom Navigator
 * [React Native Tab Navigator](https://github.com/expo/react-native-tab-navigator)
 * [React Native Material Bottom Navigation](https://www.npmjs.com/package/react-native-material-bottom-navigation) -  A helper component to the Tab Navigator: 
+* [TabNavigator main API](https://reactnavigation.org/docs/navigators/tab)
 * In the terminal
 
  ```
@@ -39,5 +40,9 @@ Before You start react-native run-ios in terminal, install the dependencies:
 
 
 ### Useful Resources:
-* [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
-* [JavaScript Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+* Tutorial and API - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
+* Stackoverflow - [How to increment JS Date](https://stackoverflow.com/questions/3674539/incrementing-a-date-in-javascript)
+* API - [JavaScript Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+* Material Design Icons - [Materials Icon](https://material.io/icons/)
+* Pretty Good Tutorial for Navigation - [The Tutorial](https://mentormate.com/blog/react-native-components/)
+* How to import custom Fonts into Xcode project - [The Tutorial](http://codewithchris.com/common-mistakes-with-adding-custom-fonts-to-your-ios-app/)
