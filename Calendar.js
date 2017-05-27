@@ -4,24 +4,25 @@ import React, { Component } from 'react'
 import {
   StyleSheet,
   Text,
-  TextInput,
   View,
+  ListView,
   TouchableHighlight,
   ActivityIndicator,
   Image,
   WebView,
   Button,
   DatePickerIOS,
+  TouchableOpacity,
 } from 'react-native';
 
+var ActivityList = require('./ActivityList');
 
 var styles = StyleSheet.create({
     container: {
       width: 375,
-      marginTop: -200,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: 'transparent',
+      backgroundColor: 'steelblue',
     },
 })
 let getTomorrow = today => {
@@ -41,61 +42,134 @@ let getElapsedDates = (startDate, endDate) => {
   return arr
 }
 
+const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
+
+
+const FIELDS = [
+  {
+    title:"Tokyoo",
+    subtitle: "Shinjuku",
+    tags: [ "eat"],
+    active: true,
+  }
+]
+
 var Carousel = require('react-native-carousel')
 
-var Calendar = React.createClass({
+class Calendar extends Component {
+  static navigationOptions = {
+    title: "Calendar",
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('./assets/navbar/calendar.png')}
+        style={[styles.tabBarIcon, {tintColor: tintColor}]}
+      />),
+  };
+  constructor(props) {
+    super(props);
+    var startDate = new Date(2017, 7, 7) //2017, August 7
+    var endDate = new Date(2017, 7, 18) //2017, August 18
 
+    this.state = {
+      activities: ds.cloneWithRows(FIELDS),
+      fields: FIELDS,
+      json: 'stuff',
+      isLoading: true,
+      startDate: startDate,
+      endDate: endDate,
+      travelDates: getElapsedDates(startDate, endDate),
+      carouselDate: startDate,
+    };
+  }
+  componentDidMount() {
+    const test = true
+    const dataUrl = 'https://facebook.github.io/react-native/movies.json'
+    if(test) {
+      let responseJson = require('./data/japan.json')
+      this.setState({
+        json: responseJson,
+        activities: ds.cloneWithRows(responseJson.FIELDS),
+        fields: responseJson.FIELDS,
+        isLoading: false,
+      }, function() {
+        this.filterActivities(this.state.carouselDate.toDateString())
+      })
+    }
+    else {
+      return fetch(dataUrl)
+         .then((response) => response.json())
+         .then((responseJson) => {
+           this.setState({
+             json: responseJson,
+             activities: ds.cloneWithRows(responseJson.FIELDS),
+             fields: responseJson.FIELDS,
+             isLoading: false,
+           }, function() {
+             this.filterActivities(this.state.carouselDate.toDateString())
+           })
+         }).bind(this)
+         .catch((error) => {
+           console.error(error);
+         });
+     }
+  }
+  filterActivities(dateString) {
+    var as = this.state.fields.filter(d => d.date == dateString)
+    this.setState({
+      activities: this.state.activities.cloneWithRows(as),
+    })
+  }
+  handlePageChange(index) {
+    //argument: index of the array mapped to the carousel pages
+
+    var selectedDate = this.state.travelDates[index].toDateString();
+
+    this.setState({
+      carouselDate: selectedDate
+    })
+    this.filterActivities(selectedDate);
+  }
   render() {
     //var imgs = ['./static/img/OscarTheGrouch.png', './static/img/HappyEmoji.png', './static/img/CryingFace.jpeg']
-    var startDate = new Date(2017, 7, 7) //2017, August 7
-    var endDate = new Date(2017, 7, 17) //2017, August 17
 
-
-    var travelDates = getElapsedDates(startDate, endDate)
+    //var travelDates = getElapsedDates(this.state.startDate, this.state.endDate)
     //dates(startDate, endDate)
     //var sources = imgs.map(d => require(d))
     var today = new Date()
-
-
     var tomorrow = getTomorrow(today)
+    const {navigate} = this.props.navigation
 
     return (
-      <Carousel animate = {false}>
-        {
-          travelDates.map( (d, i) => {
-            return (
-              <View key={i} style={styles.container}>
-                  <View style={{width: 250, height: 200,  alignItems: 'center', backgroundColor: 'skyblue'}}>
-                    <Image source={require('./static/img/OscarTheGrouch.png')}
-                       style={{width: 100, height: 100}} />
-                     <Text style={{fontSize: 24}}>{d.toDateString()}</Text>
-                     <Text>{"Today is "+today.toDateString()}</Text>
-                     <Text>{"StartDate is "+startDate.toDateString()}</Text>
-                     <Text>{"endDate is "+endDate.toDateString()}</Text>
-                     <Text>{"tomorrow is "+tomorrow.toDateString()}</Text>
+      <View style={{flex: 1}}>
+        <View style={{height: 20, backgroundColor: 'blue'}}/>
+        <View style={{height: 120}}>
+          <Carousel animate={false} onPageChange={this.handlePageChange.bind(this)}>
+            {
+              this.state.travelDates.map( (d, i) => {
+                return (
+                  <View key={i} style={styles.container}>
+                      <View style={{alignItems: 'center', width: 200, backgroundColor: "skyblue", marginTop: 0}}>
+                        <Image source={require('./assets/calendar.png')}
+                           style={{width: 50, height: 50}} />
+                         <Text style={{fontSize: 24}}>{d.toDateString()}</Text>
+                         <Text>{"Today is "+today.toDateString()}</Text>
+                         <Text>{"tomorrow is "+tomorrow.toDateString()}</Text>
+                      </View>
                   </View>
-              </View>
-            )
-          })
-        }
-     </Carousel>
+                )
+              })
+            }
+          </Carousel>
+        </View>
+        <View style={{flex: 10, backgroundColor: 'skyblue'}}>
+          <Text>Activities:</Text>
+          <ActivityList dataSource={this.state.activities} navigation={this.props.navigation}/>
+        </View>
+      </View>
 
-
-/*
-      <Carousel animate = {false}>
-        <View style={styles.container}>
-          <Image style={{width: 100, height: 100}} source = {require('./static/img/OscarTheGrouch.png')}/>
-        </View>
-        <View style={styles.container}>
-          <Image style={{width: 100, height: 100}} source = {require('./static/img/HappyEmoji.png')}/>
-        </View>
-        <View style={styles.container}>
-          <Image style={{width: 100, height: 100}} source = {require('./static/img/CryingFace.jpeg')}/>
-        </View>
-      </Carousel>
-  */
     );
   }
-})
+}
 
 module.exports = Calendar

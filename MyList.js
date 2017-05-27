@@ -16,8 +16,10 @@ import {
   Button,
 } from 'react-native';
 
+var ActivityList = require('./ActivityList');
 import { TabNavigator, StackNavigator } from 'react-navigation';
 var SearchPage = require('./SearchPage');
+
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
 
@@ -124,34 +126,14 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     color: '#48BBEC'
   },
-  navBar: {
-    flexDirection: 'row',
-    paddingTop: 30,
-    height: 64,
-    backgroundColor: '#1EAAF1'
-  },
-  tabBarIcon: {
-    width: 35,
-    height: 35
-  },
-
 });
 
 class MyList extends Component {
-  static navigationOptions = {
-    title: "List",
-    tabBarIcon: () => (
-      <Image style={styles.tabBarIcon}
-        source={require('./static/img/OscarTheGrouch.png')}
-      />),
-  };
-
   constructor(props) {
     super(props);
     this.state = {
       text: '',
-      places: ds.cloneWithRows(['Kyoto', 'Tokyo', 'Osaka', 'Kyosan']),
-      dataSource: ds.cloneWithRows(FIELDS),
+      activities: ds.cloneWithRows(FIELDS),
       dataSource2: ds2.cloneWithRows(FILTERS),
       filters: FILTERS,
       fields: FIELDS,
@@ -166,7 +148,7 @@ class MyList extends Component {
       let responseJson = require('./data/japan.json')
       this.setState({
         json: responseJson,
-        dataSource: ds.cloneWithRows(responseJson.FIELDS),
+        activities: ds.cloneWithRows(responseJson.FIELDS),
         dataSource2: ds2.cloneWithRows(responseJson.FILTERS),
         filters: responseJson.FILTERS,
         fields: responseJson.FIELDS,
@@ -179,7 +161,7 @@ class MyList extends Component {
          .then((responseJson) => {
            this.setState({
              json: responseJson,
-             dataSource: ds.cloneWithRows(responseJson.FIELDS),
+             activities: ds.cloneWithRows(responseJson.FIELDS),
              dataSource2: ds.cloneWithRows(responseJson.FILTERS),
              fields: responseJson.FIELDS,
              isLoading: false,
@@ -196,28 +178,6 @@ class MyList extends Component {
             <Text style={{fontSize: 24, backgroundColor:(filter.active)?'blue':'grey', margin:5}}>{filter.tag}</Text>
       </TouchableOpacity>
     );
-  }
-  renderField(field) {
-    const {navigate} = this.props.navigation
-    var fieldElement = <View style={{flexDirection:'column', borderWidth: 1, borderColor: 'steelblue', margin: 10}}>
-      <Text style={{fontSize: 20}}>{field.title}</Text>
-      <Text style={{fontSize: 14}}>{field.subtitle}</Text>
-      {field.tags.map((tagField, i) => {
-        return (
-          <View key={i}>
-            <Text style={{fontSize: 14, color: 'steelblue'}}>#{tagField}</Text>
-              <Button title={"Details →"} onPress={ () => navigate("Details")}>
-              </Button>
-          </View>
-        );
-      })}
-    </View>
-
-    if (field.active) {
-      return fieldElement;
-    } else {
-        return null;
-    }
   }
   handleFilterClick(filter) {
     const newFilters = this.state.filters.map(f => {
@@ -273,7 +233,7 @@ class MyList extends Component {
     });
 
     this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(searchResults),
+      activities: this.state.activities.cloneWithRows(searchResults),
     });
   }
   filterList = (newText) => {
@@ -293,15 +253,7 @@ class MyList extends Component {
 
     return (
       <View style={{flex: 1}}>
-        <View style={{flex: 2, backgroundColor: 'steelblue'}} />
-        <View style={{flex: 1, backgroundColor: 'powderblue', alignItems: 'center'}}>
-          <TextInput
-            style={{height: 40 , margin: 5}}
-            placeholder="Search!"
-            onChange={this.handleSearchText.bind(this)}
-          />
-        </View>
-        <View style={{flex: 12, backgroundColor: 'skyblue'}}>
+        <View style={{height: 40, backgroundColor: 'steelblue'}}>
           <ListView
             style={{flexDirection:'row', flex:1, flexWrap:'wrap'}}
             horizontal={true}
@@ -309,21 +261,27 @@ class MyList extends Component {
             dataSource={this.state.dataSource2}
             renderRow={this.renderFilter.bind(this)}
           />
-          <ListView
-            removeClippedSubviews={false}
-            dataSource={this.state.dataSource}
-            renderRow={this.renderField.bind(this)}
+        </View>
+        <View style={{flex: 2, backgroundColor: 'powderblue', alignItems: 'center'}}>
+          <TextInput
+            style={{height: 40 , margin: 5}}
+            placeholder="Search!"
+            onChange={this.handleSearchText.bind(this)}
           />
         </View>
-
-        <View style={{
-            flex: 1,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}>
-          <View style={{width: 80, height: 10, backgroundColor: 'powderblue'}} />
-          <View style={{width: 80, height: 10, backgroundColor: 'skyblue'}} />
-          <View style={{width: 80, height: 10, backgroundColor: 'steelblue'}} />
+        <View style={{flex: 20, backgroundColor: 'skyblue'}}>
+          <ActivityList dataSource={this.state.activities} navigation={this.props.navigation}/>
+        </View>
+        <View style={{height: 10, backgroundColor: "blue"}}>
+          <View style={{
+              flex: 1,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+            }}>
+            <View style={{width: 100, backgroundColor: 'powderblue'}} />
+            <View style={{width: 100, backgroundColor: 'skyblue'}} />
+            <View style={{width: 100, backgroundColor: 'steelblue'}} />
+          </View>
         </View>
       </View>
 
@@ -331,9 +289,4 @@ class MyList extends Component {
   }
 }
 
-const myList = StackNavigator({
-  Main: {screen: MyList},
-  Details: {screen: SearchPage}
-})
-
-module.exports = myList;
+module.exports = MyList;
