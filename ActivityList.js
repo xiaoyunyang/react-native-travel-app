@@ -8,11 +8,11 @@ import {
 } from 'react-native';
 
 import { TabNavigator, StackNavigator } from 'react-navigation';
-var SearchPage = require('./SearchPage');
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
 
+//Dummy Data
 const FILTERS = [
   {
     tag: "eat",
@@ -42,14 +42,14 @@ class ActivityList extends Component {
     };
   }
   renderField(field) {
-
-     console.log("POOP: " + this.state.text)
      var fieldElement = <View style={{flexDirection:'column', borderWidth: 1, borderColor: 'steelblue', margin: 10}}>
        <Text style={{fontSize: 20}}>{field.title}</Text>
        <Text style={{fontSize: 14}}>{field.subtitle}</Text>
        <Text style={{fontSize: 14}}>{field.date}</Text>
        <Button
-           onPress={() => this.props.navigation.navigate('Profile', { name: field.title })}
+           onPress={() => this.props.navigation.navigate('Profile', {
+             id: field.id,
+             title: field.title })}
            title="Details →"
          />
        {field.tags.map((tagField, i) => {
@@ -69,7 +69,6 @@ class ActivityList extends Component {
      }
    }
    render() {
-     console.log(this.state.text)
      return (
        <ListView
          removeClippedSubviews={false}
@@ -79,9 +78,5 @@ class ActivityList extends Component {
      );
    }
 }
-const activityList = StackNavigator({
-  Main: {screen: ActivityList},
-  Details: {screen: SearchPage}
-})
 
 module.exports = ActivityList;

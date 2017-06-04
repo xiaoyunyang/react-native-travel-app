@@ -31,6 +31,7 @@ var SearchPage = require('./SearchPage');
 var MainPage = require('./StacksOverTabs');
 var MyList = require('./MyList');
 var Calendar = require('./Calendar');
+var Detail = require('./Details');
 
 //import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -115,16 +116,6 @@ const styles = StyleSheet.create({
 
 });
 
-/*
-const TravelAppJapan = TabNavigator({
-  MyList: {screen: MyList},
-  MainPage: { screen: MainPage },
-  Calendar: { screen: Calendar },
-  SearchPage: {screen: SearchPage},
-
-});
-*/
-
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SampleText from './SampleText';
@@ -151,25 +142,27 @@ const MyNavScreen = ({ navigation, banner }) => (
 const HomeScreen = ({ navigation }) => (
   <MyNavScreen banner="Home Screen" navigation={navigation} />
 );
-const TodoList = ({ navigation }) => (
-  <MyList navigation={navigation} />
-);
 
+/*
 const MyProfileScreen = ({ navigation }) => (
   <MyNavScreen
     banner={navigation.state.params.name}
     navigation={navigation}
   />
 );
-
+*/
+const DetailsScreen = ({ navigation }) => (
+  <Detail
+    id={navigation.state.params.id}
+    title={navigation.state.params.title}
+    navigation={navigation}
+  />
+);
 const MyNotificationsSettingsScreen = ({ navigation }) => (
   <MyNavScreen banner="Notifications Screen" navigation={navigation} />
 );
 
-const MySettingsScreen = ({ navigation }) => (
-  <MyNavScreen banner="Settings Screen" navigation={navigation} />
-);
-
+//Bottom Navigator
 const TabNav = TabNavigator(
   {
     MainTab: {
@@ -186,7 +179,7 @@ const TabNav = TabNavigator(
       },
     },
     ListTab: {
-      screen: TodoList,
+      screen: MyList,
       path: '/list',
       navigationOptions: {
         title: 'Things To Do',
@@ -220,7 +213,7 @@ const TabNav = TabNavigator(
 
 const TravelAppJapan = StackNavigator({
   Root: {
-    screen: TabNav,
+    screen: TabNav, //bottom navigator
   },
   NotifSettings: {
     screen: MyNotificationsSettingsScreen,
@@ -229,8 +222,8 @@ const TravelAppJapan = StackNavigator({
     },
   },
   Profile: {
-    screen: MyProfileScreen,
-    path: '/people/:name',
+    screen: DetailsScreen,
+    path: '/detail/:name',
     navigationOptions: ({ navigation }) => {
       title: navigation.state.params.name;
     },
