@@ -12,13 +12,14 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import SampleText from './SampleText';
 
 class Details extends Component {
+
   render() {
     return (
-      <ScrollView>
-        <SampleText>{this.props.id}</SampleText>
-        <SampleText>{this.props.title}</SampleText>
-        <SampleText>Stuff</SampleText>
-      </ScrollView>
+      <View>
+        <Text>{this.props.activity.id}</Text>
+        <SampleText>{this.props.activity.title}</SampleText>
+        <SampleText>{this.props.activity.subtitle}</SampleText>
+      </View>
     );
   }
 }

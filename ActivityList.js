@@ -3,64 +3,46 @@ import React, { Component } from 'react'
 import {
   View,
   Text,
+  StyleSheet,
+  TouchableHighlight,
   Button,
   ListView,
 } from 'react-native';
 
 import { TabNavigator, StackNavigator } from 'react-navigation';
-
-const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
-
-//Dummy Data
-const FILTERS = [
-  {
-    tag: "eat",
-    "active": false
-  }
-]
-const FIELDS = [
-  {
-    title:"Tokyoo",
-    subtitle: "Shinjuku",
-    tags: [ "eat"],
-    active: true,
-  }
-]
+import Swipeout from 'react-native-swipeout';
 
 class ActivityList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: this.props.text,
-      dataSource: ds.cloneWithRows(FIELDS),
-      dataSource2: ds2.cloneWithRows(FILTERS),
-      filters: FILTERS,
-      fields: FIELDS,
-      json: 'stuff',
-      isLoading: true
-    };
+  getDetail(field) {
+    this.props.navigation.navigate('Details', {
+      activity: field
+    })
   }
   renderField(field) {
-     var fieldElement = <View style={{flexDirection:'column', borderWidth: 1, borderColor: 'steelblue', margin: 10}}>
-       <Text style={{fontSize: 20}}>{field.title}</Text>
-       <Text style={{fontSize: 14}}>{field.subtitle}</Text>
-       <Text style={{fontSize: 14}}>{field.date}</Text>
-       <Button
-           onPress={() => this.props.navigation.navigate('Profile', {
-             id: field.id,
-             title: field.title })}
-           title="Details →"
-         />
-       {field.tags.map((tagField, i) => {
-         return (
-
-           <View key={i}>
-             <Text style={{fontSize: 14, color: 'steelblue'}}>#{tagField}</Text>
+    let swipeBtns = [
+        {
+          text: 'Delete',
+          backgroundColor: '#D5544F',
+          underlayColor: 'red',
+          onPress: () => { this.getDetail(field) }
+       },
+        {
+          text: 'Duplicate',
+          backgroundColor: '#9CC5C9',
+          underlayColor: 'blue',
+          onPress: () => { this.getDetail(field) }
+       }
+      ];
+     var fieldElement = <Swipeout left={swipeBtns} style={{flexDirection:'column', borderWidth: 1, borderColor: 'white', marginTop: 5}}>
+         <TouchableHighlight underlayColor='silver' onPress={() => this.getDetail(field)}>
+           <View style={{backgroundColor: 'white', padding: 5}}>
+             <Text style={styles.textLarge}>{field.title}</Text>
+             <Text style={styles.textNormal}>{field.subtitle}</Text>
+             <Text style={styles.textSmall}>{field.date}</Text>
+             <Text style={[styles.textSmall, {color: 'steelblue'}]}>#{field.tags.map((word) => word).join(' #')}</Text>
            </View>
-         );
-       })}
-     </View>
+       </TouchableHighlight>
+     </Swipeout>
 
      if (field.active) {
        return fieldElement;
@@ -78,5 +60,27 @@ class ActivityList extends Component {
      );
    }
 }
-
+const styles = StyleSheet.create({
+  containerCenter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e8edf3'
+  },
+  container: {
+    backgroundColor: '#e8edf3'
+  },
+  textNormal: {
+    color: '#22264b',
+    fontSize: 18
+  },
+  textSmall: {
+    color: '#22264b',
+    fontSize: 12
+  },
+  textLarge: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 18
+  }
+})
 module.exports = ActivityList;

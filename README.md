@@ -40,17 +40,29 @@ Before You start react-native run-ios in terminal, install the dependencies:
  ```
 
 ##### Vector Icons  
- * [Vector Icons](https://github.com/oblador/react-native-vector-icons)
- * In the terminal
-
+ * [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+ 
 	```npm install react-native-vector-icons --save```
   
 ##### Carousel
- * [React Native Carousel](https://github.com/nick/react-native-carousel)
- * In the terminal 
+ * [React Native Carousel](https://github.com/nick/react-native-carousel) 
+ 	
+ 	```npm install react-native-carousel --save```
  
- ```npm install react-native-carousel --save```
- 
+#### Swipeout
+* [react-native-swipeout](https://github.com/dancormier/react-native-swipeout) - 
+
+	* In terminal:	``npm install react-native-swipeout --save``
+	* In your project: 
+	``import Swipeout from 'react-native-swipeout'``
+
+* There's a bug in the Swipeout. Read more about the bug and the fix [here](https://github.com/dancormier/react-native-swipeout/pull/175) After installing, change the react-native/swipeout/index.js last line to say: ``export { Swipeout };`` 
+
+##### File Access
+* [react-native-fetch-blob](https://github.com/wkh237/react-native-fetch-blob)
+* How to install: [read this](https://github.com/wkh237/react-native-fetch-blob/issues/84)
+
+  
 ### Running the app:
 * In the terminal: ```react-native run-ios``` 
 * Running on Devices: [Read the Facebook doc](https://facebook.github.io/react-native/docs/running-on-device.html)
@@ -62,3 +74,6 @@ Before You start react-native run-ios in terminal, install the dependencies:
 * Material Design Icons - [Materials Icon](https://material.io/icons/)
 * Pretty Good Tutorial for Navigation - [The Tutorial](https://mentormate.com/blog/react-native-components/)
 * How to import custom Fonts into Xcode project - [The Tutorial](http://codewithchris.com/common-mistakes-with-adding-custom-fonts-to-your-ios-app/)
+* How to manage Local assets - [The Tutorial](https://willowtreeapps.com/ideas/react-native-tips-and-tricks-2-0-managing-static-assets-with-absolute-paths/)
+* React Native App that reads and writes to a text file: [The Tutorial](http://moduscreate.com/react_native_custom_components_ios/)
+* [Realm](https://realm.io/docs/javascript/latest/index.html) - Persistent Data Layer for React Native.

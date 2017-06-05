@@ -31,7 +31,7 @@ var SearchPage = require('./SearchPage');
 var MainPage = require('./StacksOverTabs');
 var MyList = require('./MyList');
 var Calendar = require('./Calendar');
-var Detail = require('./Details');
+var Details = require('./Details');
 
 //import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -152,9 +152,8 @@ const MyProfileScreen = ({ navigation }) => (
 );
 */
 const DetailsScreen = ({ navigation }) => (
-  <Detail
-    id={navigation.state.params.id}
-    title={navigation.state.params.title}
+  <Details
+    activity={navigation.state.params.activity}
     navigation={navigation}
   />
 );
@@ -221,7 +220,7 @@ const TravelAppJapan = StackNavigator({
       title: 'Notifications',
     },
   },
-  Profile: {
+  Details: {
     screen: DetailsScreen,
     path: '/detail/:name',
     navigationOptions: ({ navigation }) => {
