@@ -16,6 +16,17 @@ import {
   Button,
 } from 'react-native';
 
+
+Array.prototype.contains = function(obj) {
+    var i = this.length;
+    while (i--) {
+        if (this[i] == obj) {
+            return true;
+        }
+    }
+    return false;
+}
+
 var ActivityList = require('./ActivityList');
 import { TabNavigator, StackNavigator } from 'react-navigation';
 var SearchPage = require('./SearchPage');
@@ -25,7 +36,7 @@ const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2
 
 const FILTERS = [
   {
-    tag: "eat",
+    tag: "Filter",
     "active": false
   }
 ]
@@ -58,114 +69,45 @@ function intersect_safe(a, b)
   return result;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  searchBar: {
-    marginTop: 30,
-    fontSize: 40,
-    height: 50,
-    flex: .1,
-    borderWidth: 3,
-    borderColor: 'red',
-  },
-  description: {
-    marginBottom: 20,
-    fontSize: 18,
-    textAlign: 'center',
-    color: '#656565'
-  },
-  container: {
-    flex: 0,
-    backgroundColor: '#374046'
-  },
-  flowRight: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'stretch'
-  },
-  buttonText: {
-    fontSize: 18,
-    color: 'white',
-    alignSelf: 'center'
-  },
-  button: {
-    height: 36,
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: '#48BBEC',
-    borderColor: '#48BBEC',
-    borderWidth: 1,
-    borderRadius: 8,
-    marginBottom: 50,
-    alignSelf: 'stretch',
-    justifyContent: 'center'
-  },
-  searchInput: {
-    height: 36,
-    padding: 4,
-    marginRight: 5,
-    flex: 4,
-    fontSize: 18,
-    borderWidth: 1,
-    borderColor: '#48BBEC',
-    borderRadius: 8,
-    color: '#48BBEC'
-  },
-});
+
 
 class MyList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       text: '',
-      activities: ds.cloneWithRows(FIELDS),
+      activitiesDisp: ds.cloneWithRows(FIELDS),
       dataSource2: ds2.cloneWithRows(FILTERS),
       filters: FILTERS,
-      fields: FIELDS,
+      activities: FIELDS,
       json: 'stuff',
       isLoading: true
     };
   }
+  setStates(responseJson) {
+    let sortedActivities = responseJson.FIELDS.sort((a,b) => new Date(a.date) - new Date(b.date))
+    this.setState({
+      json: responseJson,
+      activitiesDisp: ds.cloneWithRows(sortedActivities),
+      dataSource2: ds.cloneWithRows(responseJson.FILTERS),
+      filters: responseJson.FILTERS,
+      activities: sortedActivities,
+      isLoading: false,
+    })
+  }
   componentDidMount() {
     const test = true
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
+
     if(test) {
       let responseJson = require('./data/japan.json')
-      this.setState({
-        json: responseJson,
-        activities: ds.cloneWithRows(responseJson.FIELDS),
-        dataSource2: ds2.cloneWithRows(responseJson.FILTERS),
-        filters: responseJson.FILTERS,
-        fields: responseJson.FIELDS,
-        isLoading: false,
-      })
+      this.setStates(responseJson)
     }
     else {
       return fetch(dataUrl)
          .then((response) => response.json())
          .then((responseJson) => {
-           this.setState({
-             json: responseJson,
-             activities: ds.cloneWithRows(responseJson.FIELDS),
-             dataSource2: ds.cloneWithRows(responseJson.FILTERS),
-             fields: responseJson.FIELDS,
-             isLoading: false,
-           })
+           this.setStates(responseJson)
          })
          .catch((error) => {
            console.error(error);
@@ -202,21 +144,25 @@ class MyList extends Component {
   }
   searchAndFilter(filters, searchText) {
     //Get filtered tags
-    var filteredTags = [];
+    var selectedTags = [];
 
     filters.forEach((filter) => {
       if (filter.active) {
-        filteredTags.push(filter.tag);
+        selectedTags.push(filter.tag);
       }
     });
 
-    const searchResults = this.state.fields.map(f => {
+    const searchResults = this.state.activities.map(f => {
       let copyF = {...f};
 
       //Filter
-      if (filteredTags.length !== intersect_safe(filteredTags, copyF.tags).length) {
-        copyF.active = false;
-        return copyF;
+      let intersectTags = f.tags.filter(t => selectedTags.contains(t))
+      if(selectedTags.length!=0 && intersectTags.length!=0) {
+        copyF.active = true
+        return copyF
+      } else {
+        copyF.active = false
+        return copyF
       }
 
       //Search
@@ -233,7 +179,7 @@ class MyList extends Component {
     });
 
     this.setState({
-      activities: this.state.activities.cloneWithRows(searchResults),
+      activitiesDisp: this.state.activitiesDisp.cloneWithRows(searchResults),
     });
   }
   filterList = (newText) => {
@@ -262,15 +208,17 @@ class MyList extends Component {
             renderRow={this.renderFilter.bind(this)}
           />
         </View>
-        <View style={{flex: 2, backgroundColor: 'powderblue', alignItems: 'center'}}>
-          <TextInput
-            style={{height: 40 , margin: 5}}
-            placeholder="Search!"
-            onChange={this.handleSearchText.bind(this)}
-          />
+        <View style={{flex: 2}}>
+          <View style={styles.searchBox}>
+            <TextInput
+              style={{height: 40 , margin: 0, color:'#22264b'}}
+              placeholder="Search!"
+              onChange={this.handleSearchText.bind(this)}
+            />
+          </View>
         </View>
-        <View style={{flex: 20, backgroundColor: 'skyblue'}}>
-          <ActivityList dataSource={this.state.activities} navigation={this.props.navigation}/>
+        <View style={[styles.container, {flex: 20}]}>
+          <ActivityList dataSource={this.state.activitiesDisp} navigation={this.props.navigation}/>
         </View>
         <View style={{height: 10, backgroundColor: "blue"}}>
           <View style={{
@@ -288,5 +236,31 @@ class MyList extends Component {
     );
   }
 }
+const styles = StyleSheet.create({
+  containerCenter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e8edf3'
+  },
+  searchBox: {
+    backgroundColor: 'white',
+    paddingLeft: 8,
+    margin: 8
+  },
+  container: {
+    backgroundColor: '#e8edf3',
+    padding: 8
+  },
+  textNormal: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 12
+  },
+  textLarge: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 22
+  }
+})
 
 module.exports = MyList;

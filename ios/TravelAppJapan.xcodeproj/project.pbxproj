@@ -36,17 +36,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* TravelAppJapanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TravelAppJapanTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		FB41E2BA1ED973FA001FC731 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2B91ED973FA001FC731 /* Ionicons.ttf */; };
-		FB41E2C61ED975BE001FC731 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2BC1ED975BE001FC731 /* Entypo.ttf */; };
-		FB41E2C71ED975BE001FC731 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2BD1ED975BE001FC731 /* EvilIcons.ttf */; };
-		FB41E2C81ED975BE001FC731 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2BE1ED975BE001FC731 /* FontAwesome.ttf */; };
-		FB41E2C91ED975BE001FC731 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2BF1ED975BE001FC731 /* Foundation.ttf */; };
-		FB41E2CA1ED975BE001FC731 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2C01ED975BE001FC731 /* Ionicons.ttf */; };
-		FB41E2CB1ED975BE001FC731 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2C11ED975BE001FC731 /* MaterialCommunityIcons.ttf */; };
-		FB41E2CC1ED975BE001FC731 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2C21ED975BE001FC731 /* MaterialIcons.ttf */; };
-		FB41E2CD1ED975BE001FC731 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2C31ED975BE001FC731 /* Octicons.ttf */; };
-		FB41E2CE1ED975BE001FC731 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2C41ED975BE001FC731 /* SimpleLineIcons.ttf */; };
-		FB41E2CF1ED975BE001FC731 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41E2C51ED975BE001FC731 /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,17 +255,6 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		FB41E2B91ED973FA001FC731 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		FB41E2BC1ED975BE001FC731 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
-		FB41E2BD1ED975BE001FC731 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		FB41E2BE1ED975BE001FC731 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		FB41E2BF1ED975BE001FC731 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		FB41E2C01ED975BE001FC731 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		FB41E2C11ED975BE001FC731 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		FB41E2C21ED975BE001FC731 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		FB41E2C31ED975BE001FC731 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		FB41E2C41ED975BE001FC731 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		FB41E2C51ED975BE001FC731 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,7 +463,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				FB41E2BB1ED97598001FC731 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* TravelAppJapan */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* TravelAppJapanTests */,
@@ -504,24 +481,6 @@
 				2D02E4901E0B4A5D006451C7 /* TravelAppJapan-tvOSTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FB41E2BB1ED97598001FC731 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				FB41E2B91ED973FA001FC731 /* Ionicons.ttf */,
-				FB41E2BC1ED975BE001FC731 /* Entypo.ttf */,
-				FB41E2BD1ED975BE001FC731 /* EvilIcons.ttf */,
-				FB41E2BE1ED975BE001FC731 /* FontAwesome.ttf */,
-				FB41E2BF1ED975BE001FC731 /* Foundation.ttf */,
-				FB41E2C01ED975BE001FC731 /* Ionicons.ttf */,
-				FB41E2C11ED975BE001FC731 /* MaterialCommunityIcons.ttf */,
-				FB41E2C21ED975BE001FC731 /* MaterialIcons.ttf */,
-				FB41E2C31ED975BE001FC731 /* Octicons.ttf */,
-				FB41E2C41ED975BE001FC731 /* SimpleLineIcons.ttf */,
-				FB41E2C51ED975BE001FC731 /* Zocial.ttf */,
-			);
-			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,14 +569,21 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = LP289LXSUT;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = LP289LXSUT;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LP289LXSUT;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LP289LXSUT;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -880,18 +846,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB41E2C91ED975BE001FC731 /* Foundation.ttf in Resources */,
-				FB41E2CE1ED975BE001FC731 /* SimpleLineIcons.ttf in Resources */,
-				FB41E2CA1ED975BE001FC731 /* Ionicons.ttf in Resources */,
-				FB41E2C81ED975BE001FC731 /* FontAwesome.ttf in Resources */,
-				FB41E2C71ED975BE001FC731 /* EvilIcons.ttf in Resources */,
-				FB41E2CF1ED975BE001FC731 /* Zocial.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				FB41E2CC1ED975BE001FC731 /* MaterialIcons.ttf in Resources */,
-				FB41E2CB1ED975BE001FC731 /* MaterialCommunityIcons.ttf in Resources */,
-				FB41E2BA1ED973FA001FC731 /* Ionicons.ttf in Resources */,
-				FB41E2C61ED975BE001FC731 /* Entypo.ttf in Resources */,
-				FB41E2CD1ED975BE001FC731 /* Octicons.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1048,8 +1003,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = LP289LXSUT;
 				INFOPLIST_FILE = TravelAppJapan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1058,6 +1016,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = TravelAppJapan;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1066,7 +1026,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LP289LXSUT;
 				INFOPLIST_FILE = TravelAppJapan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1075,6 +1038,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = TravelAppJapan;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1190,8 +1155,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = LP289LXSUT;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1210,6 +1177,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1231,8 +1199,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = LP289LXSUT;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1244,6 +1214,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

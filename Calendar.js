@@ -17,14 +17,6 @@ import {
 
 var ActivityList = require('./ActivityList');
 
-var styles = StyleSheet.create({
-    container: {
-      width: 375,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'steelblue',
-    },
-})
 let getTomorrow = today => {
   return new Date(today.getTime()+1000*60*60*24);
 }
@@ -142,19 +134,25 @@ class Calendar extends Component {
 
     return (
       <View style={{flex: 1}}>
-        <View style={{height: 20, backgroundColor: 'blue'}}/>
-        <View style={{height: 120}}>
-          <Carousel animate={false} onPageChange={this.handlePageChange.bind(this)}>
+        <View style={{height: 170}}>
+          <Carousel
+            hideIndicators={false}
+            indicatorAtBottom={true}
+            indicatorOffset={-10}
+            inactiveIndicatorColor="silver"
+            indicatorColor="#22264b"
+            animate={false}
+            onPageChange={this.handlePageChange.bind(this)}>
             {
               this.state.travelDates.map( (d, i) => {
                 return (
-                  <View key={i} style={styles.container}>
-                      <View style={{alignItems: 'center', width: 200, backgroundColor: "skyblue", marginTop: 0}}>
+                  <View key={i} style={[styles.containerCenter, {width: 375}]}>
+                      <View style={{alignItems: 'center', width: 200, backgroundColor: "#e6cf8b", marginTop: -25}}>
                         <Image source={require('./assets/calendar.png')}
-                           style={{width: 50, height: 50}} />
-                         <Text style={{fontSize: 24}}>{d.toDateString()}</Text>
-                         <Text>{"Today is "+today.toDateString()}</Text>
-                         <Text>{"tomorrow is "+tomorrow.toDateString()}</Text>
+                           style={{width: 50, height: 50, marginTop: 10}} />
+                         <Text style={styles.textLarge}>{d.toDateString()}</Text>
+                         <Text style={styles.textNormal}>{"Today is "+today.toDateString()}</Text>
+                         <Text style={[styles.textNormal, {marginBottom: 10}]}>{"tomorrow is "+tomorrow.toDateString()}</Text>
                       </View>
                   </View>
                 )
@@ -162,8 +160,8 @@ class Calendar extends Component {
             }
           </Carousel>
         </View>
-        <View style={{flex: 10, backgroundColor: 'skyblue'}}>
-          <Text>Activities:</Text>
+        <View style={[styles.container, {flex: 10}]}>
+          <Text style={styles.textLarge}>Activities:</Text>
           <ActivityList dataSource={this.state.activities} navigation={this.props.navigation}/>
         </View>
       </View>
@@ -171,5 +169,25 @@ class Calendar extends Component {
     );
   }
 }
-
+const styles = StyleSheet.create({
+  containerCenter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e8edf3'
+  },
+  container: {
+    backgroundColor: '#e8edf3',
+    padding: 8
+  },
+  textNormal: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 12
+  },
+  textLarge: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 22
+  }
+})
 module.exports = Calendar
