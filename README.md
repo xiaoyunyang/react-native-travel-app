@@ -1,6 +1,14 @@
 # Travel Event App 
 #### Made with React Native
 
+### Running the app:
+* Install ReactNative on your computer - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)'
+* To run on simulator, In the terminal: 
+	``react-native run-ios``
+* Open the project on Xcode
+*  Running on Devices: [Read the Facebook doc](https://facebook.github.io/react-native/docs/running-on-device.html)
+* Xcode requires a development team error - [tutorial](https://stackoverflow.com/questions/37806538/code-signing-is-required-for-product-type-application-in-sdk-ios-10-0-stic)
+
 ## Product Specification:
 This App is for planning a trip with your friends. It gives you:
 
@@ -58,15 +66,11 @@ Before You start react-native run-ios in terminal, install the dependencies:
 
 * There's a bug in the Swipeout. Read more about the bug and the fix [here](https://github.com/dancormier/react-native-swipeout/pull/175) After installing, change the react-native/swipeout/index.js last line to say: ``export { Swipeout };`` 
 
-##### File Access
+##### File Access (Did not use)
 * [react-native-fetch-blob](https://github.com/wkh237/react-native-fetch-blob)
 * How to install: [read this](https://github.com/wkh237/react-native-fetch-blob/issues/84)
 
   
-### Running the app:
-* In the terminal: ```react-native run-ios``` 
-* Running on Devices: [Read the Facebook doc](https://facebook.github.io/react-native/docs/running-on-device.html)
-
 ### Useful Resources:
 * Tutorial and API - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
 * Stackoverflow - [How to increment JS Date](https://stackoverflow.com/questions/3674539/incrementing-a-date-in-javascript)

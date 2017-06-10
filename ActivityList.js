@@ -39,7 +39,7 @@ class ActivityList extends Component {
              <Text style={styles.textLarge}>{field.title}</Text>
              <Text style={styles.textNormal}>{field.subtitle}</Text>
              <Text style={styles.textSmall}>{field.date}</Text>
-             <Text style={[styles.textSmall, {color: 'steelblue'}]}>#{field.tags.map((word) => word).join(' #')}</Text>
+             <Text style={[styles.textSmall, {color: 'steelblue'}]}>@{field.tags.map((word) => word).join(' @')}</Text>
            </View>
        </TouchableHighlight>
      </Swipeout>

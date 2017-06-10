@@ -16,6 +16,17 @@ import {
   Button,
 } from 'react-native';
 
+
+Array.prototype.contains = function(obj) {
+    var i = this.length;
+    while (i--) {
+        if (this[i] == obj) {
+            return true;
+        }
+    }
+    return false;
+}
+
 var ActivityList = require('./ActivityList');
 import { TabNavigator, StackNavigator } from 'react-navigation';
 var SearchPage = require('./SearchPage');
@@ -25,7 +36,7 @@ const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2
 
 const FILTERS = [
   {
-    tag: "eat",
+    tag: "Filter",
     "active": false
   }
 ]
@@ -65,39 +76,38 @@ class MyList extends Component {
     super(props);
     this.state = {
       text: '',
-      activities: ds.cloneWithRows(FIELDS),
+      activitiesDisp: ds.cloneWithRows(FIELDS),
       dataSource2: ds2.cloneWithRows(FILTERS),
       filters: FILTERS,
-      fields: FIELDS,
+      activities: FIELDS,
       json: 'stuff',
       isLoading: true
     };
   }
+  setStates(responseJson) {
+    let sortedActivities = responseJson.FIELDS.sort((a,b) => new Date(a.date) - new Date(b.date))
+    this.setState({
+      json: responseJson,
+      activitiesDisp: ds.cloneWithRows(sortedActivities),
+      dataSource2: ds.cloneWithRows(responseJson.FILTERS),
+      filters: responseJson.FILTERS,
+      activities: sortedActivities,
+      isLoading: false,
+    })
+  }
   componentDidMount() {
     const test = true
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
+
     if(test) {
       let responseJson = require('./data/japan.json')
-      this.setState({
-        json: responseJson,
-        activities: ds.cloneWithRows(responseJson.FIELDS),
-        dataSource2: ds2.cloneWithRows(responseJson.FILTERS),
-        filters: responseJson.FILTERS,
-        fields: responseJson.FIELDS,
-        isLoading: false,
-      })
+      this.setStates(responseJson)
     }
     else {
       return fetch(dataUrl)
          .then((response) => response.json())
          .then((responseJson) => {
-           this.setState({
-             json: responseJson,
-             activities: ds.cloneWithRows(responseJson.FIELDS),
-             dataSource2: ds.cloneWithRows(responseJson.FILTERS),
-             fields: responseJson.FIELDS,
-             isLoading: false,
-           })
+           this.setStates(responseJson)
          })
          .catch((error) => {
            console.error(error);
@@ -134,21 +144,25 @@ class MyList extends Component {
   }
   searchAndFilter(filters, searchText) {
     //Get filtered tags
-    var filteredTags = [];
+    var selectedTags = [];
 
     filters.forEach((filter) => {
       if (filter.active) {
-        filteredTags.push(filter.tag);
+        selectedTags.push(filter.tag);
       }
     });
 
-    const searchResults = this.state.fields.map(f => {
+    const searchResults = this.state.activities.map(f => {
       let copyF = {...f};
 
       //Filter
-      if (filteredTags.length !== intersect_safe(filteredTags, copyF.tags).length) {
-        copyF.active = false;
-        return copyF;
+      let intersectTags = f.tags.filter(t => selectedTags.contains(t))
+      if(selectedTags.length!=0 && intersectTags.length!=0) {
+        copyF.active = true
+        return copyF
+      } else {
+        copyF.active = false
+        return copyF
       }
 
       //Search
@@ -165,7 +179,7 @@ class MyList extends Component {
     });
 
     this.setState({
-      activities: this.state.activities.cloneWithRows(searchResults),
+      activitiesDisp: this.state.activitiesDisp.cloneWithRows(searchResults),
     });
   }
   filterList = (newText) => {
@@ -204,7 +218,7 @@ class MyList extends Component {
           </View>
         </View>
         <View style={[styles.container, {flex: 20}]}>
-          <ActivityList dataSource={this.state.activities} navigation={this.props.navigation}/>
+          <ActivityList dataSource={this.state.activitiesDisp} navigation={this.props.navigation}/>
         </View>
         <View style={{height: 10, backgroundColor: "blue"}}>
           <View style={{

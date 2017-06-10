@@ -1,8 +1,6 @@
 package com.travelappjapan;
 
 import com.facebook.react.ReactActivity;
-import com.oblador.vectoricons.VectorIconsPackage;
-import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class MainActivity extends ReactActivity {
 
