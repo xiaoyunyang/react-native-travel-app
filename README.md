@@ -3,6 +3,7 @@
 
 ### Running the app:
 * Install ReactNative on your computer - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)'
+* Download the project from Github - [Git/Github tutorial](https://github.com/xiaoyunyang/xiaoyunyang.github.io/blob/master/assets/md/GitTutorial.md)  
 * To run on simulator, In the terminal: 
 	``react-native run-ios``
 * Open the project on Xcode
