@@ -16,10 +16,14 @@ import {
   ListView,
   ScrollView,
   Navigator,
+  StatusBar,
   TouchableOpacity,
   TouchableHighLight,
   Button,
 } from 'react-native';
+
+//This changes the header status icons (the battery and wifi) to white. 
+StatusBar.setBarStyle('light-content', true)
 
 import { NavigationComponent } from 'react-native-material-bottom-navigation';
 
@@ -175,6 +179,8 @@ const TabNav = TabNavigator(
             source={require('./assets/navbar/home.png')}
             style={[styles.tabBarIcon, {tintColor: tintColor}]}
           />),
+        headerStyle:{ backgroundColor: '#22264b'},
+        headerTitleStyle:{ color: '#e8edf3'},
       },
     },
     ListTab: {
@@ -188,6 +194,8 @@ const TabNav = TabNavigator(
             source={require('./assets/navbar/list.png')}
             style={[styles.tabBarIcon, {tintColor: tintColor}]}
           />),
+        headerStyle:{ backgroundColor: '#22264b'},
+        headerTitleStyle:{ color: '#e8edf3'},
       },
     },
     CalendarTab: {
@@ -200,6 +208,8 @@ const TabNav = TabNavigator(
             source={require('./assets/navbar/calendar.png')}
             style={[styles.tabBarIcon, {tintColor: tintColor}]}
           />),
+        headerStyle:{ backgroundColor: '#22264b'},
+        headerTitleStyle:{ color: '#e8edf3'},
       },
     },
   },

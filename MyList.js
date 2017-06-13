@@ -153,16 +153,14 @@ class MyList extends Component {
     });
 
     const searchResults = this.state.activities.map(f => {
-      let copyF = {...f};
+      var copyF = {...f};
 
       //Filter
       let intersectTags = f.tags.filter(t => selectedTags.contains(t))
       if(selectedTags.length!=0 && intersectTags.length!=0) {
         copyF.active = true
-        return copyF
       } else {
         copyF.active = false
-        return copyF
       }
 
       //Search
@@ -219,17 +217,6 @@ class MyList extends Component {
         </View>
         <View style={[styles.container, {flex: 20}]}>
           <ActivityList dataSource={this.state.activitiesDisp} navigation={this.props.navigation}/>
-        </View>
-        <View style={{height: 10, backgroundColor: "blue"}}>
-          <View style={{
-              flex: 1,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-            }}>
-            <View style={{width: 100, backgroundColor: 'powderblue'}} />
-            <View style={{width: 100, backgroundColor: 'skyblue'}} />
-            <View style={{width: 100, backgroundColor: 'steelblue'}} />
-          </View>
         </View>
       </View>
 
