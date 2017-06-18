@@ -28,8 +28,8 @@ Array.prototype.contains = function(obj) {
 }
 
 var ActivityList = require('./ActivityList');
-import { TabNavigator, StackNavigator } from 'react-navigation';
 var SearchPage = require('./SearchPage');
+import { TabNavigator, StackNavigator } from 'react-navigation';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
@@ -100,7 +100,7 @@ class MyList extends Component {
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
 
     if(test) {
-      let responseJson = require('./data/japan.json')
+      let responseJson = require('../data/japan.json')
       this.setStates(responseJson)
     }
     else {

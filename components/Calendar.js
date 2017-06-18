@@ -54,7 +54,7 @@ class Calendar extends Component {
     title: "Calendar",
     tabBarIcon: ({ tintColor }) => (
       <Image
-        source={require('./assets/navbar/calendar.png')}
+        source={require('../assets/navbar/calendar.png')}
         style={[styles.tabBarIcon, {tintColor: tintColor}]}
       />),
   };
@@ -78,7 +78,7 @@ class Calendar extends Component {
     const test = true
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
     if(test) {
-      let responseJson = require('./data/japan.json')
+      let responseJson = require('../data/japan.json')
       this.setState({
         json: responseJson,
         activities: ds.cloneWithRows(responseJson.FIELDS),
@@ -148,7 +148,7 @@ class Calendar extends Component {
                 return (
                   <View key={i} style={[styles.containerCenter, {width: 375}]}>
                       <View style={{alignItems: 'center', width: 200, backgroundColor: "#e6cf8b", marginTop: -25}}>
-                        <Image source={require('./assets/calendar.png')}
+                        <Image source={require('../assets/calendar.png')}
                            style={{width: 50, height: 50, marginTop: 10}} />
                          <Text style={styles.textLarge}>{d.toDateString()}</Text>
                          <Text style={styles.textNormal}>{"Today is "+today.toDateString()}</Text>

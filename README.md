@@ -2,7 +2,7 @@
 #### Made with React Native
 
 ### Running the app:
-* Install ReactNative on your computer - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)'
+* Install ReactNative on your computer - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
 * Download the project from Github - [Git/Github tutorial](https://github.com/xiaoyunyang/xiaoyunyang.github.io/blob/master/assets/md/GitTutorial.md)  
 * To run on simulator, In the terminal: 
 	``react-native run-ios``
@@ -82,3 +82,4 @@ Before You start react-native run-ios in terminal, install the dependencies:
 * How to manage Local assets - [The Tutorial](https://willowtreeapps.com/ideas/react-native-tips-and-tricks-2-0-managing-static-assets-with-absolute-paths/)
 * React Native App that reads and writes to a text file: [The Tutorial](http://moduscreate.com/react_native_custom_components_ios/)
 * [Realm](https://realm.io/docs/javascript/latest/index.html) - Persistent Data Layer for React Native.
+* Database for maps in its own vector format, MWM: [The Map Database](http://direct.mapswithme.com/direct/latest/)
