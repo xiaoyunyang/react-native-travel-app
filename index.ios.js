@@ -227,6 +227,8 @@ const TravelAppJapan = StackNavigator({
     screen: MyNotificationsSettingsScreen,
     navigationOptions: {
       title: 'Notifications',
+      headerStyle: { backgroundColor: '#22264b'},
+      headerTitleStyle:{ color: '#e8edf3'},
     },
   },
   Details: {
@@ -234,6 +236,12 @@ const TravelAppJapan = StackNavigator({
     path: '/detail/:name',
     navigationOptions: ({ navigation }) => {
       title: navigation.state.params.name;
+    },
+    navigationOptions: {
+      headerStyle: { backgroundColor: '#22264b'},
+      headerTitleStyle: { color: '#e8edf3'},
+      headerBackTitleStyle: { color: '#e8edf3' },
+      headerTintColor: '#e8edf3',
     },
   },
 });

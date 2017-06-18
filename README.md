@@ -1,14 +1,15 @@
-# Travel Event App 
+# Travel Event App
 #### Made with React Native
 
 ### Running the app:
 * Install ReactNative on your computer - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
 * Download the project from Github - [Git/Github tutorial](https://github.com/xiaoyunyang/xiaoyunyang.github.io/blob/master/assets/md/GitTutorial.md)  
-* To run on simulator, In the terminal: 
-	``react-native run-ios``
-* Open the project on Xcode
+* Unzip and then `cd [project name]`
+* run `npm install`
+* To run on simulator, In the terminal: `react-native run-ios`
+* Go to the ios folder and click on the .xcodeproj file to open the project in Xcode
 *  Running on Devices: [Read the Facebook doc](https://facebook.github.io/react-native/docs/running-on-device.html)
-* Xcode requires a development team error - [tutorial](https://stackoverflow.com/questions/37806538/code-signing-is-required-for-product-type-application-in-sdk-ios-10-0-stic)
+* The error where Xcode requires a development team - [tutorial](https://stackoverflow.com/questions/37806538/code-signing-is-required-for-product-type-application-in-sdk-ios-10-0-stic)
 
 ## Product Specification:
 This App is for planning a trip with your friends. It gives you:
@@ -20,11 +21,11 @@ This App is for planning a trip with your friends. It gives you:
 
 ### Components:
 
-``ActivityList`` 
+``ActivityList``
 
 * A ListView of all the activities planned for the trip/event.
 
-``MyList`` 
+``MyList``
 
 * ``ActivityList`` with a search and tag filters. The search and tag filters are custom functions in the ``MyList`` component.
 
@@ -35,10 +36,10 @@ This App is for planning a trip with your friends. It gives you:
 
 ## Dependencies:
 Before You start react-native run-ios in terminal, install the dependencies:
- 
+
 ##### React Navigator
 * [React Native Tab Navigator](https://github.com/expo/react-native-tab-navigator)
-* [React Native Material Bottom Navigation](https://www.npmjs.com/package/react-native-material-bottom-navigation) -  A helper component to the Tab Navigator: 
+* [React Native Material Bottom Navigation](https://www.npmjs.com/package/react-native-material-bottom-navigation) -  A helper component to the Tab Navigator:
 * [TabNavigator main API](https://reactnavigation.org/docs/navigators/tab)
 * [React Navigation Examples](https://github.com/react-community/react-navigation/tree/master/examples/NavigationPlayground/js)
 * In the terminal
@@ -50,28 +51,33 @@ Before You start react-native run-ios in terminal, install the dependencies:
 
 ##### Vector Icons  
  * [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
- 
+
 	```npm install react-native-vector-icons --save```
-  
+
 ##### Carousel
- * [React Native Carousel](https://github.com/nick/react-native-carousel) 
- 	
+ * [React Native Carousel](https://github.com/nick/react-native-carousel)
+
  	```npm install react-native-carousel --save```
- 
-#### Swipeout
-* [react-native-swipeout](https://github.com/dancormier/react-native-swipeout) - 
 
-	* In terminal:	``npm install react-native-swipeout --save``
-	* In your project: 
-	``import Swipeout from 'react-native-swipeout'``
+##### Swipeout
+* [react-native-swipeout](https://github.com/dancormier/react-native-swipeout) -
 
-* There's a bug in the Swipeout. Read more about the bug and the fix [here](https://github.com/dancormier/react-native-swipeout/pull/175) After installing, change the react-native/swipeout/index.js last line to say: ``export { Swipeout };`` 
+	* In terminal:	`npm install react-native-swipeout --save`
+	* In your project:
+	`import Swipeout from 'react-native-swipeout'`
+
+##### React Native Maps
+* [react-native-maps](https://github.com/airbnb/react-native-maps) by Airbnb
+
+	* In terminal:  `npm install react-native-maps --save`
+	* See this [Tutorial](https://egghead.io/lessons/react-create-a-custom-map-marker-with-react-native-maps) from EggHead
+
 
 ##### File Access (Did not use)
 * [react-native-fetch-blob](https://github.com/wkh237/react-native-fetch-blob)
 * How to install: [read this](https://github.com/wkh237/react-native-fetch-blob/issues/84)
 
-  
+
 ### Useful Resources:
 * Tutorial and API - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
 * Stackoverflow - [How to increment JS Date](https://stackoverflow.com/questions/3674539/incrementing-a-date-in-javascript)

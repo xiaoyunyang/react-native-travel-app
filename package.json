@@ -12,6 +12,7 @@
     "react-native": "0.44.0",
     "react-native-carousel": "^0.10.0",
     "react-native-fetch-blob": "^0.10.5",
+    "react-native-maps": "^0.15.2",
     "react-native-markdown": "^0.1.1",
     "react-native-markdown-view": "^1.0.0",
     "react-native-material-bottom-navigation": "^0.5.1",
@@ -19,7 +20,8 @@
     "react-native-swipe-list-view": "^0.4.1",
     "react-native-swipeout": "^2.1.1",
     "react-native-tab-navigator": "^0.3.3",
-    "react-native-vector-icons": "^4.1.1"
+    "react-native-vector-icons": "^4.1.1",
+    "react-navigation": "^1.0.0-beta.11"
   },
   "devDependencies": {
     "babel-jest": "20.0.1",
