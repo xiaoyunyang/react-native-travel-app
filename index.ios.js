@@ -16,10 +16,14 @@ import {
   ListView,
   ScrollView,
   Navigator,
+  StatusBar,
   TouchableOpacity,
   TouchableHighLight,
   Button,
 } from 'react-native';
+
+//This changes the header status icons (the battery and wifi) to white.
+StatusBar.setBarStyle('light-content', true)
 
 import { NavigationComponent } from 'react-native-material-bottom-navigation';
 
@@ -27,12 +31,14 @@ var ReactNative = require('react-native');
 
 import { TabNavigator, StackNavigator } from 'react-navigation';
 
-var SearchPage = require('./SearchPage');
-var MainPage = require('./StacksOverTabs');
-var MyList = require('./MyList');
-var Calendar = require('./Calendar');
-var Details = require('./Details');
+var SearchPage = require('./components/SearchPage');
+var MainPage = require('./components/StacksOverTabs');
+var MyList = require('./components/MyList');
+var Calendar = require('./components/Calendar');
+var Details = require('./components/Details');
 
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import SampleText from './components/SampleText';
 //import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const styles = StyleSheet.create({
@@ -117,9 +123,6 @@ const styles = StyleSheet.create({
 });
 
 
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import SampleText from './SampleText';
-
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView>
     <SampleText>{banner}</SampleText>
@@ -175,6 +178,8 @@ const TabNav = TabNavigator(
             source={require('./assets/navbar/home.png')}
             style={[styles.tabBarIcon, {tintColor: tintColor}]}
           />),
+        headerStyle:{ backgroundColor: '#22264b'},
+        headerTitleStyle:{ color: '#e8edf3'},
       },
     },
     ListTab: {
@@ -188,6 +193,8 @@ const TabNav = TabNavigator(
             source={require('./assets/navbar/list.png')}
             style={[styles.tabBarIcon, {tintColor: tintColor}]}
           />),
+        headerStyle:{ backgroundColor: '#22264b'},
+        headerTitleStyle:{ color: '#e8edf3'},
       },
     },
     CalendarTab: {
@@ -200,6 +207,8 @@ const TabNav = TabNavigator(
             source={require('./assets/navbar/calendar.png')}
             style={[styles.tabBarIcon, {tintColor: tintColor}]}
           />),
+        headerStyle:{ backgroundColor: '#22264b'},
+        headerTitleStyle:{ color: '#e8edf3'},
       },
     },
   },
@@ -218,6 +227,8 @@ const TravelAppJapan = StackNavigator({
     screen: MyNotificationsSettingsScreen,
     navigationOptions: {
       title: 'Notifications',
+      headerStyle: { backgroundColor: '#22264b'},
+      headerTitleStyle:{ color: '#e8edf3'},
     },
   },
   Details: {
@@ -225,6 +236,12 @@ const TravelAppJapan = StackNavigator({
     path: '/detail/:name',
     navigationOptions: ({ navigation }) => {
       title: navigation.state.params.name;
+    },
+    navigationOptions: {
+      headerStyle: { backgroundColor: '#22264b'},
+      headerTitleStyle: { color: '#e8edf3'},
+      headerBackTitleStyle: { color: '#e8edf3' },
+      headerTintColor: '#e8edf3',
     },
   },
 });

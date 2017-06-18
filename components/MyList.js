@@ -28,8 +28,8 @@ Array.prototype.contains = function(obj) {
 }
 
 var ActivityList = require('./ActivityList');
-import { TabNavigator, StackNavigator } from 'react-navigation';
 var SearchPage = require('./SearchPage');
+import { TabNavigator, StackNavigator } from 'react-navigation';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
@@ -100,7 +100,7 @@ class MyList extends Component {
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
 
     if(test) {
-      let responseJson = require('./data/japan.json')
+      let responseJson = require('../data/japan.json')
       this.setStates(responseJson)
     }
     else {
@@ -153,29 +153,32 @@ class MyList extends Component {
     });
 
     const searchResults = this.state.activities.map(f => {
-      let copyF = {...f};
+      var copyF = {...f};
 
       //Filter
       let intersectTags = f.tags.filter(t => selectedTags.contains(t))
       if(selectedTags.length!=0 && intersectTags.length!=0) {
-        copyF.active = true
+        copyF.active = searchMatch(true)
         return copyF
       } else {
-        copyF.active = false
+        copyF.active = searchMatch(false)
         return copyF
       }
 
       //Search
-      if (!searchText || searchText == '') {
-        copyF.active = true;
-      } else if (copyF.title.indexOf(searchText) != -1) {
-        copyF.active = true;
-      } else if (copyF.subtitle.indexOf(searchText) != -1) {
-        copyF.active = true;
-      } else {
-        copyF.active = false;
+      function searchMatch(isActive) {
+        //searchText is from the outer function. searchMatch is a closure.
+        if (!searchText || searchText == '') {
+          return isActive;
+        } else if (copyF.title.indexOf(searchText) != -1) {
+          return isActive;
+        } else if (copyF.subtitle.indexOf(searchText) != -1) {
+          return isActive;
+        } else {
+          return false;
+        }
+        return false;
       }
-      return copyF;
     });
 
     this.setState({
@@ -219,17 +222,6 @@ class MyList extends Component {
         </View>
         <View style={[styles.container, {flex: 20}]}>
           <ActivityList dataSource={this.state.activitiesDisp} navigation={this.props.navigation}/>
-        </View>
-        <View style={{height: 10, backgroundColor: "blue"}}>
-          <View style={{
-              flex: 1,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-            }}>
-            <View style={{width: 100, backgroundColor: 'powderblue'}} />
-            <View style={{width: 100, backgroundColor: 'skyblue'}} />
-            <View style={{width: 100, backgroundColor: 'steelblue'}} />
-          </View>
         </View>
       </View>
 

@@ -16,21 +16,39 @@
       "subtitle": "Yay Japan!",
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
-      "date": "Mon Aug 07 2017"
+      "date": "Mon Aug 07 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 1,
       "title":"Check into Ginza Bay Capsule Hotel",
       "subtitle": "Ginza is an area in Tokyo with a lot of shopping",
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
-      "date": "Mon Aug 07 2017"
+      "date": "Mon Aug 07 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 2,
       "title":"Explore Modern Tokyo",
       "subtitle": "Shinjuku",
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
-      "date": "Tue Aug 08 2017"
+      "date": "Tue Aug 08 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 3,
       "title":"Explore Tokyo's Nightlife",
@@ -38,6 +56,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Wed Aug 09 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 4,
       "title":"Check out the temple",
@@ -45,6 +69,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Thu Aug 10 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
       }, {
         "id": 5,
         "title":"Edo Museum or the Onsen Theme Park",
@@ -52,6 +82,12 @@
         "tags": ["Xiaoyun", "Andrew"],
         "active": true,
         "date": "Thu Aug 10 2017",
+        "markers": [
+          {
+            "title": "Tokyo Ginza Bay Hotel",
+            "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+          }
+        ]
     }, {
       "id": 6,
       "title":"Let's go to Mount Fuji",
@@ -59,6 +95,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Fri Aug 11 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 7,
       "title":"Check into Asafuji Ryokan",
@@ -66,6 +108,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Fri Aug 11 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 8,
       "title":"Take lots of pictures of Mt. Fuji.",
@@ -73,6 +121,12 @@
       "tags": ["Xiaoyun"],
       "active": true,
       "date": "Fri Aug 11 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 9,
       "title":"Depart for Kyoto.",
@@ -80,6 +134,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Sat Aug 12 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 10,
       "title": "Check into the Kyoto Guesthouse Lantern in Gion.",
@@ -87,6 +147,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Sun Aug 13 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 11,
       "title": "Explore Gion.",
@@ -94,6 +160,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Sun Aug 13 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 12,
       "title": "Explore Downtown Kyoto.",
@@ -101,6 +173,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Mon Aug 14 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 13,
       "title": "Explore Temples in Northern Higashiyama.",
@@ -108,6 +186,12 @@
       "tags": ["Xiaoyun", "Andrew"],
       "active": true,
       "date": "Mon Aug 14 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 14,
       "title": "Explore Temples in Northern Higashiyama.",
@@ -115,6 +199,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Mon Aug 14 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 15,
       "title": "Go to the best shrine in Kyoto",
@@ -122,6 +212,12 @@
       "tags": ["Xiaoyun", "Andrew"],
       "active": true,
       "date": "Mon Aug 14 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 16,
       "title": "Central Tokyo - visit Nijo Castle",
@@ -129,6 +225,12 @@
       "tags": ["Xiaoyun", "Andrew"],
       "active": true,
       "date": "Tue Aug 15 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 17,
       "title": "Arayshiyama Bamboo Forest",
@@ -136,6 +238,12 @@
       "tags": ["Xiaoyun", "Andrew"],
       "active": true,
       "date": "Tue Aug 15 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 18,
       "title": "Visit Northwest Kyoto",
@@ -143,6 +251,12 @@
       "tags": ["Kyle"],
       "active": true,
       "date": "Tue Aug 15 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 19,
       "title": "Leave for Koyasan",
@@ -150,6 +264,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Wed Aug 16 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 20,
       "title":"Leave for Koyasan",
@@ -157,6 +277,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Wed Aug 16 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 21,
       "title":"Check in to Fudou-in (temple lodging or Shukubo)",
@@ -164,6 +290,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Wed Aug 16 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 22,
       "title":"Explore and hike around in Koyasan",
@@ -171,6 +303,12 @@
       "tags": ["Xiaoyun", "Kyle"],
       "active": true,
       "date": "Wed Aug 16 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 23,
       "title":"Go Home!",
@@ -178,6 +316,12 @@
       "tags": ["Xiaoyun", "Andrew", "Kyle"],
       "active": true,
       "date": "Thu Aug 17 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }, {
       "id": 24,
       "title":"Buy Coin Purse from Akihabara",
@@ -185,6 +329,25 @@
       "tags": ["Xiaoyun"],
       "active": true,
       "date": "Tue Aug 08 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
+    }, {
+      "id": 25,
+      "title":"Buy Fridge Magnet Souvenir",
+      "subtitle":"Shibuya or Akihabara",
+      "tags": ["Xiaoyun"],
+      "active": true,
+      "date": "Tue Aug 08 2017",
+      "markers": [
+        {
+          "title": "Tokyo Ginza Bay Hotel",
+          "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        }
+      ]
     }
   ]
 }
