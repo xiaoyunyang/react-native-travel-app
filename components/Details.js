@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 
 import { TabNavigator, StackNavigator } from 'react-navigation';
-import HeroText from './HeroText';
 import MapView from 'react-native-maps';
 
 //This changes the header status icons (the battery and wifi) to white.
@@ -37,6 +36,7 @@ class Details extends Component {
   }
   componentDidMount() {
     let id = this.props.activity.id
+
     let responseJson = require('../data/detail.json')
 
     let latitudes = responseJson[id].markers.map((marker) => {
@@ -87,7 +87,6 @@ class Details extends Component {
           style={styles.mapContainer}
           initialRegion={this.state.initialRegion}
           showsUserLocation={true}
-          //onPress={this.handlePress}
         >
 
           {this.state.markers.map((marker,i) => {
@@ -97,7 +96,7 @@ class Details extends Component {
                 coordinate={marker.coordinate}
                 title={marker.title}
                 pinColor='red'
-                description={this.props.activity.title}/>)
+                description={""}/>)
           })}
         </MapView>
         <View style={styles.container}>
