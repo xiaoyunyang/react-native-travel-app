@@ -1,0 +1,342 @@
+{
+  "0": {
+    "todo": "Take the Keiyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Haneda Airport",
+        "coordinate": {"latitude": 35.549358, "longitude": 139.779839}
+      }, {
+        "title": "Metro Station",
+        "coordinate": {"latitude": 35.544854, "longitude": 139.767124}
+      }
+    ]
+  },
+  "1": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "2": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Akihabara Station",
+        "coordinate": {"latitude": 35.698353, "longitude": 139.773297}
+      }
+    ]
+  },
+  "3": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "4": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "5": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Starbucks",
+        "coordinate": {"latitude": 35.659797, "longitude": 139.700378}
+      },{
+        "title": "Hachiko (dog) Statue",
+        "coordinate": {"latitude": 35.659056, "longitude": 139.700555}
+      },{
+        "title": "Shibuya Station",
+        "coordinate": {"latitude": 35.658038, "longitude": 139.701639}
+      }
+    ]
+  },
+  "6": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Shinjuku Station",
+        "coordinate": {"latitude": 35.689398, "longitude": 139.700295}
+      }, {
+        "title": "Cat Cafe Calico",
+        "coordinate": {"latitude": 35.693850, "longitude": 139.704064}
+      }, {
+        "title": "Piss Alley",
+        "coordinate": {"latitude": 35.693295, "longitude": 139.699482}
+      }, {
+        "title": "Golden Gai",
+        "coordinate": {"latitude": 35.693775, "longitude": 139.704672}
+      }, {
+        "title": "Starbucks",
+        "coordinate": {"latitude": 35.692054, "longitude": 139.706501}
+      }
+    ]
+  },
+  "7": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "8": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "9": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "1": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "10": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "11": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "12": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "13": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "14": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "15": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "1": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "16": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "17": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "18": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "19": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "20": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "21": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "22": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "23": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "24": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "25": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "26": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  }
+}

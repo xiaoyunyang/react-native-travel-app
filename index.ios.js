@@ -38,7 +38,7 @@ var Calendar = require('./components/Calendar');
 var Details = require('./components/Details');
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SampleText from './components/SampleText';
+import HeroText from './components/HeroText';
 //import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const styles = StyleSheet.create({
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
 
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView>
-    <SampleText>{banner}</SampleText>
+    <HeroText>{banner}</HeroText>
     <Button
       onPress={() => navigation.navigate('Profile', { name: 'Jordan' })}
       title="Open profile screen"

@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   textNormal: {
     color: '#22264b',
-    fontSize: 18
+    fontSize: 16
   },
   textSmall: {
     color: '#22264b',

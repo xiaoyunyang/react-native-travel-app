@@ -3,11 +3,11 @@ import { Button, ScrollView } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SampleText from './SampleText';
+import HeroText from './HeroText';
 
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView>
-    <SampleText>{banner}</SampleText>
+    <HeroText>{banner}</HeroText>
     <Button
       onPress={() => navigation.navigate('Profile', { name: 'Jordan' })}
       title="Open profile screen"

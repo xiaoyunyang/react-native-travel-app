@@ -33,6 +33,67 @@ This App is for planning a trip with your friends. It gives you:
 
 * ``ActivityList`` with a calendar filter. The calendar filter is a ``Carousel`` component.
 
+### Access Data for The App
+The Data used to generate to App is stored here: [japan.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/japan.json)
+
+[japan.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/japan.json) contains `FIELDS`, which is an array of objects:
+
+```
+"FIELDS": [
+	{
+		"id": 0,
+		"title":"Arrive at Haneda Airport",
+		"subtitle": "Yay Japan!",
+		"tags": ["Xiaoyun", "Andrew", "Kyle"],
+		"active": true,
+		"date": "Mon Aug 07 2017",
+	}, {
+		"id": 1,
+		"title":"Check into Ginza Bay Capsule Hotel",
+		"subtitle": "Ginza is an area in Tokyo with a lot of shopping",
+		"tags": ["Xiaoyun", "Andrew", "Kyle"],
+		"active": true,
+		"date": "Mon Aug 07 2017",
+	}
+	...
+]
+```
+[detail.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/detail.json) is a set of objects that looks like this:
+
+```
+{
+  "0": {
+    "todo": "Take the Keiyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Haneda Airport",
+        "coordinate": {"latitude": 35.549358, "longitude": 139.779839}
+      }, {
+        "title": "Metro Station",
+        "coordinate": {"latitude": 35.544854, "longitude": 139.767124}
+      }
+    ]
+  },
+  "1": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  ...
+}
+```
+
+The `Details` component gets data from [detail.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/detail.json):
+
+![Details Page](https://github.com/xiaoyunyang/JapanApp/blob/master/docs/detailsPage.png)
 
 ## Dependencies:
 Before You start react-native run-ios in terminal, install the dependencies:
