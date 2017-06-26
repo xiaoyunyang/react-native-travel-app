@@ -12,20 +12,14 @@ import {
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import Swipeout from 'react-native-swipeout';
 
-class ActivityList extends Component {
+class ClickableList extends Component {
   getDetail(field) {
     this.props.navigation.navigate('Details', {
       activity: field
     })
   }
   renderField(field) {
-    let swipeBtns = [
-        {
-          text: 'Delete',
-          backgroundColor: '#D5544F',
-          underlayColor: 'red',
-          onPress: () => { this.getDetail(field) }
-       },
+    let swipeLBtns = [
         {
           text: 'Duplicate',
           backgroundColor: '#9CC5C9',
@@ -33,7 +27,15 @@ class ActivityList extends Component {
           onPress: () => { this.getDetail(field) }
        }
       ];
-     var fieldElement = <Swipeout left={swipeBtns} style={{flexDirection:'column', borderWidth: 1, borderColor: 'white', marginTop: 5}}>
+      let swipeRBtns = [
+          {
+            text: 'Delete',
+            backgroundColor: '#D5544F',
+            underlayColor: 'red',
+            onPress: () => { this.getDetail(field) }
+         }
+        ];
+     var fieldElement = <Swipeout left={swipeLBtns} right={swipeRBtns} style={{flexDirection:'column', borderWidth: 1, borderColor: 'white', marginTop: 5}}>
          <TouchableHighlight underlayColor='silver' onPress={() => this.getDetail(field)}>
            <View style={{backgroundColor: 'white', padding: 5}}>
              <Text style={styles.textLarge}>{field.title}</Text>
@@ -83,4 +85,4 @@ const styles = StyleSheet.create({
     fontSize: 18
   }
 })
-module.exports = ActivityList;
+module.exports = ClickableList;

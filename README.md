@@ -121,7 +121,7 @@ Before You start react-native run-ios in terminal, install the dependencies:
  	```npm install react-native-carousel --save```
 
 ##### Swipeout
-* [react-native-swipeout](https://github.com/dancormier/react-native-swipeout) -
+* [react-native-swipeout](https://github.com/dancormier/react-native-swipeout)
 
 	* In terminal:	`npm install react-native-swipeout --save`
 	* In your project:

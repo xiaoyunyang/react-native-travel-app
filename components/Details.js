@@ -46,8 +46,14 @@ class Details extends Component {
       return marker.coordinate.longitude
     })
     let margin = 0.003;
-    let latitudeDelta = Math.max.apply(null, latitudes) - Math.min.apply(null, latitudes) + margin;
-    let longitudeDelta = Math.max.apply(null, longitudes) - Math.min.apply(null, longitudes) + margin;
+    let maxLat = Math.max.apply(null, latitudes)
+    let minLat = Math.min.apply(null, latitudes)
+    let maxLon = Math.max.apply(null, longitudes)
+    let minLon = Math.min.apply(null, longitudes)
+    let centerLat = (maxLat + minLat) / 2
+    let centerLon = (maxLon + minLon) / 2
+    let latDelta = maxLat - minLat + margin;
+    let lonDelta = maxLon - minLon + margin;
 
     this.setState({
       markers: responseJson[id].markers,
@@ -55,10 +61,10 @@ class Details extends Component {
       image: responseJson[id].image,
       link: responseJson[id].link,
       initialRegion: {
-        latitude: latitudes.reduce((a,b) => a+b)/latitudes.length,
-        longitude: longitudes.reduce((a,b) => a+b)/longitudes.length,
-        latitudeDelta: latitudeDelta,
-        longitudeDelta: longitudeDelta,
+        latitude: centerLat,
+        longitude: centerLon,
+        latitudeDelta: latDelta,
+        longitudeDelta: lonDelta,
       },
     })
   }

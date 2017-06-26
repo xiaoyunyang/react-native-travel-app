@@ -35,6 +35,7 @@ var SearchPage = require('./components/SearchPage');
 var MainPage = require('./components/StacksOverTabs');
 var MyList = require('./components/MyList');
 var Calendar = require('./components/Calendar');
+var Translator = require('./components/Translator');
 var Details = require('./components/Details');
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -160,6 +161,11 @@ const DetailsScreen = ({ navigation }) => (
     navigation={navigation}
   />
 );
+const TranslatorScreen = ({ navigation }) => (
+  <Translator
+    navigation={navigation}
+  />
+);
 const MyNotificationsSettingsScreen = ({ navigation }) => (
   <MyNavScreen banner="Notifications Screen" navigation={navigation} />
 );
@@ -176,6 +182,21 @@ const TabNav = TabNavigator(
         tabBarIcon: ({ tintColor }) => (
           <Image
             source={require('./assets/navbar/home.png')}
+            style={[styles.tabBarIcon, {tintColor: tintColor}]}
+          />),
+        headerStyle:{ backgroundColor: '#22264b'},
+        headerTitleStyle:{ color: '#e8edf3'},
+      },
+    },
+    TranslatorTab: {
+      screen: Translator,
+      path: '/translator',
+      navigationOptions: {
+        title: 'Translate',
+        tabBarLabel: 'Translate',
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require('./assets/navbar/translate.png')}
             style={[styles.tabBarIcon, {tintColor: tintColor}]}
           />),
         headerStyle:{ backgroundColor: '#22264b'},
@@ -229,6 +250,15 @@ const TravelAppJapan = StackNavigator({
       title: 'Notifications',
       headerStyle: { backgroundColor: '#22264b'},
       headerTitleStyle:{ color: '#e8edf3'},
+    },
+  },
+  Translator: {
+    screen: TranslatorScreen,
+    navigationOptions: {
+      headerStyle: { backgroundColor: '#22264b'},
+      headerTitleStyle: { color: '#e8edf3'},
+      headerBackTitleStyle: { color: '#e8edf3' },
+      headerTintColor: '#e8edf3',
     },
   },
   Details: {
