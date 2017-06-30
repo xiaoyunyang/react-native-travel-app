@@ -1,0 +1,580 @@
+{
+  "0": {
+    "todo": "Take the Keiyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "U Street Metro",
+        "coordinate": {"latitude": 38.916904, "longitude": -77.029197}
+      }, {
+        "title": "Franconia-Springfield Metro",
+        "coordinate": {"latitude": 38.766386, "longitude": -77.168269}
+      }, {
+        "title": "Ronald Reagan Washington National Airport",
+        "coordinate": {"latitude": 38.851232, "longitude": -77.040219}
+      }
+    ]
+  },
+  "1": {
+    "todo": "Take the Keiyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Haneda Airport",
+        "coordinate": {"latitude": 35.549358, "longitude": 139.779839}
+      }, {
+        "title": "Metro Station",
+        "coordinate": {"latitude": 35.544854, "longitude": 139.767124}
+      }
+    ]
+  },
+  "1.1": {
+    "todo": "Check in the the hotel. Shiodome Station - Take Oedo Line to Kiyosumi-shirakawa Station (Edo Museum). Take the Yurikamome Line to the Telecom Center Station (Onsen Park) | *Shibashi Station* - take *Yamanote Line* to Shinjuku Station / Shibuya Station / Akihabara Station, take Asakusa Line to Asakusa, take Ginza Line to Suehirocho Station / Shibuya Station / Asakusa Station, Joban | Higashi-ginza Station - Take the Asakusa Line to Asakusa.",
+    "image": "none",
+    "link": "http://www.tokyometro.jp/en/",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      },{
+        "title": "Higashi-ginza Station",
+        "coordinate": {"latitude": 35.669700, "longitude": 139.767141}
+      },{
+        "title": "Shimbashi Station",
+        "coordinate": {"latitude": 35.666193, "longitude": 139.758332}
+      },{
+        "title": "Shiodome Station",
+        "coordinate": {"latitude": 35.662913, "longitude": 139.759983}
+      },{
+        "title": "Starbucks",
+        "coordinate": {"latitude": 35.669617, "longitude": 139.764691}
+      },{
+        "title": "7-Eleven",
+        "coordinate": {"latitude": 35.668474, "longitude": 139.759963}
+      }
+    ]
+  },
+  "1.2": {
+    "todo": "Ginza's McDonald's:  Get the Teriyaki/Bacon/Egg Burger and the Ginger Pork Burger.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      },{
+        "title": "Higashi-ginza Station",
+        "coordinate": {"latitude": 35.669700, "longitude": 139.767141}
+      },{
+        "title": "Shimbashi Station",
+        "coordinate": {"latitude": 35.666193, "longitude": 139.758332}
+      },{
+        "title": "McDonald's",
+        "coordinate": {"latitude": 35.667575, "longitude": 139.757336}
+      },{
+        "title": "McDonald's",
+        "coordinate": {"latitude": 35.672387, "longitude": 139.768063}
+      }
+    ]
+  },
+  "2": {
+    "todo": "Shibuya Crossing, Go to the Starbucks right by Shibuya Crossing, Shop for Souvenirs at Tokyo Hands and Shibuya Loft. Shop at Shibuya 109 (department store). There's also a Cat Cafe MoCHA at Shibuya.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Starbucks",
+        "coordinate": {"latitude": 35.659797, "longitude": 139.700378}
+      },{
+        "title": "Hachiko (dog) Statue",
+        "coordinate": {"latitude": 35.659056, "longitude": 139.700555}
+      },{
+        "title": "Cat Cafe MoCHA",
+        "coordinate": {"latitude": 35.661155, "longitude": 139.697418}
+      },{
+        "title": "Shibuya 109",
+        "coordinate": {"latitude": 35.659565, "longitude": 139.698753}
+      },{
+        "title": "Tokyo Hands",
+        "coordinate": {"latitude": 35.662130, "longitude": 139.697810}
+      },{
+        "title": "Shibuya Loft",
+        "coordinate": {"latitude": 35.661118, "longitude": 139.699506}
+      },{
+        "title": "Shibuya Station",
+        "coordinate": {"latitude": 35.658038, "longitude": 139.701639}
+      }
+    ]
+  },
+  "2.1": {
+    "todo": "Shibuya's McDonald's:  Get the Teriyaki/Bacon/Egg Burger and the Ginger Pork Burger.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "McDonald's",
+        "coordinate": {"latitude": 35.660396, "longitude": 139.698456}
+      },{
+        "title": "Shibuya Station",
+        "coordinate": {"latitude": 35.658038, "longitude": 139.701639}
+      }
+    ]
+  },
+  "3": {
+    "todo": "Visit Tsukiji Fish Market in the morning (Tuna auction starts at 3AM. Outer market visiting starts 5AM. Inner wholesale market opens to visitors at 10 AM). You can get a sushi breakfast there.",
+    "image": "none",
+    "link": "http://www.japan-guide.com/e/e3021.html",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      },{
+        "title": "Tsukiji Market",
+        "coordinate": {"latitude": 35.665488, "longitude": 139.770657}
+      }
+    ]
+  },
+  "3.1": {
+    "todo": "Lots of street food to sample around Sensō-ji Temple. Tokyo Skytree is visible from Asakusa Station. Grab some Onigiri from Onigiri Asakusa Yadoroku.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Sensō-ji Temple",
+        "coordinate": {"latitude": 35.714761, "longitude": 139.796660}
+      }, {
+        "title": "Asakusa Station",
+        "coordinate": {"latitude": 35.710516, "longitude": 139.797869}
+      }, {
+        "title": "Onigiri Asakusa Yadoroku",
+        "coordinate": {"latitude": 35.716885, "longitude": 139.794752}
+      }
+    ]
+  },
+  "3.2": {
+    "todo": "Asakusa's McDonald's:  Get the Teriyaki/Bacon/Egg Burger and the Ginger Pork Burger.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Asakusa Station",
+        "coordinate": {"latitude": 35.710516, "longitude": 139.797869}
+      }, {
+        "title": "McDonald's",
+        "coordinate": {"latitude": 35.711819, "longitude": 139.797347}
+      },{
+        "title": "McDonald's",
+        "coordinate": {"latitude": 35.712305, "longitude": 139.793086}
+      }
+    ]
+  },
+  "4": {
+    "todo": "Maid Cafes: @Home Cafe (the same one from the video), CureMaid Cafe (Low key).",
+    "image": "none",
+    "link": "cafe-athome.com",
+    "markers": [
+      {
+        "title": "Akihabara Station",
+        "coordinate": {"latitude": 35.698353, "longitude": 139.773297}
+      },{
+        "title": "Suehirocho Station",
+        "coordinate": {"latitude": 35.702542, "longitude": 139.771710}
+      },{
+        "title": "@Home Cafe",
+        "coordinate": {"latitude": 35.699585, "longitude": 139.773116}
+      },{
+        "title": "Cure Maid Cafe",
+        "coordinate": {"latitude": 35.701847, "longitude": 139.771244}
+      }
+    ]
+  },
+  "4.1": {
+    "todo": "Cat Cafes in Akihabara: Cat Cafe MoCHA (modern), Cafe Cafe Nyanny (homey), Cat Cafe JaLaLa (low key).",
+    "image": "none",
+    "link": "cafe-athome.com",
+    "markers": [
+      {
+        "title": "Akihabara Station",
+        "coordinate": {"latitude": 35.698353, "longitude": 139.773116}
+      },{
+        "title": "Suehirocho Station",
+        "coordinate": {"latitude": 35.702542, "longitude": 139.771710}
+      },{
+        "title": "Cat Cafe MoCHA",
+        "coordinate": {"latitude": 35.701298, "longitude": 139.771817}
+      },{
+        "title": "Cat Cafe Nyanny",
+        "coordinate": {"latitude": 35.702603, "longitude": 139.772464}
+      },{
+        "title": "Cat Cafe JaLaLa",
+        "coordinate": {"latitude": 35.701858, "longitude": 139.769469}
+      }
+    ]
+  },
+  "4.2": {
+    "todo": "Don Quijote Akihabara has discount household stuff. Animate Akihabara has Otaku Stuff.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Akihabara Station",
+        "coordinate": {"latitude": 35.698353, "longitude": 139.773116}
+      },{
+        "title": "Suehirocho Station",
+        "coordinate": {"latitude": 35.702542, "longitude": 139.771710}
+      },{
+        "title": "McDonald's",
+        "coordinate": {"latitude": 35.699796, "longitude": 139.771891}
+      },{
+        "title": "Don Quijote Akihabara",
+        "coordinate": {"latitude": 35.700794, "longitude": 139.771891}
+      },{
+        "title": "Animate Akihabara",
+        "coordinate": {"latitude": 35.700503, "longitude": 139.771675}
+      },{
+        "title": "Liberty Akihabara 8 Shop (Figurine)",
+        "coordinate": {"latitude": 35.702410, "longitude": 139.771885}
+      }
+    ]
+  },
+  "4.3": {
+    "todo": "Akihabara's McDonald's:  Get the Teriyaki/Bacon/Egg Burger and the Ginger Pork Burger.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Akihabara Station",
+        "coordinate": {"latitude": 35.698353, "longitude": 139.773116}
+      },{
+        "title": "Suehirocho Station",
+        "coordinate": {"latitude": 35.702542, "longitude": 139.771710}
+      },{
+        "title": "McDonald's",
+        "coordinate": {"latitude": 35.699796, "longitude": 139.771891}
+      },{
+        "title": "McDonald's",
+        "coordinate": {"latitude": 35.703851, "longitude": 139.772063}
+      }
+    ]
+  },
+  "5": {
+    "todo": "The Fukagawa Edo Museum is less than an hour walk from Hotel or Take the Hanzomon or Oedo Line to the Kiyosumi-shirakawa Station.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Fukagawa Edo Museum",
+        "coordinate": {"latitude": 35.681186, "longitude": 139.800595}
+      }, {
+        "title": "Kiyosumi-shirakawa Station",
+        "coordinate": {"latitude": 35.682252, "longitude": 139.798772}
+      }
+    ]
+  },
+  "6": {
+    "todo": "The Fukagawa Edo Museum is less than an hour walk from Hotel or Take the Hanzomon or Oedo Line to the Kiyosumi-shirakawa Station.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Odaiba Oedo Onsen Monogatari",
+        "coordinate": {"latitude": 35.615454, "longitude": 139.777528}
+      }, {
+        "title": "Telecom Center Station",
+        "coordinate": {"latitude": 35.617450, "longitude": 139.779410}
+      }
+    ]
+  },
+  "7": {
+    "todo": "Theme Restaurants: Alice in Fantasy Book, Robot Cafe",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Alice in Fantasy Book",
+        "coordinate": {"latitude": 35.693536, "longitude": 139.702604}
+      }, {
+        "title": "Robot Restaurant",
+        "coordinate": {"latitude": 35.694320, "longitude": 139.702851}
+      }, {
+        "title": "Cat Cafe Calico",
+        "coordinate": {"latitude": 35.693850, "longitude": 139.704064}
+      },
+    ]
+  },
+  "7.1": {
+    "todo": "Get the Famous Cheese Tart from Shinjuku Station's Pablo Shop (11AM - 10PM)",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Shinjuku Station",
+        "coordinate": {"latitude": 35.689398, "longitude": 139.700295}
+      }, {
+        "title": "Pablo (Famous Cheese Tart)",
+        "coordinate": {"latitude": 35.691182, "longitude": 139.699269}
+      }, {
+        "title": "Piss Alley",
+        "coordinate": {"latitude": 35.693295, "longitude": 139.699482}
+      }, {
+        "title": "Golden Gai",
+        "coordinate": {"latitude": 35.693775, "longitude": 139.704672}
+      }
+    ]
+  },
+  "8": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "9": {
+    "todo": "10 Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "10": {
+    "todo": "11 Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "11": {
+    "todo": "12 Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "12": {
+    "todo": "Check-in to hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Lantern in Gion",
+        "coordinate": {"latitude": 35.000160, "longitude": 135.776405}
+      }, {
+        "title": "Gion-Shijo Station",
+        "coordinate": {"latitude": 35.003561, "longitude": 135.772007}
+      }
+    ]
+  },
+  "12.1": {
+    "todo": "Check out Ishibe Koji (the alley). Get Lunch at a Japanese restaurant (Kaisaiki). Gion-Nishikawa is one of the two-Michelin-starred restaurants in Kyoto. There are four kinds of lunch menu; 5,000yen, 8,000yen, 15,000yen, and chef’s course. Miyoshi has Kobe beef. Tsujihana is affordable.",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Lantern in Gion",
+        "coordinate": {"latitude": 35.000160, "longitude": 135.776405}
+      }, {
+        "title": "Ishibe-Koji",
+        "coordinate": {"latitude": 34.999939, "longitude": 135.779797}
+      }, {
+        "title": "Tsujihana (祇園 東山 つじ華)",
+        "coordinate": {"latitude": 35.000387, "longitude": 135.778094}
+      }, {
+        "title": "Gion Nishikawa (祇園にしかわ)",
+        "coordinate": {"latitude": 34.999777, "longitude": 135.779093}
+      }, {
+        "title": "Miyoshi (にくの匠 三芳)",
+        "coordinate": {"latitude": 35.002911, "longitude": 135.775889}
+      }
+    ]
+  },
+  "12.2": {
+    "todo": "Restaurants ICHI, Tsujiri Kyotomise (Matcha dessert), Issen Yoshoku (Okonomiyaki), Hideotako (Takoyaji). check out Ishibe Koji (the alley)",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "ICHI",
+        "coordinate": {"latitude": 35.002918, "longitude": 135.771954}
+      }, {
+        "title": "Tsujiri Kyotomise",
+        "coordinate": {"latitude": 35.003715, "longitude": 135.772819}
+      }, {
+        "title": "Issen Yoshoku",
+        "coordinate": {"latitude": 35.004039, "longitude": 135.773189}
+      }
+    ]
+  },
+  "13": {
+    "todo": "Lantern in Gion -> Kiyomizu dera (15 min walking). Kiyomizu dera -> Rengeoin Sanjusangen-do (24 min walking). Rengeoin Sanjusangendo -> Shichijo Station (8 min walking).",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Lantern in Gion",
+        "coordinate": {"latitude": 35.000160, "longitude": 135.776405}
+      }, {
+        "title": "Kiyomizu dera",
+        "coordinate": {"latitude": 34.994858, "longitude": 135.785049}
+      }, {
+        "title": "Rengeoin Sanjusangen-do",
+        "coordinate": {"latitude": 34.987885, "longitude": 135.771715}
+      }, {
+        "title": "Shichijo Station",
+        "coordinate": {"latitude": 34.989411, "longitude": 135.767664}
+      },
+    ]
+  },
+  "14": {
+    "todo": "Take the Keihan Line from Shichijo Station -> Fushimi Inari Station and walk 5 minutes to Fushimi-Inari Taisha. Fushimi-Inari Taisha (Open: 24 hrs).",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Fushimi Inari Station",
+        "coordinate": {"latitude": 34.968804, "longitude": 135.769179}
+      }, {
+        "title": "Fushimi-Inari Taisha",
+        "coordinate": {"latitude": 34.967138, "longitude": 135.772669}
+      }
+    ]
+  },
+  "15": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "16": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "16.1": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "17": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "18": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "19": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "20": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "21": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "22": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "23": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  },
+  "24": {
+    "todo": "Check in the the hotel",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }
+    ]
+  }
+}

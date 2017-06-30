@@ -15,7 +15,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-var ActivityList = require('./ActivityList');
+var ActivityList = require('./ClickableList');
 
 let getTomorrow = today => {
   return new Date(today.getTime()+1000*60*60*24);

@@ -1,0 +1,44 @@
+{
+  "FILTERS": [
+    {
+      "tag": "restaurant", "active": true
+    }, {
+      "tag": "store", "active": true
+    }, {
+      "tag": "common", "active": true
+    }
+  ],
+  "FIELDS": [
+    {
+      "jp": "Chotto matte kudasai",
+      "en": "Please wait a second",
+      "tags": ["restaurant"],
+      "active": true,
+    }, {
+      "jp": "nan mei sama desu ka",
+      "en": "how many in your party?",
+      "tags": ["restaurant"],
+      "active": true,
+    }, {
+      "jp": "san nin desu",
+      "en": "three people",
+      "tags": ["restaurant"],
+      "active": true,
+    }, {
+      "jp": "onegai shimasu",
+      "en": "Please",
+      "tags": ["restaurant", "common"],
+      "active": true,
+    }, {
+      "jp": "… wo hitotsu/futatsu/mittsu/yottsu/itsutsu onegai shimasu",
+      "en": "Can I have one/two/three/four/five of … please?",
+      "tags": ["restaurant", "store"],
+      "active": true,
+    }, {
+      "jp": "(point and say) Kore onegai shimasu",
+      "en": "I will have this",
+      "tags": ["restaurant", "store"],
+      "active": true,
+    }
+  ]
+}

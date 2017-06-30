@@ -17,17 +17,6 @@ import {
 } from 'react-native';
 
 var ListFilter = require('./ListFilter');
-import { TabNavigator, StackNavigator } from 'react-navigation';
-
-Array.prototype.contains = function(obj) {
-    var i = this.length;
-    while (i--) {
-        if (this[i] == obj) {
-            return true;
-        }
-    }
-    return false;
-}
 
 const FILTERS = [
   {
@@ -43,23 +32,21 @@ const FIELDS = [
     active: true,
   }
 ]
-
-class MyList extends Component {
+class Translator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: FILTERS,
-      activities: FIELDS,
       json: 'stuff',
+      fields: FIELDS,
+      filters: FILTERS,
       isLoading: true
     };
   }
   setStates(responseJson) {
-    let sortedActivities = responseJson.FIELDS.sort((a,b) => new Date(a.date) - new Date(b.date))
     this.setState({
       json: responseJson,
+      fields: responseJson.FIELDS,
       filters: responseJson.FILTERS,
-      activities: sortedActivities,
       isLoading: false,
     })
   }
@@ -68,7 +55,7 @@ class MyList extends Component {
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
 
     if(test) {
-      let responseJson = require('../data/japan.json')
+      let responseJson = require('../data/translate.json')
       this.setStates(responseJson)
     }
     else {
@@ -92,15 +79,46 @@ class MyList extends Component {
     }
     return (
       <ListFilter
-        fields={this.state.activities}
+        fields={this.state.fields}
         filters={this.state.filters}
         navigation={this.props.navigation}
-        searchedFields={["title", "subtitle"]}
-        showFilterBar={false}
-        clickableList={true}
+        searchedFields={["en", "jp"]}
+        showFilterBar={true}
+        clickableList={false}
       />
     );
   }
 }
+const styles = StyleSheet.create({
+  containerCenter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e8edf3'
+  },
+  searchBox: {
+    backgroundColor: 'white',
+    paddingLeft: 8,
+    margin: 8
+  },
+  container: {
+    backgroundColor: '#e8edf3',
+    padding: 8
+  },
+  textNormal: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 12
+  },
+  textLarge: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 22
+  },
+  separator: {
+    flex: 1,
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: '#8E8E8E',
+  },
+})
 
-module.exports = MyList;
+module.exports = Translator;
