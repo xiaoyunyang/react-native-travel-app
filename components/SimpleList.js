@@ -13,8 +13,8 @@ class SimpleList extends Component {
   renderField(field) {
      var fieldElement = (
        <View style={{padding: 5}}>
-         <Text style={styles.textNormal}>{field.en}</Text>
-         <Text style={styles.textSmall}>{field.jp}</Text>
+         <Text style={styles.textNormal}>{field.jp}</Text>
+         <Text style={styles.textSmall}>{field.en}</Text>
          <Text style={[styles.textSmall, {color: 'steelblue'}]}>@{field.tags.map((word) => word).join(' @')}</Text>
        </View>)
      if (field.active) {

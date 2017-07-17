@@ -18,6 +18,7 @@ import {
 
 var ListFilter = require('./ListFilter');
 import { TabNavigator, StackNavigator } from 'react-navigation';
+import '../data/global.js';
 
 Array.prototype.contains = function(obj) {
     var i = this.length;
@@ -43,12 +44,11 @@ const FIELDS = [
     active: true,
   }
 ]
-
-class MyList extends Component {
+class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: FILTERS,
+      filters: this.props.filters,
       activities: FIELDS,
       json: 'stuff',
       isLoading: true
@@ -58,7 +58,6 @@ class MyList extends Component {
     let sortedActivities = responseJson.FIELDS.sort((a,b) => new Date(a.date) - new Date(b.date))
     this.setState({
       json: responseJson,
-      filters: responseJson.FILTERS,
       activities: sortedActivities,
       isLoading: false,
     })
@@ -96,11 +95,12 @@ class MyList extends Component {
         filters={this.state.filters}
         navigation={this.props.navigation}
         searchedFields={["title", "subtitle"]}
-        showFilterBar={false}
+        modFilters={this.props.modFilters}
+        showFilterBar={true}
         clickableList={true}
       />
     );
   }
 }
 
-module.exports = MyList;
+module.exports = TodoList;

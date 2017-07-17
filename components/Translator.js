@@ -83,6 +83,7 @@ class Translator extends Component {
         filters={this.state.filters}
         navigation={this.props.navigation}
         searchedFields={["en", "jp"]}
+        modFilters={() => {}}
         showFilterBar={true}
         clickableList={false}
       />

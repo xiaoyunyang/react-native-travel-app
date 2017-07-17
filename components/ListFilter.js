@@ -30,25 +30,11 @@ Array.prototype.contains = function(obj) {
 var ClickableList = require('./ClickableList');
 var SimpleList = require('./SimpleList');
 var SearchPage = require('./SearchPage');
+var Login = require('./Login');
 import { TabNavigator, StackNavigator } from 'react-navigation';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
-
-const FILTERS = [
-  {
-    tag: "Filter",
-    "active": false
-  }
-]
-const FIELDS = [
-  {
-    title:"Tokyoo",
-    subtitle: "Shinjuku",
-    tags: [ "eat"],
-    active: true,
-  }
-]
 
 function intersect_safe(a, b)
 {
@@ -87,6 +73,7 @@ class ListFilter extends Component {
       filters: this.props.filters,
       fields: this.props.fields,
     };
+    this.searchAndFilter(this.state.filters, '')
   }
   renderFilter(filter) {
     var filterBar = (
@@ -94,7 +81,6 @@ class ListFilter extends Component {
             <Text style={{fontSize: 24, backgroundColor:(filter.active)?'blue':'grey', margin:5}}>{filter.tag}</Text>
       </TouchableOpacity>
     );
-
     return filterBar;
   }
   handleFilterClick(filter) {
@@ -119,7 +105,6 @@ class ListFilter extends Component {
     this.searchAndFilter(this.state.filters, searchText);
   }
   searchAndFilter(filters, searchText) {
-
     //k1 and k2 to be used by searchMatch function
     let k1 = this.props.searchedFields[0]
     let k2 = this.props.searchedFields[1]
@@ -170,6 +155,13 @@ class ListFilter extends Component {
     return (
       <View style={{flex: 1}}>
         { this.props.showFilterBar &&
+          <Login
+            filters={this.state.filters}
+            modFilters={this.props.modFilters}
+            handleFilterClick={this.handleFilterClick.bind(this)}
+          />
+
+/*
           <View style={{height: 40, backgroundColor: 'steelblue'}}>
             <ListView
               style={{flexDirection:'row', flex:1, flexWrap:'wrap'}}
@@ -179,6 +171,7 @@ class ListFilter extends Component {
               renderRow={this.renderFilter.bind(this)}
             />
           </View>
+*/
         }
         <View style={{flex: 2}}>
           <View style={styles.searchBox}>
