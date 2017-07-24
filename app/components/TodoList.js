@@ -43,12 +43,10 @@ const FIELDS = [
     active: true,
   }
 ]
-
-class MyList extends Component {
+class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: FILTERS,
       activities: FIELDS,
       json: 'stuff',
       isLoading: true
@@ -58,17 +56,17 @@ class MyList extends Component {
     let sortedActivities = responseJson.FIELDS.sort((a,b) => new Date(a.date) - new Date(b.date))
     this.setState({
       json: responseJson,
-      filters: responseJson.FILTERS,
       activities: sortedActivities,
       isLoading: false,
     })
+   this.props.setFields(sortedActivities);
   }
   componentDidMount() {
     const test = true
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
 
     if(test) {
-      let responseJson = require('../data/japan.json')
+      let responseJson = require('../../data/japan.json')
       this.setStates(responseJson)
     }
     else {
@@ -92,8 +90,10 @@ class MyList extends Component {
     }
     return (
       <ListFilter
-        fields={this.state.activities}
-        filters={this.state.filters}
+        fields={this.props.fields}
+        setFields={this.props.setFields}
+        filters={this.props.filters}
+        setFilters={this.props.setFilters}
         navigation={this.props.navigation}
         searchedFields={["title", "subtitle"]}
         showFilterBar={false}
@@ -103,4 +103,4 @@ class MyList extends Component {
   }
 }
 
-module.exports = MyList;
+module.exports = TodoList;

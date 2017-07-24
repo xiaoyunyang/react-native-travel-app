@@ -13,8 +13,6 @@ const HeroText = ({ children }: { children?: Children }) => (
   </View>
 );
 
-export default HeroText;
-
 const styles = StyleSheet.create({
   containerCenter: {
     justifyContent: 'center',
@@ -27,3 +25,4 @@ const styles = StyleSheet.create({
     fontSize: 18
   }
 });
+module.exports = HeroText;

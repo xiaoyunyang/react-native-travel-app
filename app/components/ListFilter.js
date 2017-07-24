@@ -29,26 +29,11 @@ Array.prototype.contains = function(obj) {
 
 var ClickableList = require('./ClickableList');
 var SimpleList = require('./SimpleList');
-var SearchPage = require('./SearchPage');
+var FilterBar = require('./FilterBar');
 import { TabNavigator, StackNavigator } from 'react-navigation';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
-
-const FILTERS = [
-  {
-    tag: "Filter",
-    "active": false
-  }
-]
-const FIELDS = [
-  {
-    title:"Tokyoo",
-    subtitle: "Shinjuku",
-    tags: [ "eat"],
-    active: true,
-  }
-]
 
 function intersect_safe(a, b)
 {
@@ -74,52 +59,20 @@ class ListFilter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataSource: ds.cloneWithRows(this.props.fields),
-      dataSource2: ds2.cloneWithRows(this.props.filters),
-      filters: this.props.filters,
-      fields: this.props.fields,
+      searchText: '',
     };
   }
-  componentDidMount() {
-    this.state = {
-      dataSource: ds.cloneWithRows(this.props.fields),
-      dataSource2: ds2.cloneWithRows(this.props.filters),
-      filters: this.props.filters,
-      fields: this.props.fields,
-    };
-  }
-  renderFilter(filter) {
-    var filterBar = (
-        <TouchableOpacity onPress={this.handleFilterClick.bind(this, filter)}>
-            <Text style={{fontSize: 24, backgroundColor:(filter.active)?'blue':'grey', margin:5}}>{filter.tag}</Text>
-      </TouchableOpacity>
-    );
-
-    return filterBar;
-  }
-  handleFilterClick(filter) {
-    const newFilters = this.state.filters.map(f => {
-      let copyF = {...f};
-      if (copyF.tag === filter.tag) {
-        copyF.active = !filter.active;
-      }
-      return copyF;
-    });
-    this.setState({
-      filters: newFilters,
-      dataSource2: this.state.dataSource2.cloneWithRows(newFilters)
-    });
-    this.searchAndFilter(newFilters, this.state.searchText);
+  componentDidMount(){
+    this.props.setFields(this.searchAndFilter(this.props.filters, ''))
   }
   handleSearchText(event) {
     let searchText = event.nativeEvent.text;
     this.setState({
       searchText,
     });
-    this.searchAndFilter(this.state.filters, searchText);
+    this.props.setFields(this.searchAndFilter(this.props.filters, searchText));
   }
   searchAndFilter(filters, searchText) {
-
     //k1 and k2 to be used by searchMatch function
     let k1 = this.props.searchedFields[0]
     let k2 = this.props.searchedFields[1]
@@ -133,7 +86,7 @@ class ListFilter extends Component {
       }
     });
 
-    const searchResults = this.state.fields.map(f => {
+    const searchResults = this.props.fields.map(f => {
       var copyF = {...f};
 
       //Filter
@@ -161,24 +114,21 @@ class ListFilter extends Component {
         return false;
       }
     });
-
-    this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(searchResults),
-    });
+    return searchResults;
+  }
+  filteredFields() {
+    return this.searchAndFilter(this.props.filters, this.state.searchText)
   }
   render() {
     return (
       <View style={{flex: 1}}>
         { this.props.showFilterBar &&
-          <View style={{height: 40, backgroundColor: 'steelblue'}}>
-            <ListView
-              style={{flexDirection:'row', flex:1, flexWrap:'wrap'}}
-              horizontal={true}
-              removeClippedSubviews={false}
-              dataSource={this.state.dataSource2}
-              renderRow={this.renderFilter.bind(this)}
-            />
-          </View>
+          <FilterBar
+            filters={this.props.filters}
+            setFilters={this.props.setFilters}
+            fields={this.props.fields}
+            setFields={this.props.setFields}
+          />
         }
         <View style={{flex: 2}}>
           <View style={styles.searchBox}>
@@ -189,14 +139,21 @@ class ListFilter extends Component {
             />
           </View>
         </View>
+        { !this.props.showFilterBar &&
+          <View style={{marginTop: 15, alignItems: 'center'}}>
+            <Text style={[styles.textNormal]}>
+              Display Data for:  {this.props.filters.map(u =>
+                 u.active ? '@'+ u.tag+ ' ' : '')}
+            </Text>
+          </View>
+        }
         <View style={[styles.container, {flex: 20}]}>
-
           { this.props.clickableList &&
-            <ClickableList dataSource={this.state.dataSource} navigation={this.props.navigation}/>
+            <ClickableList dataSource={ds.cloneWithRows(this.props.fields)} navigation={this.props.navigation}/>
           }
 
           { !this.props.clickableList &&
-            <SimpleList dataSource={this.state.dataSource} navigation={this.props.navigation}/>
+            <SimpleList dataSource={ds.cloneWithRows(this.props.fields)} navigation={this.props.navigation}/>
           }
 
         </View>

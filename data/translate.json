@@ -39,6 +39,26 @@
       "en": "I will have this",
       "tags": ["restaurant", "store"],
       "active": true,
+    }, {
+      "jp": "itadakimasu",
+      "en": "say this before you eat",
+      "tags": ["restaurant"],
+      "active": true,
+    }, {
+      "jp": "ohaiyou (gozaimasu)",
+      "en": "good morning (polite)",
+      "tags": ["common"],
+      "active": true,
+    }, {
+      "jp": "koko desu",
+      "en": "here it is",
+      "tags": ["common"],
+      "active": true,
+    }, {
+      "jp": "tekimashita ",
+      "en": "I'm done",
+      "tags": ["common"],
+      "active": true,
     }
   ]
 }

@@ -468,7 +468,7 @@
     ]
   },
   "16": {
-    "todo": "Check in the the hotel",
+    "todo": "Nishiki Market. Pontocho Alley (another Geisha District)",
     "image": "none",
     "link": "none",
     "markers": [
@@ -479,6 +479,17 @@
     ]
   },
   "16.1": {
+    "todo": "Get Omurice",
+    "image": "none",
+    "link": "none",
+    "markers": [
+      {
+        "title": "Kichi Kichi Omurice",
+        "coordinate": {"latitude": 35.007351, "longitude": 135.770832}
+      }
+    ]
+  },
+  "16.2": {
     "todo": "Check in the the hotel",
     "image": "none",
     "link": "none",

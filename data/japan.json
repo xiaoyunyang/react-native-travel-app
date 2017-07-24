@@ -70,7 +70,7 @@
       "date": "Wed Aug 09 2017",
       "title":"Get a McDonald's Japan Menu Item 🍔",
       "subtitle":"Asaksa.",
-      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "tags": ["Xiaoyun"],
       "active": true,
     }, {
       "id": 4,
@@ -207,6 +207,13 @@
       "active": true,
     }, {
       "id": 16.1,
+      "date": "Sun Aug 13 2017",
+      "title": "Get Omurice",
+      "subtitle":"Kichi Kichi Omurice",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+    }, {
+      "id": 16.2,
       "title": "Explore Temples in Northern Higashiyama",
       "subtitle":"Nanzenji Temple, the Philosopher's Path",
       "tags": ["Xiaoyun", "Andrew", "Kyle"],

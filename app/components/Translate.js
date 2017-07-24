@@ -32,7 +32,7 @@ const FIELDS = [
     active: true,
   }
 ]
-class Translator extends Component {
+class Translate extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -49,13 +49,14 @@ class Translator extends Component {
       filters: responseJson.FILTERS,
       isLoading: false,
     })
+   this.props.setFields(responseJson.FIELDS);
   }
   componentDidMount() {
     const test = true
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
 
     if(test) {
-      let responseJson = require('../data/translate.json')
+      let responseJson = require('../../data/translate.json')
       this.setStates(responseJson)
     }
     else {
@@ -79,13 +80,16 @@ class Translator extends Component {
     }
     return (
       <ListFilter
-        fields={this.state.fields}
-        filters={this.state.filters}
+        fields={this.props.fields}
+        setFields={this.props.setFields}
+        filters={this.props.filters}
+        setFilters={this.props.setFilters}
         navigation={this.props.navigation}
         searchedFields={["en", "jp"]}
         showFilterBar={true}
         clickableList={false}
       />
+
     );
   }
 }
@@ -121,4 +125,4 @@ const styles = StyleSheet.create({
   },
 })
 
-module.exports = Translator;
+module.exports = Translate;

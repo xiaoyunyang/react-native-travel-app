@@ -37,7 +37,7 @@ class Details extends Component {
   componentDidMount() {
     let id = this.props.activity.id
 
-    let responseJson = require('../data/detail.json')
+    let responseJson = require('../../data/detail.json')
 
     let latitudes = responseJson[id].markers.map((marker) => {
       return marker.coordinate.latitude

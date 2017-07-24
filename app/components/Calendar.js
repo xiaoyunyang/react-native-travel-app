@@ -15,7 +15,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-var ActivityList = require('./ClickableList');
+var ClickableList = require('./ClickableList');
+var Carousel = require('react-native-carousel')
 
 let getTomorrow = today => {
   return new Date(today.getTime()+1000*60*60*24);
@@ -35,19 +36,6 @@ let getElapsedDates = (startDate, endDate) => {
 }
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
-
-
-const FIELDS = [
-  {
-    title:"Tokyoo",
-    subtitle: "Shinjuku",
-    tags: [ "eat"],
-    active: true,
-  }
-]
-
-var Carousel = require('react-native-carousel')
 
 class Calendar extends Component {
   static navigationOptions = {
@@ -64,53 +52,15 @@ class Calendar extends Component {
     var endDate = new Date(2017, 7, 18) //2017, August 18
 
     this.state = {
-      activities: ds.cloneWithRows(FIELDS),
-      fields: FIELDS,
-      json: 'stuff',
-      isLoading: true,
       startDate: startDate,
       endDate: endDate,
       travelDates: getElapsedDates(startDate, endDate),
-      carouselDate: startDate,
+      carouselDate: startDate.toDateString(),
     };
   }
-  componentDidMount() {
-    const test = true
-    const dataUrl = 'https://facebook.github.io/react-native/movies.json'
-    if(test) {
-      let responseJson = require('../data/japan.json')
-      this.setState({
-        json: responseJson,
-        activities: ds.cloneWithRows(responseJson.FIELDS),
-        fields: responseJson.FIELDS,
-        isLoading: false,
-      }, function() {
-        this.filterActivities(this.state.carouselDate.toDateString())
-      })
-    }
-    else {
-      return fetch(dataUrl)
-         .then((response) => response.json())
-         .then((responseJson) => {
-           this.setState({
-             json: responseJson,
-             activities: ds.cloneWithRows(responseJson.FIELDS),
-             fields: responseJson.FIELDS,
-             isLoading: false,
-           }, function() {
-             this.filterActivities(this.state.carouselDate.toDateString())
-           })
-         }).bind(this)
-         .catch((error) => {
-           console.error(error);
-         });
-     }
-  }
-  filterActivities(dateString) {
-    var as = this.state.fields.filter(d => d.date == dateString)
-    this.setState({
-      activities: this.state.activities.cloneWithRows(as),
-    })
+
+  filteredFields(dateString) {
+    return this.props.fields.filter(d => d.date == dateString)
   }
   handlePageChange(index) {
     //argument: index of the array mapped to the carousel pages
@@ -120,22 +70,24 @@ class Calendar extends Component {
     this.setState({
       carouselDate: selectedDate
     })
-    this.filterActivities(selectedDate);
+  }
+  gotoToday(today) {
+    //returns the index of the Carousel for the date
+    var selectedDate = this.state.travelDates.filter(d => today >= d)
+    if(selectedDate.length <= 0) return 0;
+    return selectedDate.length-1;
   }
   render() {
-    //var imgs = ['./static/img/OscarTheGrouch.png', './static/img/HappyEmoji.png', './static/img/CryingFace.jpeg']
-
-    //var travelDates = getElapsedDates(this.state.startDate, this.state.endDate)
-    //dates(startDate, endDate)
-    //var sources = imgs.map(d => require(d))
     var today = new Date()
     var tomorrow = getTomorrow(today)
+
     const {navigate} = this.props.navigation
 
     return (
       <View style={{flex: 1}}>
         <View style={{height: 170}}>
           <Carousel
+            initialPage={this.gotoToday(today)}
             hideIndicators={false}
             indicatorAtBottom={true}
             indicatorOffset={-10}
@@ -162,10 +114,16 @@ class Calendar extends Component {
         </View>
         <View style={[styles.container, {flex: 10}]}>
           <Text style={styles.textLarge}>Activities:</Text>
-          <ActivityList dataSource={this.state.activities} navigation={this.props.navigation}/>
+          <Text style={[styles.textNormal]}>
+            Display Data for:  {this.props.activeUsers.map(u =>
+               u.active ? '@'+ u.tag+ ' ' : '')}
+          </Text>
+          <ClickableList
+            dataSource={ds.cloneWithRows(this.filteredFields(this.state.carouselDate))}
+            navigation={this.props.navigation}
+            />
         </View>
       </View>
-
     );
   }
 }
