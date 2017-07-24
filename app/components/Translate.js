@@ -17,18 +17,6 @@ import {
 } from 'react-native';
 
 var ListFilter = require('./ListFilter');
-import { TabNavigator, StackNavigator } from 'react-navigation';
-import '../data/global.js';
-
-Array.prototype.contains = function(obj) {
-    var i = this.length;
-    while (i--) {
-        if (this[i] == obj) {
-            return true;
-        }
-    }
-    return false;
-}
 
 const FILTERS = [
   {
@@ -44,30 +32,31 @@ const FIELDS = [
     active: true,
   }
 ]
-class TodoList extends Component {
+class Translate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: this.props.filters,
-      activities: FIELDS,
       json: 'stuff',
+      fields: FIELDS,
+      filters: FILTERS,
       isLoading: true
     };
   }
   setStates(responseJson) {
-    let sortedActivities = responseJson.FIELDS.sort((a,b) => new Date(a.date) - new Date(b.date))
     this.setState({
       json: responseJson,
-      activities: sortedActivities,
+      fields: responseJson.FIELDS,
+      filters: responseJson.FILTERS,
       isLoading: false,
     })
+   this.props.setFields(responseJson.FIELDS);
   }
   componentDidMount() {
     const test = true
     const dataUrl = 'https://facebook.github.io/react-native/movies.json'
 
     if(test) {
-      let responseJson = require('../data/japan.json')
+      let responseJson = require('../../data/translate.json')
       this.setStates(responseJson)
     }
     else {
@@ -91,16 +80,49 @@ class TodoList extends Component {
     }
     return (
       <ListFilter
-        fields={this.state.activities}
-        filters={this.state.filters}
+        fields={this.props.fields}
+        setFields={this.props.setFields}
+        filters={this.props.filters}
+        setFilters={this.props.setFilters}
         navigation={this.props.navigation}
-        searchedFields={["title", "subtitle"]}
-        modFilters={this.props.modFilters}
+        searchedFields={["en", "jp"]}
         showFilterBar={true}
-        clickableList={true}
+        clickableList={false}
       />
+
     );
   }
 }
+const styles = StyleSheet.create({
+  containerCenter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e8edf3'
+  },
+  searchBox: {
+    backgroundColor: 'white',
+    paddingLeft: 8,
+    margin: 8
+  },
+  container: {
+    backgroundColor: '#e8edf3',
+    padding: 8
+  },
+  textNormal: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 12
+  },
+  textLarge: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 22
+  },
+  separator: {
+    flex: 1,
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: '#8E8E8E',
+  },
+})
 
-module.exports = TodoList;
+module.exports = Translate;

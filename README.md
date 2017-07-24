@@ -150,3 +150,4 @@ Before You start react-native run-ios in terminal, install the dependencies:
 * React Native App that reads and writes to a text file: [The Tutorial](http://moduscreate.com/react_native_custom_components_ios/)
 * [Realm](https://realm.io/docs/javascript/latest/index.html) - Persistent Data Layer for React Native.
 * Database for maps in its own vector format, MWM: [The Map Database](http://direct.mapswithme.com/direct/latest/)
+* Wrapping the app in Redux, this tutorial is very helpful:  [Jon Lebenshold's Medium Article](https://medium.com/@jonlebensold/getting-started-with-react-native-redux-2b01408c0053)

@@ -9,26 +9,14 @@ import {
   StatusBar,
   ListView,
   TouchableOpacity,
-  TouchableHighLight,
+  TouchableHighlight,
 } from 'react-native';
 
-import { TabNavigator, StackNavigator } from 'react-navigation';
-import '../data/global.js';
-const FILTERS = [
-  {
-    tag: "Filter",
-    "active": false
-  }
-]
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
 
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      filters: this.props.filters,
-      dataSource2: ds2.cloneWithRows(this.props.filters),
-    };
   }
   renderFilter(filter) {
     var filterBar = (
@@ -39,33 +27,29 @@ class Login extends Component {
     return filterBar;
   }
   handleFilterClick(filter) {
-    const newFilters = this.state.filters.map(f => {
+    const newFilters = this.props.activeUsers.map(f => {
       let copyF = {...f};
       if (copyF.tag === filter.tag) {
         copyF.active = !filter.active;
       }
       return copyF;
     });
-    this.setState({
-      filters: newFilters,
-      dataSource2: this.state.dataSource2.cloneWithRows(newFilters)
-    });
-    console.log(newFilters)
-    this.props.modFilters(newFilters)
-    this.props.handleFilterClick(filter)
+    this.props.setActiveUsers(newFilters)
   }
   render() {
     return (
       <View style={styles.containerCenter}>
-        <Text>Display Data For</Text>
-        <View style={{height: 40, backgroundColor: 'steelblue'}}>
-          <ListView
-            style={{flexDirection:'row', flex:1, flexWrap:'wrap'}}
-            horizontal={true}
-            removeClippedSubviews={false}
-            dataSource={this.state.dataSource2}
-            renderRow={this.renderFilter.bind(this)}
-          />
+        <View style={styles.containerCenter}>
+          <Text>Display Data For</Text>
+          <View style={{height: 40, backgroundColor: 'steelblue'}}>
+            <ListView
+              style={{flexDirection:'row', flex:1, flexWrap:'wrap'}}
+              horizontal={true}
+              removeClippedSubviews={false}
+              dataSource={ds2.cloneWithRows(this.props.activeUsers)}
+              renderRow={this.renderFilter.bind(this)}
+            />
+          </View>
         </View>
       </View>
     );
