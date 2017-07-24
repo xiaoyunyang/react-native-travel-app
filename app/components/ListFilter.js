@@ -62,6 +62,9 @@ class ListFilter extends Component {
       searchText: '',
     };
   }
+  componentDidMount(){
+    this.props.setFields(this.searchAndFilter(this.props.filters, ''))
+  }
   handleSearchText(event) {
     let searchText = event.nativeEvent.text;
     this.setState({

@@ -134,6 +134,10 @@ Before You start react-native run-ios in terminal, install the dependencies:
 	* See this [Tutorial](https://egghead.io/lessons/react-create-a-custom-map-marker-with-react-native-maps) from EggHead
 
 
+##### Data Persistence
+* [redux-persist](https://github.com/rt2zz/redux-persist)
+	* In terminal: 'npm install redux-persist --save' 	
+
 ##### File Access (Did not use)
 * [react-native-fetch-blob](https://github.com/wkh237/react-native-fetch-blob)
 * How to install: [read this](https://github.com/wkh237/react-native-fetch-blob/issues/84)
