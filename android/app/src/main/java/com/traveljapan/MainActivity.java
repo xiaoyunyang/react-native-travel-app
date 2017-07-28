@@ -1,7 +1,6 @@
-package com.travelappjapan;
+package com.traveljapan;
 
 import com.facebook.react.ReactActivity;
-import io.realm.react.RealmReactPackage;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "TravelAppJapan";
+        return "TravelJapan";
     }
 }

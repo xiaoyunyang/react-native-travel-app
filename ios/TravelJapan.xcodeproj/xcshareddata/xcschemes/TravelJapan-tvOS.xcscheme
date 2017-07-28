@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "TravelAppJapan-tvOS.app"
-               BlueprintName = "TravelAppJapan-tvOS"
-               ReferencedContainer = "container:TravelAppJapan.xcodeproj">
+               BuildableName = "TravelJapan-tvOS.app"
+               BlueprintName = "TravelJapan-tvOS"
+               ReferencedContainer = "container:TravelJapan.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "TravelAppJapan-tvOSTests.xctest"
-               BlueprintName = "TravelAppJapan-tvOSTests"
-               ReferencedContainer = "container:TravelAppJapan.xcodeproj">
+               BuildableName = "TravelJapan-tvOSTests.xctest"
+               BlueprintName = "TravelJapan-tvOSTests"
+               ReferencedContainer = "container:TravelJapan.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "TravelAppJapan-tvOSTests.xctest"
-               BlueprintName = "TravelAppJapan-tvOSTests"
-               ReferencedContainer = "container:TravelAppJapan.xcodeproj">
+               BuildableName = "TravelJapan-tvOSTests.xctest"
+               BlueprintName = "TravelJapan-tvOSTests"
+               ReferencedContainer = "container:TravelJapan.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "TravelAppJapan-tvOS.app"
-            BlueprintName = "TravelAppJapan-tvOS"
-            ReferencedContainer = "container:TravelAppJapan.xcodeproj">
+            BuildableName = "TravelJapan-tvOS.app"
+            BlueprintName = "TravelJapan-tvOS"
+            ReferencedContainer = "container:TravelJapan.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "TravelAppJapan-tvOS.app"
-            BlueprintName = "TravelAppJapan-tvOS"
-            ReferencedContainer = "container:TravelAppJapan.xcodeproj">
+            BuildableName = "TravelJapan-tvOS.app"
+            BlueprintName = "TravelJapan-tvOS"
+            ReferencedContainer = "container:TravelJapan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "TravelAppJapan-tvOS.app"
-            BlueprintName = "TravelAppJapan-tvOS"
-            ReferencedContainer = "container:TravelAppJapan.xcodeproj">
+            BuildableName = "TravelJapan-tvOS.app"
+            BlueprintName = "TravelJapan-tvOS"
+            ReferencedContainer = "container:TravelJapan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
