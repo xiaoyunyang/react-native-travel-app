@@ -1,8 +1,9 @@
 import createReducer from '../lib/createReducer'
 import * as types from '../actions/types'
 
-var index = {};
-index.USERS = [
+let init = {};
+
+init.USERS = [
   {
     "tag": "Xiaoyun", "active": true
   }, {
@@ -11,7 +12,7 @@ index.USERS = [
     "tag": "Kyle", "active": true
   }
 ];
-index.TRANSLATE = [
+init.TRANSLATE = [
   {
     "tag": "restaurant", "active": true
   }, {
@@ -20,7 +21,7 @@ index.TRANSLATE = [
     "tag": "common", "active": true
   }
 ];
-index.FIELDS = [
+init.FIELDS = [
   {
     "id": 0,
     "date": "Mon Aug 07 2017",
@@ -38,18 +39,18 @@ export const todoCount = createReducer(0, {
   }
 });
 
-export const activeUsers = createReducer(index.USERS, {
+export const activeUsers = createReducer(init.USERS, {
   [types.SET_ACTIVE_USERS](state, action) {
     return action.state;
   }
 });
 
-export const userFilteredTodos = createReducer(index.FIELDS, {
+export const userFilteredTodos = createReducer(init.FIELDS, {
   [types.SET_USER_FILTERED_TODOS](state, action) {
     return action.state;
   }
 });
-export const activeTranslate = createReducer(index.TRANSLATE, {
+export const activeTranslate = createReducer(init.TRANSLATE, {
   [types.SET_ACTIVE_TRANSLATE](state, action) {
     return action.state;
   }

@@ -27,6 +27,7 @@ let areDatesSame = (d1, d2) => {
 }
 let getElapsedDates = (startDate, endDate) => {
   //TODO: Need to add logic here if startDate is greater than endDate, then return. Something's wrong
+  //TODO: convert this ugly imperative code to map then a reduce
   var start = startDate
   var arr = []
   while(!areDatesSame(start, endDate)) {
