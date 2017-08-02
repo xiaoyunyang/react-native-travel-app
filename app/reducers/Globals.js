@@ -2,11 +2,11 @@ module.exports = {
     init: {
       USERS: [
       {
-        "tag": "Xiaoyun", "active": true
+        "tag": "", "active": true
       }, {
-        "tag": "Andrew", "active": true
+        "tag": "", "active": true
       }, {
-        "tag": "Kyle", "active": true
+        "tag": "", "active": true
       }
     ],
     TRANSLATE: [

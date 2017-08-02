@@ -131,7 +131,7 @@ class ListFilter extends Component {
           />
         }
         <View style={{flex: 3}}>
-          <View style={styles.searchBox}>
+          <View style={styles.textBox}>
             <TextInput
               style={{height: 40 , margin: 0, color:'#22264b'}}
               placeholder="Search!"
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#e8edf3'
   },
-  searchBox: {
+  textBox: {
     backgroundColor: 'white',
     paddingLeft: 8,
     margin: 8

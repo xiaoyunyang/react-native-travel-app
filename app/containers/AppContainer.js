@@ -38,7 +38,7 @@ const HomeScreen = ({ navigation, screenProps }) => (
     <HeroText>Enter Info to Customize Your Trip:</HeroText>
     <Button
       onPress={() => navigation.navigate('LoginSetting')}
-      title="Enter Traveler Names"
+      title="Enter Travelers"
       />
     <FilterBar
       filters={screenProps.activeUsers}
@@ -49,7 +49,7 @@ const HomeScreen = ({ navigation, screenProps }) => (
       />
     <Button
      onPress={() => navigation.navigate('LoginSetting')}
-     title="Select Travel Dates"
+     title="Enter Travel Dates"
      />
    <HeroText>Manage Your Travel Todo-list:</HeroText>
    <Button
@@ -69,16 +69,10 @@ const HomeScreen = ({ navigation, screenProps }) => (
 );
 
 const LoginScreen = ({ navigation, screenProps}) => (
-  <ScrollView>
-    <FilterBar
-      filters={screenProps.activeUsers}
-      setFilters={screenProps.setActiveUsers}
-      fields={screenProps.userFilteredTodos}
-      setFields={screenProps.setUserFilteredTodos}
-      setUserFilteredTodos={screenProps.setUserFilteredTodos}
+  <Login
+    navigation={navigation}
+    screenProps={screenProps}
     />
-    <Button onPress={() => navigation.goBack(null)} title="Go back" />
-  </ScrollView>
 );
 
 const DetailsScreen = ({ navigation }) => (
@@ -315,6 +309,7 @@ export default connect((state) => {
   //the state in the argument is the global state of the application
   return {
     todoCount: state.todoCount,
+    users: state.users,
     activeUsers: state.activeUsers,
     userFilteredTodos: state.userFilteredTodos,
     activeTranslate: state.activeTranslate,

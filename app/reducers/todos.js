@@ -11,8 +11,16 @@ export const todoCount = createReducer(0, {
   }
 });
 
+export const users = createReducer(init.USERS, {
+  [types.SET_USERS](state, action) {
+    return action.state;
+  }
+});
 export const activeUsers = createReducer(init.USERS, {
   [types.SET_ACTIVE_USERS](state, action) {
+    return action.state;
+  },
+  [types.SET_USERS](state, action) {
     return action.state;
   }
 });
