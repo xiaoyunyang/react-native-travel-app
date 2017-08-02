@@ -30,7 +30,6 @@ class SimpleList extends Component {
          removeClippedSubviews={false}
          dataSource={this.props.dataSource}
          renderRow={this.renderField.bind(this)}
-         renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
        />
      );
    }

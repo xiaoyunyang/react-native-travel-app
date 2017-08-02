@@ -1,53 +1,145 @@
 {
   "FILTERS": [
     {
-      "tag": "restaurant", "active": true
+      "tag": "dining", "active": true
     }, {
       "tag": "store", "active": true
     }, {
-      "tag": "common", "active": true
+      "tag": "basic", "active": true
+    }, {
+      "tag": "food", "active": true
     }
   ],
   "FIELDS": [
     {
-      "jp": "Chotto matte kudasai",
-      "en": "Please wait a second",
-      "tags": ["restaurant"],
+      "jp": "konnichiwa",
+      "en": "hello",
+      "tags": ["dining", "store", "basic"],
       "active": true,
     }, {
-      "jp": "nan mei sama desu ka",
-      "en": "how many in your party?",
-      "tags": ["restaurant"],
+      "jp": "Ohayou gozaimasu",
+      "en": "good morning",
+      "tags": ["basic"],
       "active": true,
     }, {
-      "jp": "san nin desu",
-      "en": "three people",
-      "tags": ["restaurant"],
+      "jp": "konnbanwa",
+      "en": "good evening",
+      "tags": ["basic"],
+      "active": true,
+    }, {
+      "jp": "sumimasen",
+      "en": "Excuse me",
+      "tags": ["basic"],
+      "active": true,
+    }, {
+      "jp": "arigato (gozaimasu)",
+      "en": "thank you (very much)",
+      "tags": ["dining", "store", "basic"],
+      "active": true,
+    }, {
+      "jp": "Sayonara",
+      "en": "goodbye",
+      "tags": ["dining", "store", "basic"],
+      "active": true,
+    }, {
+      "jp": "Chekku in wo onegai shimasu",
+      "en": "I would like to check in, please.",
+      "tags": ["dining", "store", "basic"],
+      "active": true,
+    }, {
+      "jp": "soshite",
+      "en": "and",
+      "tags": ["dining", "store", "basic"],
+      "active": true,
+    }, {
+      "jp": "bezuni",
+      "en": "no problem",
+      "tags": ["dining", "store", "basic"],
+      "active": true,
+    }, {
+      "jp": "bezuni daijabu desu",
+      "en": "that’s alright doesn’t matter",
+      "tags": ["dining", "store", "basic"],
+      "active": true,
+    }, {
+      "jp": "Youkoso! Nan mei sama desu ka",
+      "en": "Welcome! How many in your party?",
+      "tags": ["dining"],
+      "active": true,
+    }, {
+      "jp": "futari (san) nin desu",
+      "en": "Table for two (three) people",
+      "tags": ["dining"],
       "active": true,
     }, {
       "jp": "onegai shimasu",
       "en": "Please",
-      "tags": ["restaurant", "common"],
+      "tags": ["dining", "basic"],
       "active": true,
     }, {
-      "jp": "… wo hitotsu/futatsu/mittsu/yottsu/itsutsu onegai shimasu",
-      "en": "Can I have one/two/three/four/five of … please?",
-      "tags": ["restaurant", "store"],
+      "jp": "Nani wo tabe/nomi tai desu ka?",
+      "en": "What do you want to eat/drink?",
+      "tags": ["dining"],
+      "active": true,
+    }, {
+      "jp": "Nani wo kai masu ka?",
+      "en": "What do you want to buy?",
+      "tags": ["store"],
+      "active": true,
+    }, {
+      "jp": "Chotto matte kudasai",
+      "en": "Please wait a second",
+      "tags": ["dining", "basic"],
+      "active": true,
+    }, {
+      "jp": "mada desu",
+      "en": "not yet (when asked if you are ready to order yet)",
+      "tags": ["dining", "basic"],
+      "active": true,
+    }, {
+      "jp": "___ wo hitotsu/futatsu/mittsu/yottsu/itsutsu onegai shimasu",
+      "en": "Can I have one/two/three/four/five of ___ please?",
+      "tags": ["dining", "store"],
+      "active": true,
+    }, {
+      "jp": "osusume wa nan desku ka?",
+      "en": "What do you recommend?",
+      "tags": ["dining", "basic"],
       "active": true,
     }, {
       "jp": "(point and say) Kore onegai shimasu",
-      "en": "I will have this",
-      "tags": ["restaurant", "store"],
+      "en": "I will have this, please.",
+      "tags": ["dining", "store"],
+      "active": true,
+    }, {
+      "jp": "(point and say) Kono ryouri wo kudasai",
+      "en": "I will have this dish, please.",
+      "tags": ["dining"],
+      "active": true,
+    }, {
+      "jp": "Chotto kangae sasete kudasai",
+      "en": "Let me think about it",
+      "tags": ["dining", "basic"],
+      "active": true,
+    }, {
+      "jp": "Kanpai!",
+      "en": "cheers!",
+      "tags": ["dining"],
+      "active": true,
+    }, {
+      "jp": "oishii",
+      "en": "delicious",
+      "tags": ["dining", "basic"],
       "active": true,
     }, {
       "jp": "itadakimasu",
       "en": "say this before you eat",
-      "tags": ["restaurant"],
+      "tags": ["dining"],
       "active": true,
     }, {
       "jp": "ohaiyou (gozaimasu)",
       "en": "good morning (polite)",
-      "tags": ["common"],
+      "tags": ["basic"],
       "active": true,
     }, {
       "jp": "koko desu",
@@ -58,6 +150,141 @@
       "jp": "tekimashita ",
       "en": "I'm done",
       "tags": ["common"],
+      "active": true,
+    }, {
+      "jp": "O-kanjou wo onegai shimasu",
+      "en": "The check please",
+      "tags": ["dining"],
+      "active": true,
+    }, {
+      "jp": "Kurejitto kaado wa tsukae masu ka?",
+      "en": "Do you accept credit cards?",
+      "tags": ["dining", "store"],
+      "active": true,
+    }, {
+      "jp": "Ryoushuu-sho kudasai",
+      "en": "Please give me receipt",
+      "tags": ["dining", "store"],
+      "active": true,
+    }, {
+      "jp": "Kore wa ikura desu ka?",
+      "en": "How much is this?",
+      "tags": ["store"],
+      "active": true,
+    }, {
+      "jp": "Hitotsu ikura desu ka?",
+      "en": "How much is one?",
+      "tags": ["dining", "store"],
+      "active": true,
+    }, {
+      "jp": "Kore wa muryou desu ka?",
+      "en": "Is this free?",
+      "tags": ["store"],
+      "active": true,
+    }, {
+      "jp": "Nan desuka kore wa?",
+      "en": "What is this?",
+      "tags": ["dining", "store"],
+      "active": true,
+    }, {
+      "jp": "Nanda sore wa?",
+      "en": "What is that?",
+      "tags": ["dining", "store"],
+      "active": true,
+    }, {
+      "jp": "Toire wa doko desu ka?",
+      "en": "Where is the bathroom?",
+      "tags": ["dining", "basic"],
+      "active": true,
+    }, {
+      "jp": "Tokyo Eki wa doko desuka?",
+      "en": "Where is the train station?",
+      "tags": ["basic"],
+      "active": true,
+    }, {
+      "jp": "konbini wa doko desuka?",
+      "en": "Where is the convenience store?",
+      "tags": ["store"],
+      "active": true,
+    }, {
+      "jp": "___ e iki tai no desuga.",
+      "en": "I'd like to go to ___.",
+      "tags": ["store"],
+      "active": true,
+    }, {
+      "jp": "___ e wa dou iku desu ka?",
+      "en": "How do I get to ___?",
+      "tags": ["store"],
+      "active": true,
+    }, {
+      "jp": "miso shiru 味噌汁",
+      "en": "miso soup",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "Okonomiyaki お好み焼き",
+      "en": "Japanese pancake",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "tenpura 天ぷら",
+      "en": "tempura",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "donburi 丼",
+      "en": "rice bowl",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "Una-don (or Unagi-don) 鰻(うなぎ)(ウナギ) 丼",
+      "en": "eel bowl",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "gohan ご飯",
+      "en": "rice",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "tori-niku 鶏肉",
+      "en": "chicken",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "gyuu-niku 牛肉",
+      "en": "pork",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "buta-niku 豚肉",
+      "en": "pork",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "kare-raise カレーライス",
+      "en": "curry and rice",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "tofu 豆腐",
+      "en": "tofu",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "ika イカ",
+      "en": "squid",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "tako たこ",
+      "en": "octopus",
+      "tags": ["food"],
+      "active": true,
+    }, {
+      "jp": "tamago 卵焼き or 玉子焼き",
+      "en": "Japanese omelet",
+      "tags": ["food"],
       "active": true,
     }
   ]

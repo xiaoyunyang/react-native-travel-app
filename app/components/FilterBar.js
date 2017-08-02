@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import {
   View,
+  Dimensions,
   Text,
   StyleSheet,
   ScrollView,
@@ -28,9 +29,26 @@ class FilterBar extends Component {
     super(props);
   }
   renderFilter(filter) {
+    const windowWidth = Dimensions.get('window').width;
+    let margin = 3
+    let filterBarWidth = 0.95*windowWidth / this.props.filters.length - margin * this.props.filters.length;
+
     var filterBar = (
         <TouchableOpacity onPress={this.handleFilterClick.bind(this, filter)}>
-            <Text style={{fontSize: 24, backgroundColor:(filter.active)?'blue':'grey', margin:5}}>{filter.tag}</Text>
+            <Text style={
+                {
+                  width: filterBarWidth,
+                  fontSize: 18,
+                  textAlign: 'center',
+                  backgroundColor:(filter.active)?'#434c5b':'#eceff5',
+                  color:(filter.active)?'white':'slategray',
+                  borderColor: (filter.active)?'#b56969':'slategray',
+                  borderWidth: 2,
+                  margin: margin,
+                  padding: 5,
+                }}>
+                  {filter.tag}
+            </Text>
       </TouchableOpacity>
     );
     return filterBar;
@@ -78,7 +96,7 @@ class FilterBar extends Component {
       <View style={styles.containerCenter}>
         <View style={styles.containerCenter}>
           <Text>Display Data For</Text>
-          <View style={{height: 40, backgroundColor: 'steelblue'}}>
+          <View style={{height: 40}}>
             <ListView
               style={{flexDirection:'row', flex:1, flexWrap:'wrap'}}
               horizontal={true}
@@ -93,11 +111,6 @@ class FilterBar extends Component {
   }
 }
 const styles = StyleSheet.create({
-  marker: {
-    backgroundColor: "#550bbc",
-    padding: 5,
-    borderRadius: 5,
-  },
   text: {
     color: "#FFF",
     fontWeight: "bold"
@@ -110,7 +123,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#e8edf3',
-    padding: 8,
+    padding: 5,
   },
   textLarge: {
     color: '#22264b',

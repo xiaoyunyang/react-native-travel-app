@@ -17,7 +17,7 @@
     ]
   },
   "1": {
-    "todo": "Take the Keiyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
+    "todo": "#1 Get a PASMO Card (metro card/train card/cash card, can be used in Tokyo, Kyoto, and Osaka) #2 Take the Keikyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
     "image": "access-tokyo",
     "link": null,
     "markers": [
@@ -56,6 +56,9 @@
       }, {
         "title": "7-Eleven",
         "coordinate": {"latitude": 35.668474, "longitude": 139.759963}
+      }, {
+        "title": "Nakagin Capsule Tower",
+        "coordinate": {"latitude": 35.665636, "longitude": 139.763476}
       }
     ]
   },
@@ -83,19 +86,22 @@
     ]
   },
   "1.3": {
-    "todo": "Walk to Shimbashi Station from hotel, then take the Yamanote Line (green) to Tokyo Station to buy a Shinkansen ticket to go to Kyoto. The regular one way fare from Tokyo to Kyoto is 13,080 yen by non-reserved seat on any train, around 13,500 yen by reserved seat on Hikari or Kodama trains and around 14,000 yen by reserved seat on a Nozomi train. Buy a train ticket that leaves no earlier than 16:00.",
+    "todo": "Walk to Shimbashi Station from hotel, stop by the Nakagin Capsule Tower and the Miyazaki/Ghibli-Clock to take a picture, then take the Yamanote Line (green) to Tokyo Station to buy a Shinkansen ticket to go to Kyoto. The regular one way fare from Tokyo to Kyoto is 13,080 yen by non-reserved seat on any train, around 13,500 yen by reserved seat on Hikari or Kodama trains and around 14,000 yen by reserved seat on a Nozomi train. Buy a train ticket that leaves no earlier than 16:00.",
     "image": null,
     "link": null,
     "markers": [
       {
         "title": "Tokyo Ginza Bay Hotel",
         "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      },{
+      }, {
         "title": "Shimbashi Station",
         "coordinate": {"latitude": 35.666193, "longitude": 139.758332}
-      },{
-        "title": "Tokyo Station",
-        "coordinate": {"latitude": 35.681168, "longitude": 139.767049}
+      }, {
+        "title": "Nakagin Capsule Tower",
+        "coordinate": {"latitude": 35.665636, "longitude": 139.763476}
+      }, {
+        "title": "Miyazaki-Clock",
+        "coordinate": {"latitude": 35.663355, "longitude": 139.760004}
       }
     ]
   },
@@ -144,7 +150,7 @@
   },
   "2": {
     "todo": "Visit Tsukiji Fish Market in the morning (Tuna auction starts at 3AM. Outer market visiting starts 5AM. Inner wholesale market opens to visitors at 10 AM). You can get a sushi breakfast there.",
-    "image": null,
+    "image": "cheatsheet-sushi",
     "link": "http://www.japan-guide.com/e/e3021.html",
     "markers": [
       {
@@ -271,7 +277,7 @@
     ]
   },
   "2.7": {
-    "todo": "Don Quijote Akihabara has discount household stuff. Animate Akihabara has Otaku Stuff.",
+    "todo": "Don Quijote Akihabara has discount household stuff. Animate Akihabara has Otaku Stuff. Buy wind chime.",
     "image": "10-things-to-do-when-in-akihabara",
     "link": null,
     "markers": [
@@ -337,7 +343,7 @@
     ]
   },
   "3.1": {
-    "todo": "Onsen (natural hotspring) with a Edo period theme park.",
+    "todo": "Onsen (natural hotspring) with a Edo period theme park",
     "image": null,
     "link": null,
     "markers": [
@@ -347,11 +353,14 @@
       }, {
         "title": "Telecom Center Station",
         "coordinate": {"latitude": 35.617450, "longitude": 139.779410}
+      }, {
+        "title": "Hello de Miki",
+        "coordinate": {"latitude": 35.624878, "longitude": 139.774393}
       }
     ]
   },
   "3.2": {
-    "todo": "From the Kiyosumi-shirakawa Station (near the museum), take the Hanzomon Line (purple) to Oshiage Station.",
+    "todo": "To go to Tokyo Skytree from the Edo museum, from the Kiyosumi-shirakawa Station (near the museum), take the Hanzomon Line (purple) to Oshiage Station.",
     "image": null,
     "link": null,
     "markers": [
@@ -368,7 +377,24 @@
     ]
   },
   "3.3": {
-    "todo": "Theme Restaurants: Alice in Fantasy Book, Robot Cafe",
+    "todo": "To go the Roppongi Hills from Tokyo Skytree, take the Asakusa Line (pink) to the Higashi-ginza Station, then transfer to the Hibiya Line (gray) to go to the Roppongi Station.",
+    "image": null,
+    "link": null,
+    "markers": [
+      {
+        "title": "Roppongi Hills",
+        "coordinate": {"latitude": 35.660464, "longitude": 139.729249}
+      }, {
+        "title": "Mori Garden",
+        "coordinate": {"latitude": 35.660323, "longitude": 139.730494}
+      }, {
+        "title": "West Aoyama Garden",
+        "coordinate": {"latitude": 35.666869, "longitude": 139.724679}
+      }
+    ]
+  },
+  "3.4": {
+    "todo": "Theme Restaurants: Alice in Fantasy Book, Robot Cafe. Godzilla head (Maruhan) by the Shinjuku Toho Building.",
     "image": "10-things-to-do-when-in-shinjuku",
     "link": null,
     "markers": [
@@ -381,10 +407,13 @@
       }, {
         "title": "Cat Cafe Calico",
         "coordinate": {"latitude": 35.693850, "longitude": 139.704064}
+      }, {
+        "title": "Godzilla Head (Maruhan)",
+        "coordinate": {"latitude": 35.695560, "longitude": 139.701905}
       },
     ]
   },
-  "3.4": {
+  "3.5": {
     "todo": "Get the Famous Cheese Tart from Shinjuku Station's Pablo Shop (11AM - 10PM). From Shinjuku Station, the fastest way to get back to the hotel is to take the Oedo line to Tsukijishijo Station.",
     "image": "10-things-to-do-when-in-shinjuku",
     "link": null,
@@ -478,7 +507,7 @@
     ]
   },
   "5.1": {
-    "todo": "Get Ekiben at Train Station.",
+    "todo": "Get Ekiben at Train Station. Ekiben (駅弁) are Japanese railway boxed meals.",
     "image": null,
     "link": null,
     "markers": [
@@ -614,6 +643,9 @@
       {
         "title": "Kichi Kichi Omurice",
         "coordinate": {"latitude": 35.007351, "longitude": 135.770832}
+      }, {
+        "title": "Pontocho Alley",
+        "coordinate": {"latitude": 35.005083, "longitude": 135.771089}
       }
     ]
   },
@@ -652,7 +684,7 @@
         "title": "Shichijo Station",
         "coordinate": {"latitude": 34.989411, "longitude": 135.767664}
       }, {
-        "title": "Tokyo Station",
+        "title": "Kyoto Station",
         "coordinate": {"latitude": 34.985846, "longitude": 135.758773}
       }, {
         "title": "Saga-Arashiyama Station",
@@ -660,6 +692,12 @@
       }, {
         "title": "Arashiyama Bamboo Grove",
         "coordinate": {"latitude": 35.017045, "longitude": 135.671879}
+      }, {
+        "title": "Gio-ji Temple",
+        "coordinate": {"latitude": 35.023477, "longitude": 135.666743}
+      }, {
+        "title": "Monkey Park Iwatayama",
+        "coordinate": {"latitude": 35.011252, "longitude": 135.676690}
       }
     ]
   },
@@ -717,6 +755,9 @@
       {
         "title": "Fudou-in Temple Lodging",
         "coordinate": {"latitude": 34.212691, "longitude": 135.587463}
+      } , {
+        "title": "Daimon Gate",
+        "coordinate": {"latitude": 34.213171, "longitude": 135.572868}
       }
     ]
   },

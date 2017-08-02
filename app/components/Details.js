@@ -97,6 +97,8 @@ class Details extends Component {
         return require('../../data/img/access-akihabara.png')
       } else if(imgName == '10-things-to-do-when-in-akihabara') {
         return require('../../data/img/10-things-to-do-when-in-akihabara.png')
+      } else if(imgName == 'cheatsheet-sushi') {
+        return require('../../data/img/cheatsheet-sushi.png')
       } else if(imgName == '10-things-to-do-when-in-kyoto') {
         return require('../../data/img/10-things-to-do-when-in-kyoto.png')
       } else if(imgName == 'access-koyasan') {
@@ -124,6 +126,9 @@ class Details extends Component {
     } else if(imgName=="access-koyasan") {
       img.width = windowWidth
       img.height = windowWidth*0.9
+    } else if(imgName=="cheatsheet-sushi") {
+      img.width = windowWidth*0.8
+      img.height = windowWidth*0.95
     }
     return <Image
       style={{flex:1, height: img.height, width: img.width, alignSelf: 'center'}}

@@ -130,7 +130,7 @@ class ListFilter extends Component {
             setFields={this.props.setFields}
           />
         }
-        <View style={{flex: 2}}>
+        <View style={{flex: 3}}>
           <View style={styles.searchBox}>
             <TextInput
               style={{height: 40 , margin: 0, color:'#22264b'}}

@@ -35,30 +35,36 @@ StatusBar.setBarStyle('light-content', true)
 
 const HomeScreen = ({ navigation, screenProps }) => (
   <ScrollView>
-    <HeroText>App Setting</HeroText>
+    <HeroText>Enter Info to Customize Your Trip:</HeroText>
     <Button
       onPress={() => navigation.navigate('LoginSetting')}
-      title="Login as"
-    />
+      title="Enter Traveler Names"
+      />
     <FilterBar
       filters={screenProps.activeUsers}
       setFilters={screenProps.setActiveUsers}
       fields={screenProps.userFilteredTodos}
       setFields={screenProps.setUserFilteredTodos}
       setUserFilteredTodos={screenProps.setUserFilteredTodos}
-   />
-   <Button
-     onPress={() => navigation.navigate('TranslateTab')}
-     title="Go to Translate"
-   />
+      />
+    <Button
+     onPress={() => navigation.navigate('LoginSetting')}
+     title="Select Travel Dates"
+     />
+   <HeroText>Manage Your Travel Todo-list:</HeroText>
    <Button
       onPress={() => navigation.navigate('TodoListTab')}
-      title="Go to Todo-list"
-    />
+      title="See All Your Todos"
+      />
     <Button
       onPress={() => navigation.navigate('CalendarTab')}
-      title="Go to Calendar View"
-    />
+      title="See Your Todos by Date"
+      />
+    <HeroText>Resources:</HeroText>
+    <Button
+      onPress={() => navigation.navigate('TranslateTab')}
+      title="Useful Japanese Phrases"
+      />
   </ScrollView>
 );
 
