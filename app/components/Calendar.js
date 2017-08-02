@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import {
   StyleSheet,
   Text,
+  Dimensions,
   View,
   ListView,
   TouchableHighlight,
@@ -26,6 +27,7 @@ let areDatesSame = (d1, d2) => {
 }
 let getElapsedDates = (startDate, endDate) => {
   //TODO: Need to add logic here if startDate is greater than endDate, then return. Something's wrong
+  //TODO: convert this ugly imperative code to map then a reduce
   var start = startDate
   var arr = []
   while(!areDatesSame(start, endDate)) {
@@ -83,6 +85,9 @@ class Calendar extends Component {
 
     const {navigate} = this.props.navigation
 
+    let windowWidth = Dimensions.get('window').width;
+    let calWidth = windowWidth*0.7;
+
     return (
       <View style={{flex: 1}}>
         <View style={{height: 170}}>
@@ -98,8 +103,8 @@ class Calendar extends Component {
             {
               this.state.travelDates.map( (d, i) => {
                 return (
-                  <View key={i} style={[styles.containerCenter, {width: 375}]}>
-                      <View style={{alignItems: 'center', width: 200, backgroundColor: "#e6cf8b", marginTop: -25}}>
+                  <View key={i} style={[styles.containerCenter, {width: windowWidth}]}>
+                      <View style={{alignItems: 'center', width: calWidth, backgroundColor: "#e6cf8b", marginTop: -25}}>
                         <Image source={require('../assets/calendar.png')}
                            style={{width: 50, height: 50, marginTop: 10}} />
                          <Text style={styles.textLarge}>{d.toDateString()}</Text>

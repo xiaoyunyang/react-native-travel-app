@@ -5,6 +5,12 @@ export function addTodo() {
     type: types.ADD_TODO,
   }
 }
+export function setUsers(newUsers) {
+  return {
+    type: types.SET_USERS,
+    state: newUsers
+  }
+}
 export function setActiveUsers(newActiveUsers) {
   return {
     type: types.SET_ACTIVE_USERS,

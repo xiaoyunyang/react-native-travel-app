@@ -4,10 +4,12 @@ import {
   View,
   Text,
   StyleSheet,
+  Image,
   Button,
   ScrollView,
   StatusBar,
   ListView,
+  Dimensions,
 } from 'react-native';
 
 import { TabNavigator, StackNavigator } from 'react-navigation';
@@ -28,9 +30,9 @@ class Details extends Component {
         latitudeDelta: 0.0411,
         longitudeDelta: 0.0411,
       },
-      todo: "none",
-      image: "none",
-      link: "none"
+      todo: null,
+      image: null,
+      link: null
     }
     this.handlePress = this.handlePress.bind(this);
   }
@@ -45,11 +47,11 @@ class Details extends Component {
     let longitudes = responseJson[id].markers.map((marker) => {
       return marker.coordinate.longitude
     })
-    let margin = 0.003;
     let maxLat = Math.max.apply(null, latitudes)
     let minLat = Math.min.apply(null, latitudes)
     let maxLon = Math.max.apply(null, longitudes)
     let minLon = Math.min.apply(null, longitudes)
+    let margin = Math.max.apply(null, [(maxLat - minLat), (maxLon - minLon)])*0.5;
     let centerLat = (maxLat + minLat) / 2
     let centerLon = (maxLon + minLon) / 2
     let latDelta = maxLat - minLat + margin;
@@ -80,15 +82,67 @@ class Details extends Component {
       ]
     })*/
   }
+  generateImg(imgName) {
+    //let img = getImg(imgName)
+    if(imgName == null) return
+
+    const getImg = (imgName) => {
+      if(imgName == '10-things-to-do-when-in-shibuya') {
+        return require('../../data/img/10-things-to-do-when-in-shibuya.png')
+      } else if(imgName == '10-things-to-do-when-in-shinjuku') {
+        return require('../../data/img/10-things-to-do-when-in-shinjuku.png')
+      } else if(imgName == 'access-tokyo') {
+        return require('../../data/img/access-tokyo.png')
+      } else if(imgName == 'access-akihabara') {
+        return require('../../data/img/access-akihabara.png')
+      } else if(imgName == '10-things-to-do-when-in-akihabara') {
+        return require('../../data/img/10-things-to-do-when-in-akihabara.png')
+      } else if(imgName == 'cheatsheet-sushi') {
+        return require('../../data/img/cheatsheet-sushi.png')
+      } else if(imgName == '10-things-to-do-when-in-kyoto') {
+        return require('../../data/img/10-things-to-do-when-in-kyoto.png')
+      } else if(imgName == 'access-koyasan') {
+        return require('../../data/img/access-koyasan.png')
+      } else {
+        return null
+      }
+    }
+    let img = {}
+    img.data = getImg(imgName)
+    if(img.data == null) return
+
+    //windowWidth should be 375 on iPhone 6
+    let windowWidth = Dimensions.get('window').width
+
+    img.width = windowWidth*0.9
+    img.height = img.width
+
+    if(imgName=="access-tokyo") {
+      img.width = windowWidth*0.96
+      img.height = windowWidth*0.6666
+    } else if(imgName=="access-akihabara") {
+      img.width = windowWidth*0.96
+      img.height = windowWidth*0.3733
+    } else if(imgName=="access-koyasan") {
+      img.width = windowWidth
+      img.height = windowWidth*0.9
+    } else if(imgName=="cheatsheet-sushi") {
+      img.width = windowWidth*0.8
+      img.height = windowWidth*0.95
+    }
+    return <Image
+      style={{flex:1, height: img.height, width: img.width, alignSelf: 'center'}}
+      source={img.data}
+      />
+  }
   render() {
     return (
-      <View>
+      <ScrollView>
         <View style={styles.containerCenter}>
           <Text style={[styles.textSmall, {color: 'steelblue'}]}>@{this.props.activity.tags.map((word) => word).join(' @')}</Text>
           <Text style={styles.textLarge}>{this.props.activity.title}</Text>
           <Text style={styles.textNormal}>{this.props.activity.subtitle}</Text>
         </View>
-
         <MapView
           style={styles.mapContainer}
           initialRegion={this.state.initialRegion}
@@ -108,8 +162,9 @@ class Details extends Component {
         <View style={styles.container}>
           <Text style={styles.textLarge}>What To Do:</Text>
           <Text style={styles.textNormal}>{this.state.todo}</Text>
+          {this.state.image && this.generateImg(this.state.image)}
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }

@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -18,6 +17,10 @@ import {
 
 var ListFilter = require('./ListFilter');
 
+/* TODO
+ * Add-on: click to access audio. Use this for source of audio:
+ * http://japanese-phrases.sakura.ne.jp/
+ */
 const FILTERS = [
   {
     tag: "Filter",
