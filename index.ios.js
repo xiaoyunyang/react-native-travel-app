@@ -46,4 +46,4 @@ const App = () => (
   </Provider>
 )
 
-AppRegistry.registerComponent('TravelAppJapan', () => App);
+AppRegistry.registerComponent('TravelJapan', () => App);

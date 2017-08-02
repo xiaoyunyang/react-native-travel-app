@@ -1,6 +1,20 @@
 # Travel Event App
 #### Made with React Native
 
+## Product Specification:
+This App is for planning a trip with your friends. It gives you:
+
+* Access to your itinerary via calendar view
+* Access to your list of planned activities
+* An integrated to-do-list and a map for the area
+* A quick lookup on the stuff you researched, including travel destination articles and translations for words from the local language to English
+
+![Travel Japan on App Store](https://github.com/xiaoyunyang/JapanApp/blob/master/docs/appStore.png)
+
+Download Link on App Store:
+[https://itunes.apple.com/us/app/travel-japan/id1260677523?mt=8](https://itunes.apple.com/us/app/travel-japan/id1260677523?mt=8)
+
+## Dev Information:
 ### Running the app:
 * Install ReactNative on your computer - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
 * Download the project from Github - [Git/Github tutorial](https://github.com/xiaoyunyang/xiaoyunyang.github.io/blob/master/assets/md/GitTutorial.md)  
@@ -11,13 +25,6 @@
 *  Running on Devices: [Read the Facebook doc](https://facebook.github.io/react-native/docs/running-on-device.html)
 * The error where Xcode requires a development team - [tutorial](https://stackoverflow.com/questions/37806538/code-signing-is-required-for-product-type-application-in-sdk-ios-10-0-stic)
 
-## Product Specification:
-This App is for planning a trip with your friends. It gives you:
-
-* Access to your itinerary via calendar view
-* Access to your list of planned activities
-* An integrated to-do-list and a map for the area
-* A quick lookup on the stuff you researched, including travel destination articles and translations for words from the local language to English
 
 ### Components:
 
@@ -155,3 +162,4 @@ Before You start react-native run-ios in terminal, install the dependencies:
 * [Realm](https://realm.io/docs/javascript/latest/index.html) - Persistent Data Layer for React Native.
 * Database for maps in its own vector format, MWM: [The Map Database](http://direct.mapswithme.com/direct/latest/)
 * Wrapping the app in Redux, this tutorial is very helpful:  [Jon Lebenshold's Medium Article](https://medium.com/@jonlebensold/getting-started-with-react-native-redux-2b01408c0053)
+* How to change the name of your app: [Good Tutorial on Medium](https://medium.com/the-react-native-log/how-to-rename-a-react-native-app-dafd92161c35)

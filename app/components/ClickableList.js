@@ -5,7 +5,6 @@ import {
   Text,
   StyleSheet,
   TouchableHighlight,
-  Button,
   ListView,
 } from 'react-native';
 

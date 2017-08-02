@@ -1,8 +1,8 @@
 {
   "0": {
-    "todo": "Take the Keiyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
-    "image": "none",
-    "link": "none",
+    "todo": "Itinerary: #1 DC (09:35 depart) -> Toronto (13:40 depart) -> Tokyo (15:35 arrive)",
+    "image": null,
+    "link": null,
     "markers": [
       {
         "title": "U Street Metro",
@@ -17,9 +17,9 @@
     ]
   },
   "1": {
-    "todo": "Take the Keiyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
-    "image": "none",
-    "link": "none",
+    "todo": "#1 Get a PASMO Card (metro card/train card/cash card, can be used in Tokyo, Kyoto, and Osaka) #2 Take the Keikyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
+    "image": "access-tokyo",
+    "link": null,
     "markers": [
       {
         "title": "Haneda Airport",
@@ -31,58 +31,84 @@
     ]
   },
   "1.1": {
-    "todo": "Check in the the hotel. Shiodome Station - Take Oedo Line to Kiyosumi-shirakawa Station (Edo Museum). Take the Yurikamome Line to the Telecom Center Station (Onsen Park) | *Shibashi Station* - take *Yamanote Line* to Shinjuku Station / Shibuya Station / Akihabara Station, take Asakusa Line to Asakusa, take Ginza Line to Suehirocho Station / Shibuya Station / Asakusa Station, Joban | Higashi-ginza Station - Take the Asakusa Line to Asakusa.",
-    "image": "none",
+    "todo": "Metro Stations around the hotel:  From Shimbashi Station, take Yamanote Line (green) to Shinjuku/Shibuya/Akihabara Stations ~~~ From Tsukijishijo Station, take Oedo Line (red) to Shinjuku Station or to Kiyosumi-shirakawa Station (to go to the Edo Museum) ~~~ From Shimbashi Station, take the Yurikamome Line (blue) to the Telecom Center Station (Onsen Park), take Ginza Line (orange) to Asakusa / Suehirocho Station (Akihabara) / Shibuya Station. ~~~ From the Higashi-ginza Station, take the Asakusa Line (pink) to Asakusa Station.",
+    "image": "access-tokyo",
     "link": "http://www.tokyometro.jp/en/",
     "markers": [
       {
         "title": "Tokyo Ginza Bay Hotel",
         "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      },{
+      }, {
         "title": "Higashi-ginza Station",
         "coordinate": {"latitude": 35.669700, "longitude": 139.767141}
-      },{
+      }, {
         "title": "Shimbashi Station",
         "coordinate": {"latitude": 35.666193, "longitude": 139.758332}
-      },{
+      }, {
         "title": "Shiodome Station",
         "coordinate": {"latitude": 35.662913, "longitude": 139.759983}
-      },{
+      }, {
+          "title": "Tsukijishijo Station",
+          "coordinate": {"latitude": 35.664880, "longitude": 139.766877}
+      }, {
         "title": "Starbucks",
         "coordinate": {"latitude": 35.669617, "longitude": 139.764691}
-      },{
+      }, {
         "title": "7-Eleven",
         "coordinate": {"latitude": 35.668474, "longitude": 139.759963}
+      }, {
+        "title": "Nakagin Capsule Tower",
+        "coordinate": {"latitude": 35.665636, "longitude": 139.763476}
       }
     ]
   },
   "1.2": {
     "todo": "Ginza's McDonald's:  Get the Teriyaki/Bacon/Egg Burger and the Ginger Pork Burger.",
-    "image": "none",
-    "link": "none",
+    "image": null,
+    "link": null,
     "markers": [
       {
         "title": "Tokyo Ginza Bay Hotel",
         "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      },{
+      }, {
         "title": "Higashi-ginza Station",
         "coordinate": {"latitude": 35.669700, "longitude": 139.767141}
-      },{
+      }, {
         "title": "Shimbashi Station",
         "coordinate": {"latitude": 35.666193, "longitude": 139.758332}
-      },{
+      }, {
         "title": "McDonald's",
         "coordinate": {"latitude": 35.667575, "longitude": 139.757336}
-      },{
+      }, {
         "title": "McDonald's",
         "coordinate": {"latitude": 35.672387, "longitude": 139.768063}
       }
     ]
   },
-  "2": {
-    "todo": "Shibuya Crossing, Go to the Starbucks right by Shibuya Crossing, Shop for Souvenirs at Tokyo Hands and Shibuya Loft. Shop at Shibuya 109 (department store). There's also a Cat Cafe MoCHA at Shibuya.",
-    "image": "none",
-    "link": "none",
+  "1.3": {
+    "todo": "Walk to Shimbashi Station from hotel, stop by the Nakagin Capsule Tower and the Miyazaki/Ghibli-Clock to take a picture, then take the Yamanote Line (green) to Tokyo Station to buy a Shinkansen ticket to go to Kyoto. The regular one way fare from Tokyo to Kyoto is 13,080 yen by non-reserved seat on any train, around 13,500 yen by reserved seat on Hikari or Kodama trains and around 14,000 yen by reserved seat on a Nozomi train. Buy a train ticket that leaves no earlier than 16:00.",
+    "image": null,
+    "link": null,
+    "markers": [
+      {
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }, {
+        "title": "Shimbashi Station",
+        "coordinate": {"latitude": 35.666193, "longitude": 139.758332}
+      }, {
+        "title": "Nakagin Capsule Tower",
+        "coordinate": {"latitude": 35.665636, "longitude": 139.763476}
+      }, {
+        "title": "Miyazaki-Clock",
+        "coordinate": {"latitude": 35.663355, "longitude": 139.760004}
+      }
+    ]
+  },
+  "1.4": {
+    "todo": "From Tokyo Station, take the Yamanote Line (green) to Shibuya Crossing, Go to the Starbucks right by Shibuya Crossing, Shop for Souvenirs at Tokyo Hands and Shibuya Loft. Shop at Shibuya 109 (department store). There's also a Cat Cafe MoCHA at Shibuya. To get back to the hotel from the Shibuya Station, the fastest way is to take the Ginza Line (orange) to Shimbashi Station.",
+    "image": "10-things-to-do-when-in-shibuya",
+    "link": null,
     "markers": [
       {
         "title": "Starbucks",
@@ -108,10 +134,10 @@
       }
     ]
   },
-  "2.1": {
+  "1.5": {
     "todo": "Shibuya's McDonald's:  Get the Teriyaki/Bacon/Egg Burger and the Ginger Pork Burger.",
-    "image": "none",
-    "link": "none",
+    "image": null,
+    "link": null,
     "markers": [
       {
         "title": "McDonald's",
@@ -122,24 +148,44 @@
       }
     ]
   },
-  "3": {
+  "2": {
     "todo": "Visit Tsukiji Fish Market in the morning (Tuna auction starts at 3AM. Outer market visiting starts 5AM. Inner wholesale market opens to visitors at 10 AM). You can get a sushi breakfast there.",
-    "image": "none",
+    "image": "cheatsheet-sushi",
     "link": "http://www.japan-guide.com/e/e3021.html",
     "markers": [
       {
         "title": "Tokyo Ginza Bay Hotel",
         "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      },{
+      }, {
         "title": "Tsukiji Market",
         "coordinate": {"latitude": 35.665488, "longitude": 139.770657}
       }
     ]
   },
-  "3.1": {
-    "todo": "Lots of street food to sample around Sensō-ji Temple. Tokyo Skytree is visible from Asakusa Station. Grab some Onigiri from Onigiri Asakusa Yadoroku.",
-    "image": "none",
-    "link": "none",
+  "2.1": {
+    "todo": "From the Higashi-ginza Station, take the Asakusa Line (pink) to Asakusa Station. Walk to Sensō-ji Temple. Tokyo Skytree is visible from Asakusa Station.",
+    "image": null,
+    "link": null,
+    "markers": [
+      {
+        "title": "Tsukiji Market",
+        "coordinate": {"latitude": 35.665488, "longitude": 139.770657}
+      }, {
+        "title": "Higashi-ginza Station",
+        "coordinate": {"latitude": 35.669700, "longitude": 139.767141}
+      }, {
+        "title": "Asakusa Station",
+        "coordinate": {"latitude": 35.710516, "longitude": 139.797869}
+      }, {
+        "title": "Sensō-ji Temple",
+        "coordinate": {"latitude": 35.714761, "longitude": 139.796660}
+      }
+    ]
+  },
+  "2.2": {
+    "todo": "Sample Taiyaki (Fish-shaped cake), Takoyaki (Octopus Balls). Grab some Onigiri from Onigiri Asakusa Yadoroku.",
+    "image": null,
+    "link": null,
     "markers": [
       {
         "title": "Sensō-ji Temple",
@@ -153,10 +199,10 @@
       }
     ]
   },
-  "3.2": {
+  "2.3": {
     "todo": "Asakusa's McDonald's:  Get the Teriyaki/Bacon/Egg Burger and the Ginger Pork Burger.",
-    "image": "none",
-    "link": "none",
+    "image": null,
+    "link": null,
     "markers": [
       {
         "title": "Asakusa Station",
@@ -170,9 +216,26 @@
       }
     ]
   },
-  "4": {
+  "2.4": {
+    "todo": "The Wifi Rental store is on the second floor, above a wine and liqueur store. Hours: 9:30AM - 6:30PM (Weekdays Only)",
+    "image": "access-tokyo",
+    "link": "https://en.wifi-rental-store.jp/access.html",
+    "markers": [
+      {
+        "title": "Akihabara Station",
+        "coordinate": {"latitude": 35.698353, "longitude": 139.773297}
+      },{
+        "title": "Suehirocho Station",
+        "coordinate": {"latitude": 35.702542, "longitude": 139.771710}
+      },{
+        "title": "Wifi Rental Store",
+        "coordinate": {"latitude": 35.6962284, "longitude": 139.7702997}
+      }
+    ]
+  },
+  "2.5": {
     "todo": "Maid Cafes: @Home Cafe (the same one from the video), CureMaid Cafe (Low key).",
-    "image": "none",
+    "image": "access-akihabara",
     "link": "cafe-athome.com",
     "markers": [
       {
@@ -190,10 +253,10 @@
       }
     ]
   },
-  "4.1": {
+  "2.6": {
     "todo": "Cat Cafes in Akihabara: Cat Cafe MoCHA (modern), Cafe Cafe Nyanny (homey), Cat Cafe JaLaLa (low key).",
-    "image": "none",
-    "link": "cafe-athome.com",
+    "image": null,
+    "link": "www.cafe-athome.com",
     "markers": [
       {
         "title": "Akihabara Station",
@@ -213,10 +276,10 @@
       }
     ]
   },
-  "4.2": {
-    "todo": "Don Quijote Akihabara has discount household stuff. Animate Akihabara has Otaku Stuff.",
-    "image": "none",
-    "link": "none",
+  "2.7": {
+    "todo": "Don Quijote Akihabara has discount household stuff. Animate Akihabara has Otaku Stuff. Buy wind chime.",
+    "image": "10-things-to-do-when-in-akihabara",
+    "link": null,
     "markers": [
       {
         "title": "Akihabara Station",
@@ -239,10 +302,10 @@
       }
     ]
   },
-  "4.3": {
+  "2.8": {
     "todo": "Akihabara's McDonald's:  Get the Teriyaki/Bacon/Egg Burger and the Ginger Pork Burger.",
-    "image": "none",
-    "link": "none",
+    "image": null,
+    "link": null,
     "markers": [
       {
         "title": "Akihabara Station",
@@ -259,24 +322,30 @@
       }
     ]
   },
-  "5": {
+  "3": {
     "todo": "The Fukagawa Edo Museum is less than an hour walk from Hotel or Take the Hanzomon or Oedo Line to the Kiyosumi-shirakawa Station.",
-    "image": "none",
-    "link": "none",
+    "image": null,
+    "link": null,
     "markers": [
       {
-        "title": "Fukagawa Edo Museum",
-        "coordinate": {"latitude": 35.681186, "longitude": 139.800595}
+        "title": "Tokyo Ginza Bay Hotel",
+        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }, {
+        "title": "Tsukijishijo Station",
+        "coordinate": {"latitude": 35.664880, "longitude": 139.766877}
       }, {
         "title": "Kiyosumi-shirakawa Station",
         "coordinate": {"latitude": 35.682252, "longitude": 139.798772}
+      }, {
+        "title": "Fukagawa Edo Museum",
+        "coordinate": {"latitude": 35.681186, "longitude": 139.800595}
       }
     ]
   },
-  "6": {
-    "todo": "The Fukagawa Edo Museum is less than an hour walk from Hotel or Take the Hanzomon or Oedo Line to the Kiyosumi-shirakawa Station.",
-    "image": "none",
-    "link": "none",
+  "3.1": {
+    "todo": "Onsen (natural hotspring) with a Edo period theme park",
+    "image": null,
+    "link": null,
     "markers": [
       {
         "title": "Tokyo Odaiba Oedo Onsen Monogatari",
@@ -284,13 +353,50 @@
       }, {
         "title": "Telecom Center Station",
         "coordinate": {"latitude": 35.617450, "longitude": 139.779410}
+      }, {
+        "title": "Hello de Miki",
+        "coordinate": {"latitude": 35.624878, "longitude": 139.774393}
       }
     ]
   },
-  "7": {
-    "todo": "Theme Restaurants: Alice in Fantasy Book, Robot Cafe",
-    "image": "none",
-    "link": "none",
+  "3.2": {
+    "todo": "To go to Tokyo Skytree from the Edo museum, from the Kiyosumi-shirakawa Station (near the museum), take the Hanzomon Line (purple) to Oshiage Station.",
+    "image": null,
+    "link": null,
+    "markers": [
+      {
+        "title": "Kiyosumi-shirakawa Station",
+        "coordinate": {"latitude": 35.682252, "longitude": 139.798772}
+      }, {
+        "title": "Oshiage Station",
+        "coordinate": {"latitude": 35.710784, "longitude": 139.812922}
+      }, {
+        "title": "Tokyo Skytree",
+        "coordinate": {"latitude": 35.710063, "longitude": 139.810701}
+      }
+    ]
+  },
+  "3.3": {
+    "todo": "To go the Roppongi Hills from Tokyo Skytree, take the Asakusa Line (pink) to the Higashi-ginza Station, then transfer to the Hibiya Line (gray) to go to the Roppongi Station.",
+    "image": null,
+    "link": null,
+    "markers": [
+      {
+        "title": "Roppongi Hills",
+        "coordinate": {"latitude": 35.660464, "longitude": 139.729249}
+      }, {
+        "title": "Mori Garden",
+        "coordinate": {"latitude": 35.660323, "longitude": 139.730494}
+      }, {
+        "title": "West Aoyama Garden",
+        "coordinate": {"latitude": 35.666869, "longitude": 139.724679}
+      }
+    ]
+  },
+  "3.4": {
+    "todo": "Theme Restaurants: Alice in Fantasy Book, Robot Cafe. Godzilla head (Maruhan) by the Shinjuku Toho Building.",
+    "image": "10-things-to-do-when-in-shinjuku",
+    "link": null,
     "markers": [
       {
         "title": "Alice in Fantasy Book",
@@ -301,13 +407,16 @@
       }, {
         "title": "Cat Cafe Calico",
         "coordinate": {"latitude": 35.693850, "longitude": 139.704064}
+      }, {
+        "title": "Godzilla Head (Maruhan)",
+        "coordinate": {"latitude": 35.695560, "longitude": 139.701905}
       },
     ]
   },
-  "7.1": {
-    "todo": "Get the Famous Cheese Tart from Shinjuku Station's Pablo Shop (11AM - 10PM)",
-    "image": "none",
-    "link": "none",
+  "3.5": {
+    "todo": "Get the Famous Cheese Tart from Shinjuku Station's Pablo Shop (11AM - 10PM). From Shinjuku Station, the fastest way to get back to the hotel is to take the Oedo line to Tsukijishijo Station.",
+    "image": "10-things-to-do-when-in-shinjuku",
+    "link": null,
     "markers": [
       {
         "title": "Shinjuku Station",
@@ -324,54 +433,94 @@
       }
     ]
   },
-  "8": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
+  "4": {
+    "todo": "#1 Take the Oedo Line from Tsukijishijo Station to Shinjuku Station. #2 Board Bus number 1303 (Fujikyuko Bus) before 12:45. Travel time is about 2 hours. 14:37 arrive. #3 Stop by the tourist information center next to the Kawaguchiko Station. #4 Asafuji hotel offers pick-up service from Kawaguchiko Train Station from 14:00 - 20:00.",
+    "image": null,
+    "link": null,
     "markers": [
       {
         "title": "Tokyo Ginza Bay Hotel",
         "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+      }, {
+        "title": "Tsukijishijo Station",
+        "coordinate": {"latitude": 35.664880, "longitude": 139.766877}
+      }, {
+        "title": "Shinjuku Station",
+        "coordinate": {"latitude": 35.689398, "longitude": 139.700295}
+      }, {
+        "title": "Kawaguchiko Station",
+        "coordinate": {"latitude": 35.498246, "longitude": 138.768834}
+      }, {
+        "title": "Tourist Information Station",
+        "coordinate": {"latitude": 35.498273, "longitude": 138.769161}
       }
     ]
   },
-  "9": {
-    "todo": "10 Check in the the hotel",
-    "image": "none",
-    "link": "none",
+  "4.1": {
+    "todo": "Check-in: Asafuji Ryokan. The hotel is 1.2 miles from Kawaguchiko Train Station. Asafuji hotel offers pick-up service from Kawaguchiko Train Station from 14:00 - 20:00. Check-in times: 15:00 - 18:00. Must check in by 21:00 latest. Must check in by 18:00 to eat dinner. Pickup service from and to the Kawaguchiko Station.",
+    "image": null,
+    "link": null,
     "markers": [
       {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        "title": "Kawaguchiko Station",
+        "coordinate": {"latitude": 35.498246, "longitude": 138.768834}
+      }, {
+        "title": "Asafui Ryokan",
+        "coordinate": {"latitude": 35.512268, "longitude": 138.774891}
       }
     ]
   },
-  "10": {
-    "todo": "11 Check in the the hotel",
-    "image": "none",
-    "link": "none",
+  "4.2": {
+    "todo": "The public hot-spring baths are open from 06:00-09:30 and from 15:00-23:30 daily.",
+    "image": null,
+    "link": null,
     "markers": [
       {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        "title": "Asafui Ryokan",
+        "coordinate": {"latitude": 35.512268, "longitude": 138.774891}
       }
     ]
   },
-  "11": {
-    "todo": "12 Check in the the hotel",
-    "image": "none",
-    "link": "none",
+  "4.3": {
+    "todo": "The hotel is a 10-minute walk from Mt. Kachi Kachi Ropeway and Lake Kawaguchi's boat dock. The Mt. Kachikachi ropeway will take you to an observation deck on Tenjo-yama at an altitude of 1,075m in 3 minutes, giving you a fantastic view of both Mt. Fuji and Lake Kawaguchi. Facing Lake Kawaguchi.",
+    "image": null,
+    "link": null,
     "markers": [
       {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        "title": "Asafui Ryokan",
+        "coordinate": {"latitude": 35.512268, "longitude": 138.774891}
       }
     ]
   },
-  "12": {
+  "5": {
+    "todo": "Bus leaves from Kawaguchiko Station at 12:45, Arrive at Shinjuku Station at 14:37. From Shinjuku Station, take the Chuo Line to Tokyo Station (20 min). Westbound (Tokyo-Kyoto): 6:00am first / 7:50pm last. rush hour (between 7am and 9am and 4pm and 7pm).",
+    "image": null,
+    "link": null,
+    "markers": [
+      {
+        "title": "Shinjuku Station",
+        "coordinate": {"latitude": 35.689398, "longitude": 139.700295}
+      }, {
+        "title": "Tokyo Station",
+        "coordinate": {"latitude": 35.681168, "longitude": 139.767049}
+      }
+    ]
+  },
+  "5.1": {
+    "todo": "Get Ekiben at Train Station. Ekiben (駅弁) are Japanese railway boxed meals.",
+    "image": null,
+    "link": null,
+    "markers": [
+      {
+        "title": "Tokyo Station",
+        "coordinate": {"latitude": 35.681168, "longitude": 139.767049}
+      }
+    ]
+  },
+  "5.2": {
     "todo": "Check-in to hotel",
-    "image": "none",
-    "link": "none",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
     "markers": [
       {
         "title": "Lantern in Gion",
@@ -382,10 +531,128 @@
       }
     ]
   },
-  "12.1": {
+  "5.3": {
+    "todo": "Restaurants ICHI, Tsujiri Kyotomise (Matcha dessert), Issen Yoshoku (Okonomiyaki), Hideotako (Takoyaji). check out Ishibe Koji (the alley)",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
+    "markers": [
+      {
+        "title": "ICHI",
+        "coordinate": {"latitude": 35.002918, "longitude": 135.771954}
+      }, {
+        "title": "Tsujiri Kyotomise",
+        "coordinate": {"latitude": 35.003715, "longitude": 135.772819}
+      }, {
+        "title": "Issen Yoshoku",
+        "coordinate": {"latitude": 35.004039, "longitude": 135.773189}
+      }
+    ]
+  },
+  "6": {
+    "todo": "#1 Lantern in Gion -> Kiyomizu-dera (15 min walking). #2 Kiyomizu-dera -> Rengeoin Sanjusangen-do (24 min walking). #3 Rengeoin Sanjusangendo -> Shichijo Station (8 min walking).",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
+    "markers": [
+      {
+        "title": "Lantern in Gion",
+        "coordinate": {"latitude": 35.000160, "longitude": 135.776405}
+      }, {
+        "title": "Kiyomizu-dera",
+        "coordinate": {"latitude": 34.994858, "longitude": 135.785049}
+      }, {
+        "title": "Rengeoin Sanjusangen-do",
+        "coordinate": {"latitude": 34.987885, "longitude": 135.771715}
+      }, {
+        "title": "Shichijo Station",
+        "coordinate": {"latitude": 34.989411, "longitude": 135.767664}
+      },
+    ]
+  },
+  "6.1": {
+    "todo": "Take the Keihan Line from Shichijo Station -> Fushimi Inari Station and walk 5 minutes to Fushimi-Inari Taisha. Fushimi-Inari Taisha (Open: 24 hrs).",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
+    "markers": [
+      {
+        "title": "Fushimi Inari Station",
+        "coordinate": {"latitude": 34.968804, "longitude": 135.769179}
+      }, {
+        "title": "Fushimi-Inari Taisha Shrine",
+        "coordinate": {"latitude": 34.967138, "longitude": 135.772669}
+      }
+    ]
+  },
+  "6.2": {
+    "todo": "Take the Keihan Line from Fushimi Inari Station -> Demachiyanagi Station and walk 14 minutes to Shimogamo-Jinja Shrine.",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
+    "markers": [
+      {
+        "title": "Demachiyanagi Station",
+        "coordinate": {"latitude": 35.030502, "longitude": 135.773230}
+      }, {
+        "title": "Shimogamo-Jinja Shrine",
+        "coordinate": {"latitude": 35.039172, "longitude": 135.773011}
+      }
+    ]
+  },
+  "6.3": {
+    "todo": "from the Demachiyanagi Station, Walk to the start of the Philosopher’s Path. Walk the Philosopher’s path to Nanzen-ji Temple (26 min). Explore Nanzen-ji Temple. Nanzen-ji Temple -> Lantern in Gion (32 min walking).",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
+    "markers": [
+      {
+        "title": "Demachiyanagi Station",
+        "coordinate": {"latitude": 35.030502, "longitude": 135.773230}
+      }, {
+        "title": "Shimogamo-Jinja Shrine",
+        "coordinate": {"latitude": 35.039172, "longitude": 135.773011}
+      }
+    ]
+  },
+  "7": {
+    "todo": "Lantern in Gion -> Nijō Castle (47 min walking)",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
+    "markers": [
+      {
+        "title": "Nijō Castle",
+        "coordinate": {"latitude": 35.014228, "longitude": 135.748220}
+      }
+    ]
+  },
+  "7.1": {
+    "todo": "Nishiki Market is a historic marketplace. Pontocho Alley (another Geisha District)",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
+    "markers": [
+      {
+        "title": "Nishiki Market",
+        "coordinate": {"latitude": 35.005054, "longitude": 135.763300}
+      }, {
+        "title": "Pontocho Alley",
+        "coordinate": {"latitude": 35.005083, "longitude": 135.771089}
+      }
+    ]
+  },
+  "7.2": {
+    "todo": "Get Omurice",
+    "image": null,
+    "link": "https://www.youtube.com/watch?v=BLIDS27ZJhg",
+    "markers": [
+      {
+        "title": "Kichi Kichi Omurice",
+        "coordinate": {"latitude": 35.007351, "longitude": 135.770832}
+      }, {
+        "title": "Pontocho Alley",
+        "coordinate": {"latitude": 35.005083, "longitude": 135.771089}
+      }
+    ]
+  },
+  "8": {
     "todo": "Check out Ishibe Koji (the alley). Get Lunch at a Japanese restaurant (Kaisaiki). Gion-Nishikawa is one of the two-Michelin-starred restaurants in Kyoto. There are four kinds of lunch menu; 5,000yen, 8,000yen, 15,000yen, and chef’s course. Miyoshi has Kobe beef. Tsujihana is affordable.",
-    "image": "none",
-    "link": "none",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
     "markers": [
       {
         "title": "Lantern in Gion",
@@ -405,186 +672,146 @@
       }
     ]
   },
-  "12.2": {
-    "todo": "Restaurants ICHI, Tsujiri Kyotomise (Matcha dessert), Issen Yoshoku (Okonomiyaki), Hideotako (Takoyaji). check out Ishibe Koji (the alley)",
-    "image": "none",
-    "link": "none",
-    "markers": [
-      {
-        "title": "ICHI",
-        "coordinate": {"latitude": 35.002918, "longitude": 135.771954}
-      }, {
-        "title": "Tsujiri Kyotomise",
-        "coordinate": {"latitude": 35.003715, "longitude": 135.772819}
-      }, {
-        "title": "Issen Yoshoku",
-        "coordinate": {"latitude": 35.004039, "longitude": 135.773189}
-      }
-    ]
-  },
-  "13": {
-    "todo": "Lantern in Gion -> Kiyomizu dera (15 min walking). Kiyomizu dera -> Rengeoin Sanjusangen-do (24 min walking). Rengeoin Sanjusangendo -> Shichijo Station (8 min walking).",
-    "image": "none",
-    "link": "none",
+  "8.1": {
+    "todo": "To get to the Bamboo Forest: #1 Take the Keihan Line Southward from the Gion Shijo Station to Shichijo Station (14 min), #2 Walk from Shichijo Station to Kyoto Station (14 min), #3 Take the San-In Line (purple) westward from Kyoto Station to Saga Arashiyama Station (26 minutes), #4 * Walk 14 minutes west from the Saga Arashiyama Station to get the the Arashiyama Bamboo Grove, #5 Walk 16 minutes south from the Saga Arashiyama Station to get to the Arashiyama Monkey Park Iwatayama",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
     "markers": [
       {
         "title": "Lantern in Gion",
         "coordinate": {"latitude": 35.000160, "longitude": 135.776405}
       }, {
-        "title": "Kiyomizu dera",
-        "coordinate": {"latitude": 34.994858, "longitude": 135.785049}
-      }, {
-        "title": "Rengeoin Sanjusangen-do",
-        "coordinate": {"latitude": 34.987885, "longitude": 135.771715}
-      }, {
         "title": "Shichijo Station",
         "coordinate": {"latitude": 34.989411, "longitude": 135.767664}
-      },
-    ]
-  },
-  "14": {
-    "todo": "Take the Keihan Line from Shichijo Station -> Fushimi Inari Station and walk 5 minutes to Fushimi-Inari Taisha. Fushimi-Inari Taisha (Open: 24 hrs).",
-    "image": "none",
-    "link": "none",
-    "markers": [
-      {
-        "title": "Fushimi Inari Station",
-        "coordinate": {"latitude": 34.968804, "longitude": 135.769179}
       }, {
-        "title": "Fushimi-Inari Taisha",
-        "coordinate": {"latitude": 34.967138, "longitude": 135.772669}
+        "title": "Kyoto Station",
+        "coordinate": {"latitude": 34.985846, "longitude": 135.758773}
+      }, {
+        "title": "Saga-Arashiyama Station",
+        "coordinate": {"latitude": 35.018756, "longitude": 135.681201}
+      }, {
+        "title": "Arashiyama Bamboo Grove",
+        "coordinate": {"latitude": 35.017045, "longitude": 135.671879}
+      }, {
+        "title": "Gio-ji Temple",
+        "coordinate": {"latitude": 35.023477, "longitude": 135.666743}
+      }, {
+        "title": "Monkey Park Iwatayama",
+        "coordinate": {"latitude": 35.011252, "longitude": 135.676690}
       }
     ]
   },
-  "15": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
+  "8.2": {
+    "todo": "#1 Take the San-In Line (purple) from the Saga-Arashiyama Station to the Uzumasa Station. Walk about 4 minutes to the Satsueisho-mae Station. Take the Keifuku Dentetsu-Kitano Line (green) to the Ryoan-ji Station. Walk about 9 minutes to get to the Ryoan-ji. Ryoan-ji (open: 8AM - 5PM). Walk 21 minutes from Ryoan-ji to Kinkaku-ji. The Tea Ceremony place is right next to Kinkaku-ji.",
+    "image": "10-things-to-do-when-in-kyoto",
+    "link": null,
     "markers": [
       {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        "title": "Saga-Arashiyama Station",
+        "coordinate": {"latitude": 35.018756, "longitude": 135.681201}
+      }, {
+        "title": "Uzumasa Station",
+        "coordinate": {"latitude": 35.017100, "longitude": 135.701331}
+      }, {
+        "title": "Satsueisho-mae Station",
+        "coordinate": {"latitude": 35.017117, "longitude": 135.701337}
+      }, {
+        "title": "Ryoan-ji Station",
+        "coordinate": {"latitude": 35.027799, "longitude": 135.721259}
+      }, {
+        "title": "Ryoan-ji",
+        "coordinate": {"latitude": 35.034494, "longitude": 135.718267}
+      }, {
+        "title": "Kinkaku-ji",
+        "coordinate": {"latitude": 35.039368, "longitude": 135.729245}
       }
     ]
   },
-  "16": {
-    "todo": "Nishiki Market. Pontocho Alley (another Geisha District)",
-    "image": "none",
-    "link": "none",
+  "9": {
+    "todo": "#1 From Gion-Shijo Station, take the Keihan Line (red) to Yodoyabashi Station. #2 From Yodoyabashi Station, take the Midosuji Line (red) to Osaka-Namba Station. #3 Take the Nankai-Koya Line (green) from Osaka-Namba Station to the Gokurakubashi station. At Gokurakubashi, transfer to the furnicular (cable car) which travels up the mountain to Koyasan. The ride takes about five minutes and costs 390 yen. From the top station, it is a ten minute bus ride into the town center (290 yen to Senjuinbashi bus stop). Take the bus from Koyasan bus station to Daimon Gate.",
+    "image": "access-koyasan",
+    "link": "https://www.thewholeworldisaplayground.com/how-to-mount-koya-jr-pass-kyoto-tokyo-osaka-nara-koyasan-japan/",
     "markers": [
       {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        "title": "Namba Station",
+        "coordinate": {"latitude": 34.662551, "longitude": 135.502599}
+      }, {
+        "title": "Osaka-Namba Station",
+        "coordinate": {"latitude": 34.667099, "longitude": 135.498904}
+      }, {
+        "title": "Gokurakubashi Station",
+        "coordinate": {"latitude": 34.234387, "longitude": 135.582062}
+      }, {
+        "title": "Koyasan Station",
+        "coordinate": {"latitude": 34.227596, "longitude": 135.577389}
       }
     ]
   },
-  "16.1": {
-    "todo": "Get Omurice",
-    "image": "none",
-    "link": "none",
+  "9.1": {
+    "todo": "Fudou-in is a 20 minute walk from the Daimon Gate (the traditional entrance to Koyasan). Check in time for Fudou-in is 15:00 - 18:00. Check out by 10:00.",
+    "image": null,
+    "link": "http://www.japan-guide.com/e/e4909.html",
     "markers": [
       {
-        "title": "Kichi Kichi Omurice",
-        "coordinate": {"latitude": 35.007351, "longitude": 135.770832}
+        "title": "Fudou-in Temple Lodging",
+        "coordinate": {"latitude": 34.212691, "longitude": 135.587463}
+      } , {
+        "title": "Daimon Gate",
+        "coordinate": {"latitude": 34.213171, "longitude": 135.572868}
       }
     ]
   },
-  "16.2": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
+  "9.2": {
+    "todo": "Okunoin Cemetery is a 20 min walk from Fudou-in.",
+    "image": null,
+    "link": null,
     "markers": [
       {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        "title": "Fudou-in Temple Lodging",
+        "coordinate": {"latitude": 34.212691, "longitude": 135.587463}
+      }, {
+        "title": "Okunoin Cemetery",
+        "coordinate": {"latitude": 34.217834, "longitude": 135.602714}
+      }, {
+        "title": "Daimon Gate",
+        "coordinate": {"latitude": 34.213171, "longitude": 135.572868}
+      }, {
+        "title": "Morishita Tofu Shop",
+        "coordinate": {"latitude": 34.213882, "longitude": 135.574625}
+      }, {
+        "title": "Tofu Restaurant",
+        "coordinate": {"latitude": 34.211670, "longitude": 135.587597}
       }
     ]
   },
-  "17": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
+  "9.3": {
+    "todo": "The diet of monks, shojin ryori is a Buddisht vegan cooking style and one of the highlights of a temple stay on the Mount is a shojin ryori style breakfast and evening meal.",
+    "image": null,
+    "link": null,
     "markers": [
       {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        "title": "Fudou-in Temple Lodging",
+        "coordinate": {"latitude": 34.212691, "longitude": 135.587463}
       }
     ]
   },
-  "18": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
+  "10": {
+    "todo": "#1 Go to Koyasan Station. #2 Take the furnicular (cable car) to Gokurakubashi station. #3 Take the Nankai-Koya Line (green) to Tengachaya Station. #3 Transfer to the Nankai Main Line and take it to the Kansai Airport (KIX)",
+    "image": "access-koyasan",
+    "link": null,
     "markers": [
       {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      }
-    ]
-  },
-  "19": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
-    "markers": [
-      {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      }
-    ]
-  },
-  "20": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
-    "markers": [
-      {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      }
-    ]
-  },
-  "21": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
-    "markers": [
-      {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      }
-    ]
-  },
-  "22": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
-    "markers": [
-      {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      }
-    ]
-  },
-  "23": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
-    "markers": [
-      {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
-      }
-    ]
-  },
-  "24": {
-    "todo": "Check in the the hotel",
-    "image": "none",
-    "link": "none",
-    "markers": [
-      {
-        "title": "Tokyo Ginza Bay Hotel",
-        "coordinate": {"latitude": 35.667492, "longitude": 139.763868}
+        "title": "Gokurakubashi Station",
+        "coordinate": {"latitude": 34.234387, "longitude": 135.582062}
+      }, {
+        "title": "Koyasan Station",
+        "coordinate": {"latitude": 34.227596, "longitude": 135.577389}
+      }, {
+        "title": "Tengachaya Station",
+        "coordinate": {"latitude": 34.637163, "longitude": 135.496769}
+      }, {
+        "title": "Kansai Airport",
+        "coordinate": {"latitude": 34.436205, "longitude": 135.243374}
       }
     ]
   }
