@@ -1,7 +1,12 @@
-# Travel Event App
+# Travel Japan
 #### Made with React Native
 
 ## Product Specification:
+__App Name__:   Travel Japan
+
+__App Description__:   This app provides a list of things to do for you and your friends traveling together in Japan. You can add up to 3 people to your travel group. Pick which date to start your trip and also how long you plan to stay in Japan. Let the app take care of the rest of the planning
+
+__Additional Info__: 
 This App is for planning a trip with your friends. It gives you:
 
 * Access to your itinerary via calendar view
@@ -143,7 +148,15 @@ Before You start react-native run-ios in terminal, install the dependencies:
 
 ##### Data Persistence
 * [redux-persist](https://github.com/rt2zz/redux-persist)
-	* In terminal: 'npm install redux-persist --save' 	
+	* In terminal: 'npm install redux-persist --save' 
+
+##### Date Picker
+* [react-native-date-picker](https://github.com/xgfe/react-native-datepicker)
+	* In terminal: 'npm install react-native-datepicker --save' 
+
+##### Native Base
+* [NativeBase](https://nativebase.io/docs/v0.3.0/components#button)
+	* Consider using this in an update to the app to pretty up the UI. 		
 
 ##### File Access (Did not use)
 * [react-native-fetch-blob](https://github.com/wkh237/react-native-fetch-blob)
@@ -163,3 +176,4 @@ Before You start react-native run-ios in terminal, install the dependencies:
 * Database for maps in its own vector format, MWM: [The Map Database](http://direct.mapswithme.com/direct/latest/)
 * Wrapping the app in Redux, this tutorial is very helpful:  [Jon Lebenshold's Medium Article](https://medium.com/@jonlebensold/getting-started-with-react-native-redux-2b01408c0053)
 * How to change the name of your app: [Good Tutorial on Medium](https://medium.com/the-react-native-log/how-to-rename-a-react-native-app-dafd92161c35)
+* Why Apple rejects app submittals: [Official FAQ](https://developer.apple.com/app-store/review/rejections/), [11 Reasons](http://www.moveoapps.com/blog/11-reasons-why-apple-will-reject-your-app-when-submitted-for-review/)

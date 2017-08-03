@@ -91,6 +91,7 @@ class Translate extends Component {
         searchedFields={["en", "jp"]}
         showFilterBar={true}
         clickableList={false}
+        filterBarLabel={"Categories"}
       />
 
     );

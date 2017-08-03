@@ -31,7 +31,7 @@ class FilterBar extends Component {
   renderFilter(filter) {
     const windowWidth = Dimensions.get('window').width;
     let margin = 3
-    let filterBarWidth = 0.95*windowWidth / this.props.filters.length - margin * this.props.filters.length;
+    let filterBarWidth = 0.8*windowWidth / this.props.filters.length - margin * this.props.filters.length;
 
     var filterBar = (
         <TouchableOpacity onPress={this.handleFilterClick.bind(this, filter)}>
@@ -54,60 +54,13 @@ class FilterBar extends Component {
     return filterBar;
   }
   handleFilterClick(filter) {
-
-    let users = this.props.filters.map(u => {
-      return u.tag
-    })
-
-    let isGuest = (users) => {
-      if(users.contains("Andrew") &&
-      users.contains("Xiaoyun") &&
-      users.contains("Kyle")) {
-        return false
-      } else {
-        return true
-      }
-    }
-    //Hack: this.props.filters will be length 3 iff the filters are for Login
-    if(this.props.filters.length==3 && isGuest(users)) {
-      return
-    }
     const newFilters = this.props.filters.map(f => {
       let copyF = {...f};
-      if (copyF.tag === filter.tag) {
-        copyF.active = !filter.active;
-      }
+      copyF.active = (copyF.tag === filter.tag)
+
       return copyF;
     });
     this.props.setFilters(newFilters)
-    this.props.setFields(this.filteredFields(newFilters))
-  }
-  filteredFields(filters) {
-
-    //Get filtered tags
-    var selectedTags = [];
-
-    filters.forEach((filter) => {
-      if (filter.active) {
-        selectedTags.push(filter.tag);
-      }
-    });
-
-    const resultFields = this.props.fields.map(f => {
-      var copyF = {...f};
-
-      //Filter
-      let intersectTags = f.tags.filter(t => selectedTags.contains(t))
-      if(selectedTags.length!=0 && intersectTags.length!=0) {
-        copyF.active = true
-        return copyF
-      } else {
-        copyF.active = false
-        return copyF
-      }
-    });
-
-    return resultFields;
   }
   render() {
     return (

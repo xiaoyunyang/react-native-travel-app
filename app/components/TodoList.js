@@ -44,49 +44,14 @@ const FIELDS = [
   }
 ]
 class TodoList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activities: FIELDS,
-      json: 'stuff',
-      isLoading: true
-    };
-  }
-  setStates(responseJson) {
-    let sortedActivities = responseJson.FIELDS.sort((a,b) => new Date(a.date) - new Date(b.date))
-    this.setState({
-      json: responseJson,
-      activities: sortedActivities,
-      isLoading: false,
-    })
-   this.props.setFields(sortedActivities);
-  }
-  componentDidMount() {
-    const test = true
-    const dataUrl = 'https://facebook.github.io/react-native/movies.json'
-
-    if(test) {
-      let responseJson = require('../../data/japan.json')
-      this.setStates(responseJson)
-    }
-    else {
-      return fetch(dataUrl)
-         .then((response) => response.json())
-         .then((responseJson) => {
-           this.setStates(responseJson)
-         })
-         .catch((error) => {
-           console.error(error);
-         });
-     }
-  }
   render() {
-    if(this.state.isLoading) {
-      return (
-        <View style={{flex: 1, paddingTop: 20}}>
-          <ActivityIndicator />
-        </View>
-      );
+    let travelers = this.props.filters.map(f => f.tag)
+    let noTravelers = travelers.reduce((a,b) => a+b) == ""
+    if(noTravelers) {
+      return <Text>Need to enter at least one traveler for the trip. Go to the Home tab.</Text>
+    }
+    if(this.props.travelDates.length < 4) {
+      return <Text>Need to enter travel dates from the Home tab.</Text>
     }
     return (
       <ListFilter
