@@ -1,9 +1,10 @@
 import createReducer from '../lib/createReducer'
 import * as types from '../actions/types'
 
-const GLOBAL = require("../reducers/Globals")
+const GLOBAL = require("./Globals")
 
 let init = GLOBAL.init
+let today = new Date()
 
 export const todoCount = createReducer(0, {
   [types.ADD_TODO](state, action) {
@@ -11,8 +12,13 @@ export const todoCount = createReducer(0, {
   }
 });
 
-export const users = createReducer(init.USERS, {
-  [types.SET_USERS](state, action) {
+export const activeDurations = createReducer(init.DURATIONS, {
+  [types.SET_ACTIVE_DURATIONS](state, action) {
+    return action.state;
+  }
+});
+export const travelDates = createReducer([""], {
+  [types.SET_TRAVEL_DATES](state, action) {
     return action.state;
   }
 });

@@ -12,6 +12,12 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import Swipeout from 'react-native-swipeout';
 
 class ClickableList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isGuest: true,
+    };
+  }
   getDetail(field) {
     this.props.navigation.navigate('Details', {
       activity: field
@@ -51,13 +57,53 @@ class ClickableList extends Component {
          return null;
      }
    }
+   renderFieldGuest(field) {
+     let swipeLBtns = [
+         {
+           text: 'Duplicate',
+           backgroundColor: '#9CC5C9',
+           underlayColor: 'blue',
+           onPress: () => { this.getDetail(field) }
+        }
+       ];
+       let swipeRBtns = [
+           {
+             text: 'Delete',
+             backgroundColor: '#D5544F',
+             underlayColor: 'red',
+             onPress: () => { this.getDetail(field) }
+          }
+         ];
+      var fieldElement = <Swipeout left={swipeLBtns} right={swipeRBtns} style={{flexDirection:'column', borderWidth: 1, borderColor: 'white', marginTop: 5}}>
+          <TouchableHighlight underlayColor='silver' onPress={() => this.getDetail(field)}>
+            <View style={{backgroundColor: 'white', padding: 5}}>
+              <Text style={styles.textLarge}>{field.title}</Text>
+              <Text style={styles.textNormal}>{field.subtitle}</Text>
+            </View>
+        </TouchableHighlight>
+      </Swipeout>
+
+      if (field.active) {
+        return fieldElement;
+      } else {
+          return null;
+      }
+    }
    render() {
+     let isGuest = false
      return (
-       <ListView
-         removeClippedSubviews={false}
-         dataSource={this.props.dataSource}
-         renderRow={this.renderField.bind(this)}
-       />
+       <View>
+       { this.props.isGuest && <ListView
+           removeClippedSubviews={false}
+           dataSource={this.props.dataSource}
+           renderRow={this.renderFieldGuest.bind(this)}
+         /> }
+       { !this.props.isGuest && <ListView
+          removeClippedSubviews={false}
+          dataSource={this.props.dataSource}
+          renderRow={this.renderField.bind(this)}
+        />}
+        </View>
      );
    }
 }

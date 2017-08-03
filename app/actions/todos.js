@@ -5,10 +5,16 @@ export function addTodo() {
     type: types.ADD_TODO,
   }
 }
-export function setUsers(newUsers) {
+export function setActiveDurations(newActiveDurations) {
   return {
-    type: types.SET_USERS,
-    state: newUsers
+    type: types.SET_ACTIVE_DURATIONS,
+    state: newActiveDurations
+  }
+}
+export function setTravelDates(newTravelDates) {
+  return {
+    type: types.SET_TRAVEL_DATES,
+    state: newTravelDates
   }
 }
 export function setActiveUsers(newActiveUsers) {

@@ -1,5 +1,17 @@
 module.exports = {
     init: {
+      DURATIONS: [
+        {
+          "tag": "4 days", "active": true
+        }, {
+          "tag": "7 days", "active": false
+        }, {
+          "tag": "11 days", "active": false
+        }
+      ],
+      TRAVEL_DATES: [
+        today
+      ],
       USERS: [
       {
         "tag": "", "active": true
@@ -32,3 +44,5 @@ module.exports = {
     ]
   }
 }
+
+let today = new Date()

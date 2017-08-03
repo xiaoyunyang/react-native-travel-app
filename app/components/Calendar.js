@@ -19,6 +19,12 @@ import {
 var ClickableList = require('./ClickableList');
 var Carousel = require('react-native-carousel')
 
+let dateString2Date = (dateStr) => {
+  //Note, dateStr has to be in the format YYYY-MM-DD
+  let [yr, mon, day] = dateStr.toString().split('-')
+  return new Date(yr, mon-1, day)
+}
+
 let getTomorrow = today => {
   return new Date(today.getTime()+1000*60*60*24);
 }
@@ -50,8 +56,8 @@ class Calendar extends Component {
   };
   constructor(props) {
     super(props);
-    var startDate = new Date(2017, 7, 7) //2017, August 7
-    var endDate = new Date(2017, 7, 18) //2017, August 18
+    let startDate = new Date(2017, 7, 7) //2017, August 7
+    let endDate = new Date(2017, 7, 18) //2017, August 18
 
     this.state = {
       startDate: startDate,
@@ -80,6 +86,32 @@ class Calendar extends Component {
     return selectedDate.length-1;
   }
   render() {
+    let travelers = this.props.filters.map(f => f.tag)
+    let noTravelers = travelers.reduce((a,b) => a+b) == ""
+    if(noTravelers) {
+      return <Text>Need to enter at least one traveler for the trip. Go to the Home tab.</Text>
+    }
+    if(this.props.travelDates.length < 4) {
+      return <Text>Need to enter travel dates from the Home tab.</Text>
+    }
+    let startDateGuest = dateString2Date(this.props.travelDates[0])
+    let endDateGuest = dateString2Date(this.props.travelDates.slice(-1)[0])
+    let travelDatesGuest = this.props.travelDates.map(d => dateString2Date(d))
+
+    let users = this.props.filters.map(u => {
+      return u.tag
+    })
+
+    let isGuest = (users) => {
+      if(users.contains("Andrew") &&
+      users.contains("Xiaoyun") &&
+      users.contains("Kyle")) {
+        return false
+      } else {
+        return true
+      }
+    }
+
     var today = new Date()
     var tomorrow = getTomorrow(today)
 
@@ -91,41 +123,71 @@ class Calendar extends Component {
     return (
       <View style={{flex: 1}}>
         <View style={{height: 170}}>
-          <Carousel
-            initialPage={this.gotoToday(today)}
-            hideIndicators={false}
-            indicatorAtBottom={true}
-            indicatorOffset={-10}
-            inactiveIndicatorColor="silver"
-            indicatorColor="#22264b"
-            animate={false}
-            onPageChange={this.handlePageChange.bind(this)}>
-            {
-              this.state.travelDates.map( (d, i) => {
-                return (
-                  <View key={i} style={[styles.containerCenter, {width: windowWidth}]}>
-                      <View style={{alignItems: 'center', width: calWidth, backgroundColor: "#e6cf8b", marginTop: -25}}>
-                        <Image source={require('../assets/calendar.png')}
-                           style={{width: 50, height: 50, marginTop: 10}} />
-                         <Text style={styles.textLarge}>{d.toDateString()}</Text>
-                         <Text style={styles.textNormal}>{"Today is "+today.toDateString()}</Text>
-                         <Text style={[styles.textNormal, {marginBottom: 10}]}>{"tomorrow is "+tomorrow.toDateString()}</Text>
-                      </View>
-                  </View>
-                )
-              })
-            }
-          </Carousel>
+          { !isGuest(users) && <Carousel
+              initialPage={this.gotoToday(today)}
+              hideIndicators={false}
+              indicatorAtBottom={true}
+              indicatorOffset={-10}
+              inactiveIndicatorColor="silver"
+              indicatorColor="#22264b"
+              animate={false}
+              onPageChange={this.handlePageChange.bind(this)}>
+              {
+                this.state.travelDates.map( (d, i) => {
+                  return (
+                    <View key={i} style={[styles.containerCenter, {width: windowWidth}]}>
+                        <View style={{alignItems: 'center', width: calWidth, backgroundColor: "#e6cf8b", marginTop: -25}}>
+                          <Image source={require('../assets/calendar.png')}
+                             style={{width: 50, height: 50, marginTop: 10}} />
+                           <Text style={styles.textLarge}>{d.toDateString()}</Text>
+                           <Text style={styles.textNormal}>{"Today is "+today.toDateString()}</Text>
+                           <Text style={[styles.textNormal, {marginBottom: 10}]}>{"tomorrow is "+tomorrow.toDateString()}</Text>
+                        </View>
+                    </View>
+                  )
+                })
+              }
+            </Carousel>
+          }
+
+          { isGuest(users) && <Carousel
+              initialPage={this.gotoToday(today)}
+              hideIndicators={false}
+              indicatorAtBottom={true}
+              indicatorOffset={-10}
+              inactiveIndicatorColor="silver"
+              indicatorColor="#22264b"
+              animate={false}
+              onPageChange={this.handlePageChange.bind(this)}>
+              {
+                travelDatesGuest.map( (d, i) => {
+                  return (
+                    <View key={i} style={[styles.containerCenter, {width: windowWidth}]}>
+                        <View style={{alignItems: 'center', width: calWidth, backgroundColor: "#e6cf8b", marginTop: -25}}>
+                          <Image source={require('../assets/calendar.png')}
+                             style={{width: 50, height: 50, marginTop: 10}} />
+                           <Text style={styles.textLarge}>{d.toDateString()}</Text>
+                           <Text style={styles.textNormal}>{"Today is "+today.toDateString()}</Text>
+                           <Text style={[styles.textNormal, {marginBottom: 10}]}>{"tomorrow is "+tomorrow.toDateString()}</Text>
+                        </View>
+                    </View>
+                  )
+                })
+              }
+            </Carousel>
+          }
+
         </View>
         <View style={[styles.container, {flex: 10}]}>
           <Text style={styles.textLarge}>Activities:</Text>
           <Text style={[styles.textNormal]}>
-            Display Data for:  {this.props.activeUsers.map(u =>
+            Display Data for:  {this.props.filters.map(u =>
                u.active ? '@'+ u.tag+ ' ' : '')}
           </Text>
           <ClickableList
             dataSource={ds.cloneWithRows(this.filteredFields(this.state.carouselDate))}
             navigation={this.props.navigation}
+            isGuest={isGuest(users)}
             />
         </View>
       </View>

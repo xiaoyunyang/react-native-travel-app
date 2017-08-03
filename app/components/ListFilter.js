@@ -120,6 +120,21 @@ class ListFilter extends Component {
     return this.searchAndFilter(this.props.filters, this.state.searchText)
   }
   render() {
+
+    let users = this.props.filters.map(u => {
+      return u.tag
+    })
+
+    let isGuest = (users) => {
+      if(users.contains("Andrew") &&
+      users.contains("Xiaoyun") &&
+      users.contains("Kyle")) {
+        return false
+      } else {
+        return true
+      }
+    }
+
     return (
       <View style={{flex: 1}}>
         { this.props.showFilterBar &&
@@ -128,6 +143,7 @@ class ListFilter extends Component {
             setFilters={this.props.setFilters}
             fields={this.props.fields}
             setFields={this.props.setFields}
+            filterBarLabel={this.props.filterBarLabel}
           />
         }
         <View style={{flex: 3}}>
@@ -149,7 +165,10 @@ class ListFilter extends Component {
         }
         <View style={[styles.container, {flex: 20}]}>
           { this.props.clickableList &&
-            <ClickableList dataSource={ds.cloneWithRows(this.props.fields)} navigation={this.props.navigation}/>
+            <ClickableList
+              dataSource={ds.cloneWithRows(this.props.fields)}
+              isGuest={isGuest(users)}
+              navigation={this.props.navigation}/>
           }
 
           { !this.props.clickableList &&
