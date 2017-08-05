@@ -19,29 +19,8 @@ import {
 var ClickableList = require('./ClickableList');
 var Carousel = require('react-native-carousel')
 
-let dateString2Date = (dateStr) => {
-  //Note, dateStr has to be in the format YYYY-MM-DD
-  let [yr, mon, day] = dateStr.toString().split('-')
-  return new Date(yr, mon-1, day)
-}
-
-let getTomorrow = today => {
-  return new Date(today.getTime()+1000*60*60*24);
-}
-let areDatesSame = (d1, d2) => {
-  return d1.toDateString() === d2.toDateString()
-}
-let getElapsedDates = (startDate, endDate) => {
-  //TODO: Need to add logic here if startDate is greater than endDate, then return. Something's wrong
-  //TODO: convert this ugly imperative code to map then a reduce
-  var start = startDate
-  var arr = []
-  while(!areDatesSame(start, endDate)) {
-    arr = arr.concat(start)
-    start = getTomorrow(start)
-  }
-  return arr
-}
+import DateHelper from '../lib/DateHelper';
+import isGuest from '../lib/isGuest';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
@@ -57,12 +36,8 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     let startDate = new Date(2017, 7, 7) //2017, August 7
-    let endDate = new Date(2017, 7, 18) //2017, August 18
 
     this.state = {
-      startDate: startDate,
-      endDate: endDate,
-      travelDates: getElapsedDates(startDate, endDate),
       carouselDate: startDate.toDateString(),
     };
   }
@@ -72,8 +47,10 @@ class Calendar extends Component {
   }
   handlePageChange(index) {
     //argument: index of the array mapped to the carousel pages
-
-    var selectedDate = this.state.travelDates[index].toDateString();
+    let startDate = new Date(2017, 7, 7) //2017, August 7
+    let endDate = new Date(2017, 7, 18) //2017, August 18
+    let travelDates = DateHelper.getElapsedDates(startDate, endDate)
+    let selectedDate = travelDates[index].toDateString();
 
     this.setState({
       carouselDate: selectedDate
@@ -81,7 +58,7 @@ class Calendar extends Component {
   }
   gotoToday(today) {
     //returns the index of the Carousel for the date
-    var selectedDate = this.state.travelDates.filter(d => today >= d)
+    var selectedDate = this.props.travelDates.filter(d => today >= DateHelper.dateString2Date(d))
     if(selectedDate.length <= 0) return 0;
     return selectedDate.length-1;
   }
@@ -94,89 +71,50 @@ class Calendar extends Component {
     if(this.props.travelDates.length < 4) {
       return <Text>Need to enter travel dates from the Home tab.</Text>
     }
-    let startDateGuest = dateString2Date(this.props.travelDates[0])
-    let endDateGuest = dateString2Date(this.props.travelDates.slice(-1)[0])
-    let travelDatesGuest = this.props.travelDates.map(d => dateString2Date(d))
+    let travelDates = this.props.travelDates.map(d => DateHelper.dateString2Date(d))
 
     let users = this.props.filters.map(u => {
       return u.tag
     })
 
-    let isGuest = (users) => {
-      if(users.contains("Andrew") &&
-      users.contains("Xiaoyun") &&
-      users.contains("Kyle")) {
-        return false
-      } else {
-        return true
-      }
-    }
-
     var today = new Date()
-    var tomorrow = getTomorrow(today)
+    var tomorrow = DateHelper.getTomorrow(today)
 
     const {navigate} = this.props.navigation
 
     let windowWidth = Dimensions.get('window').width;
     let calWidth = windowWidth*0.7;
 
+
+
     return (
       <View style={{flex: 1}}>
         <View style={{height: 170}}>
-          { !isGuest(users) && <Carousel
-              initialPage={this.gotoToday(today)}
-              hideIndicators={false}
-              indicatorAtBottom={true}
-              indicatorOffset={-10}
-              inactiveIndicatorColor="silver"
-              indicatorColor="#22264b"
-              animate={false}
-              onPageChange={this.handlePageChange.bind(this)}>
-              {
-                this.state.travelDates.map( (d, i) => {
-                  return (
-                    <View key={i} style={[styles.containerCenter, {width: windowWidth}]}>
-                        <View style={{alignItems: 'center', width: calWidth, backgroundColor: "#e6cf8b", marginTop: -25}}>
-                          <Image source={require('../assets/calendar.png')}
-                             style={{width: 50, height: 50, marginTop: 10}} />
-                           <Text style={styles.textLarge}>{d.toDateString()}</Text>
-                           <Text style={styles.textNormal}>{"Today is "+today.toDateString()}</Text>
-                           <Text style={[styles.textNormal, {marginBottom: 10}]}>{"tomorrow is "+tomorrow.toDateString()}</Text>
-                        </View>
-                    </View>
-                  )
-                })
-              }
-            </Carousel>
-          }
-
-          { isGuest(users) && <Carousel
-              initialPage={this.gotoToday(today)}
-              hideIndicators={false}
-              indicatorAtBottom={true}
-              indicatorOffset={-10}
-              inactiveIndicatorColor="silver"
-              indicatorColor="#22264b"
-              animate={false}
-              onPageChange={this.handlePageChange.bind(this)}>
-              {
-                travelDatesGuest.map( (d, i) => {
-                  return (
-                    <View key={i} style={[styles.containerCenter, {width: windowWidth}]}>
-                        <View style={{alignItems: 'center', width: calWidth, backgroundColor: "#e6cf8b", marginTop: -25}}>
-                          <Image source={require('../assets/calendar.png')}
-                             style={{width: 50, height: 50, marginTop: 10}} />
-                           <Text style={styles.textLarge}>{d.toDateString()}</Text>
-                           <Text style={styles.textNormal}>{"Today is "+today.toDateString()}</Text>
-                           <Text style={[styles.textNormal, {marginBottom: 10}]}>{"tomorrow is "+tomorrow.toDateString()}</Text>
-                        </View>
-                    </View>
-                  )
-                })
-              }
-            </Carousel>
-          }
-
+          <Carousel
+            initialPage={this.gotoToday(today)}
+            hideIndicators={false}
+            indicatorAtBottom={true}
+            indicatorOffset={-10}
+            inactiveIndicatorColor="silver"
+            indicatorColor="#22264b"
+            animate={false}
+            onPageChange={this.handlePageChange.bind(this)}>
+            {
+              travelDates.map( (d, i) => {
+                return (
+                  <View key={i} style={[styles.containerCenter, {width: windowWidth}]}>
+                      <View style={{alignItems: 'center', width: calWidth, backgroundColor: "#e6cf8b", marginTop: -25}}>
+                        <Image source={require('../assets/calendar.png')}
+                           style={{width: 50, height: 50, marginTop: 10}} />
+                         <Text style={styles.textLarge}>{d.toDateString()}</Text>
+                         <Text style={styles.textNormal}>{"Today is "+today.toDateString()}</Text>
+                         <Text style={[styles.textNormal, {marginBottom: 10}]}>{"tomorrow is "+tomorrow.toDateString()}</Text>
+                      </View>
+                  </View>
+                )
+              })
+            }
+          </Carousel>
         </View>
         <View style={[styles.container, {flex: 10}]}>
           <Text style={styles.textLarge}>Activities:</Text>

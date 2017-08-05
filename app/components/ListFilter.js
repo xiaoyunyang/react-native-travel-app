@@ -31,6 +31,7 @@ var ClickableList = require('./ClickableList');
 var SimpleList = require('./SimpleList');
 var FilterBar = require('./FilterBar');
 import { TabNavigator, StackNavigator } from 'react-navigation';
+import isGuest from '../lib/isGuest';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
@@ -124,16 +125,6 @@ class ListFilter extends Component {
     let users = this.props.filters.map(u => {
       return u.tag
     })
-
-    let isGuest = (users) => {
-      if(users.contains("Andrew") &&
-      users.contains("Xiaoyun") &&
-      users.contains("Kyle")) {
-        return false
-      } else {
-        return true
-      }
-    }
 
     return (
       <View style={{flex: 1}}>

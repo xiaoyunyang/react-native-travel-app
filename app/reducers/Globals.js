@@ -10,7 +10,7 @@ module.exports = {
         }
       ],
       TRAVEL_DATES: [
-        today
+        ""
       ],
       USERS: [
       {
@@ -44,5 +44,3 @@ module.exports = {
     ]
   }
 }
-
-let today = new Date()

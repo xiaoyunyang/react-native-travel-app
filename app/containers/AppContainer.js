@@ -30,20 +30,8 @@ var HeroText = require('../components/HeroText');
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-
 //This changes the header status icons (the battery and wifi) to white.
 StatusBar.setBarStyle('light-content', true)
-
-
-let date2DateString = (date) => {
-  let dateString = date.toDateString()
-  if(format="YYYY-MM-DD") {
-    return dateString = date.getFullYear() + '-'
-           + ('0' + (date.getMonth()+1)).slice(-2) + '-'
-           + ('0' + date.getDate()).slice(-2)
-  }
-  return dateString
-}
 
 const FILTERS = [
   {
@@ -62,42 +50,43 @@ const FIELDS = [
 
 const HomeScreen = ({ navigation, screenProps }) => (
   <ScrollView>
-    <HeroText>Step 1. Enter Travelers:</HeroText>
-    <Button
-      onPress={() => navigation.navigate('LoginSetting')}
-      title="Enter Travelers"
-      />
-    <FilterBar
-      filters={screenProps.activeUsers}
-      setFilters={screenProps.setActiveUsers}
-      fields={screenProps.userFilteredTodos}
-      filterBarLabel={"Travelers"}
-      setFields={screenProps.setUserFilteredTodos}
-      setUserFilteredTodos={screenProps.setUserFilteredTodos}
-      />
-    <HeroText>Step 2. Enter Date:</HeroText>
-    <Button
-     onPress={() => navigation.navigate('travelDatesSetting')}
-     title="Set Travel Dates"
-     />
-     <View style={{flex: 1},styles.containerCenter}>
-       <Text style={styles.textNormal}>Travel Dates</Text>
-       <Text style={styles.textSmall}>Start: {screenProps.travelDates[0]}</Text>
-       <Text style={styles.textSmall}>End: {screenProps.travelDates.slice(-1)[0]}</Text>
-     </View>
-     <HeroText>Step 3. Click to Update Your Itinerary</HeroText>
-     <UpdateItinerary
-       screenProps={screenProps}
-       navigation={navigation}/>
-     <HeroText>Step 4. View Travel To-dos:</HeroText>
-     <Button
-      onPress={() => navigation.navigate('TodoListTab')}
-      title="See All Your To-dos"
-      />
-     <Button
-      onPress={() => navigation.navigate('CalendarTab')}
-      title="See Your To-dos by Date"
-      />
+    <HeroText>Step 1</HeroText>
+    <View style={styles.section}>
+      <Button
+        onPress={() => navigation.navigate('LoginSetting')}
+        title="Enter Travelers"
+        />
+      <FilterBar
+        filters={screenProps.activeUsers}
+        setFilters={screenProps.setActiveUsers}
+        fields={screenProps.userFilteredTodos}
+        filterBarLabel={"Travelers"}
+        setFields={screenProps.setUserFilteredTodos}
+        setUserFilteredTodos={screenProps.setUserFilteredTodos}
+        />
+    </View>
+    <HeroText>Step 2</HeroText>
+    <View style={styles.section}>
+      <Button
+       onPress={() => navigation.navigate('travelDatesSetting')}
+       title="Enter Travel Dates"
+       />
+       <View style={{flex: 1},styles.containerCenter}>
+         <Text style={styles.textSmall}>Start: {screenProps.travelDates[0]}</Text>
+         <Text style={styles.textSmall}>End: {screenProps.travelDates.slice(-1)[0]}</Text>
+       </View>
+    </View>
+    <HeroText>Step 3</HeroText>
+    <View style={styles.section}>
+       <Button
+        onPress={() => navigation.navigate('TodoListTab')}
+        title="See All Your To-dos"
+        />
+       <Button
+        onPress={() => navigation.navigate('CalendarTab')}
+        title="See Your To-dos by Date"
+        />
+    </View>
     <HeroText>Resources:</HeroText>
     <Button
       onPress={() => navigation.navigate('TranslateTab')}
@@ -184,7 +173,7 @@ const TabNav = TabNavigator(
       screen: HomeScreen,
       path: '/',
       navigationOptions: {
-        title: 'Welcome',
+        title: 'Home',
         tabBarLabel: 'Home',
         tabBarIcon: ({ tintColor }) => (
           <Image
@@ -334,6 +323,11 @@ class AppContainer extends Component {
 }
 
 const styles = StyleSheet.create({
+  section: {
+    borderWidth: 1,
+    borderColor: '#656565',
+    margin: 5,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -349,14 +343,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-  },
-  searchBar: {
-    marginTop: 30,
-    fontSize: 40,
-    height: 50,
-    flex: .1,
-    borderWidth: 3,
-    borderColor: 'red',
   },
   description: {
     marginBottom: 20,
@@ -413,9 +399,9 @@ const styles = StyleSheet.create({
   },
   containerCenter: {
     justifyContent: 'center',
-        alignItems: 'center',
+    alignItems: 'center',
     backgroundColor: '#e8edf3',
-    padding: 20,
+    padding: 5,
   },
 
 });
