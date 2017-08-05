@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#e8edf3',
-    padding: 5,
+    padding: 3,
   },
   textLarge: {
     color: '#22264b',

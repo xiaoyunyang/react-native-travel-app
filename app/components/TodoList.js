@@ -45,9 +45,6 @@ const FIELDS = [
 ]
 class TodoList extends Component {
   render() {
-    console.log("POOOOOOOOOOOOP")
-console.log(this.props.fields)
-
     let travelers = this.props.filters.map(f => f.tag)
     let noTravelers = travelers.reduce((a,b) => a+b) == ""
     if(noTravelers) {

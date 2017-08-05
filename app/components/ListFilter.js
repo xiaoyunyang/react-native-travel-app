@@ -120,6 +120,16 @@ class ListFilter extends Component {
   filteredFields() {
     return this.searchAndFilter(this.props.filters, this.state.searchText)
   }
+  setField(id) {
+    let newFields = this.props.fields.map(f => {
+      let newF = f
+      if(f.id==id) {
+        newF.completed = !newF.completed
+      }
+      return newF
+    })
+    this.props.setFields(newFields)
+  }
   render() {
 
     let users = this.props.filters.map(u => {
@@ -158,6 +168,7 @@ class ListFilter extends Component {
           { this.props.clickableList &&
             <ClickableList
               dataSource={ds.cloneWithRows(this.props.fields)}
+              setField={this.setField.bind(this)}
               isGuest={isGuest(users)}
               navigation={this.props.navigation}/>
           }

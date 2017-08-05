@@ -151,6 +151,7 @@ const TodoListScreen = ({ navigation, screenProps }) => (
 const CalendarScreen = ({ navigation, screenProps}) => (
   <Calendar
     fields={screenProps.userFilteredTodos}
+    setFields={screenProps.setUserFilteredTodos}
     filters={screenProps.activeUsers}
     travelDates={screenProps.travelDates}
     navigation={navigation}

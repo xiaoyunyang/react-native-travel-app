@@ -62,6 +62,16 @@ class Calendar extends Component {
     if(selectedDate.length <= 0) return 0;
     return selectedDate.length-1;
   }
+  setField(id) {
+    let newFields = this.props.fields.map(f => {
+      let newF = f
+      if(f.id==id) {
+        newF.completed = !newF.completed
+      }
+      return newF
+    })
+    this.props.setFields(newFields)
+  }
   render() {
     let travelers = this.props.filters.map(f => f.tag)
     let noTravelers = travelers.reduce((a,b) => a+b) == ""
@@ -84,8 +94,6 @@ class Calendar extends Component {
 
     let windowWidth = Dimensions.get('window').width;
     let calWidth = windowWidth*0.7;
-
-
 
     return (
       <View style={{flex: 1}}>
@@ -116,7 +124,7 @@ class Calendar extends Component {
             }
           </Carousel>
         </View>
-        <View style={[styles.container, {flex: 10}]}>
+        <View style={[styles.container, {flex: 10, marginBottom: 35}]}>
           <Text style={styles.textLarge}>Activities:</Text>
           <Text style={[styles.textNormal]}>
             Display Data for:  {this.props.filters.map(u =>
@@ -125,6 +133,7 @@ class Calendar extends Component {
           <ClickableList
             dataSource={ds.cloneWithRows(this.filteredFields(this.state.carouselDate))}
             navigation={this.props.navigation}
+            setField={this.setField.bind(this)}
             isGuest={isGuest(users)}
             />
         </View>
