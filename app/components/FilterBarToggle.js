@@ -34,21 +34,21 @@ class FilterBar extends Component {
     let filterBarWidth = 0.8*windowWidth / this.props.filters.length - margin * this.props.filters.length;
 
     var filterBar = (
-        <TouchableOpacity onPress={this.handleFilterClick.bind(this, filter)}>
-            <Text style={
-                {
-                  width: filterBarWidth,
-                  fontSize: 18,
-                  textAlign: 'center',
-                  backgroundColor:(filter.active)?'#434c5b':'#eceff5',
-                  color:(filter.active)?'white':'slategray',
-                  borderColor: (filter.active)?'#b56969':'slategray',
-                  borderWidth: 2,
-                  margin: margin,
-                  padding: 5,
-                }}>
-                  {filter.tag}
-            </Text>
+      <TouchableOpacity onPress={this.handleFilterClick.bind(this, filter)}>
+        <Text style={
+            {
+              width: filterBarWidth,
+              fontSize: 18,
+              textAlign: 'center',
+              backgroundColor:(filter.active)?'#434c5b':'#eceff5',
+              color:(filter.active)?'white':'slategray',
+              borderColor: (filter.active)?'#b56969':'slategray',
+              borderWidth: 2,
+              margin: margin,
+              padding: 5,
+            }}>
+              {filter.tag}
+        </Text>
       </TouchableOpacity>
     );
     return filterBar;

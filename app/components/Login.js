@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 
 var FilterBar = require('./FilterBar');
+import isGuest from '../lib/isGuest';
 
 Array.prototype.contains = function(obj) {
     var i = this.length;
@@ -25,14 +26,11 @@ Array.prototype.contains = function(obj) {
     }
     return false;
 }
+
 class Login extends Component {
   constructor(props) {
     super(props);
-    let usersInit = [
-      this.props.screenProps.activeUsers[0].tag,
-      this.props.screenProps.activeUsers[1].tag,
-      this.props.screenProps.activeUsers[2].tag
-    ]
+    let usersInit = this.props.screenProps.activeUsers.map(u => u.tag)
     this.state = {
       textEntry1: usersInit[0],
       textEntry2: usersInit[1],
@@ -75,14 +73,14 @@ class Login extends Component {
       }
     )
     this.props.screenProps.setActiveUsers(newUsers)
-    this.setTodos()
+    this.setTodos(newUsers)
   }
-  setTodos() {
+  setTodos(newUsers) {
     let newFields = this.props.screenProps.userFilteredTodos.map(todo => {
         var newTodo = todo;
-        if(todo.tags.contains(this.state.textEntry1) ||
-          todo.tags.contains(this.state.textEntry1) ||
-          todo.tags.contains(this.state.textEntry1)) {
+        if(todo.tags.contains(newUsers[0]) ||
+          todo.tags.contains(newUsers[1]) ||
+          todo.tags.contains(newUsers[2])) {
           newTodo.active = true
         }
         return newTodo;
@@ -94,19 +92,15 @@ class Login extends Component {
           return newTodo;
         }
     );
-    let intendedUsers = ["Andrew", "Xiaoyun", "Kyle"]
-    var areIntendedUsers = false
-
-    if(intendedUsers.contains(this.state.textEntry1) &&
-      intendedUsers.contains(this.state.textEntry1) &&
-      intendedUsers.contains(this.state.textEntry1)) {
-        areIntendedUsers = true
-      } else {
-        areIntendedUsers = false
-      }
-
-    if(!areIntendedUsers) {
+    if(isGuest(newUsers)) {
       this.props.screenProps.setUserFilteredTodos(newFieldsGuest)
+      let newActiveUsers = this.props.screenProps.activeUsers
+      newActiveUsers.map(u => {
+          var newU = u
+          newU.active = true
+          return newU
+      })
+      this.props.screenProps.setActiveUsers(newActiveUsers)
     } else {
       this.props.screenProps.setUserFilteredTodos(newFields)
     }
@@ -165,7 +159,7 @@ class Login extends Component {
           <Button
             onPress={() => this.props.navigation.goBack(null)}
             color="white"
-            title="GO BACK" />
+            title="OK" />
         </View>
       </View>
 

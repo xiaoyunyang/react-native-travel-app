@@ -177,3 +177,4 @@ Before You start react-native run-ios in terminal, install the dependencies:
 * Wrapping the app in Redux, this tutorial is very helpful:  [Jon Lebenshold's Medium Article](https://medium.com/@jonlebensold/getting-started-with-react-native-redux-2b01408c0053)
 * How to change the name of your app: [Good Tutorial on Medium](https://medium.com/the-react-native-log/how-to-rename-a-react-native-app-dafd92161c35)
 * Why Apple rejects app submittals: [Official FAQ](https://developer.apple.com/app-store/review/rejections/), [11 Reasons](http://www.moveoapps.com/blog/11-reasons-why-apple-will-reject-your-app-when-submitted-for-review/)
+* Import and Export Modules in Javascript: Read [This Article](https://medium.com/@trekinbami/a-not-so-in-depth-explanation-of-es6-modules-import-and-export-13a80300f2f0)

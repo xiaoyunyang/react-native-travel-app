@@ -1,10 +1,10 @@
 import createReducer from '../lib/createReducer'
+import DateHelper from '../lib/DateHelper'
 import * as types from '../actions/types'
 
 const GLOBAL = require("./Globals")
 
 let init = GLOBAL.init
-let today = new Date()
 
 export const todoCount = createReducer(0, {
   [types.ADD_TODO](state, action) {

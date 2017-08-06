@@ -31,6 +31,7 @@ var ClickableList = require('./ClickableList');
 var SimpleList = require('./SimpleList');
 var FilterBar = require('./FilterBar');
 import { TabNavigator, StackNavigator } from 'react-navigation';
+import isGuest from '../lib/isGuest';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const ds2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.active !== r2.active});
@@ -119,21 +120,21 @@ class ListFilter extends Component {
   filteredFields() {
     return this.searchAndFilter(this.props.filters, this.state.searchText)
   }
+  setField(id) {
+    let newFields = this.props.fields.map(f => {
+      let newF = f
+      if(f.id==id) {
+        newF.completed = !newF.completed
+      }
+      return newF
+    })
+    this.props.setFields(newFields)
+  }
   render() {
 
     let users = this.props.filters.map(u => {
       return u.tag
     })
-
-    let isGuest = (users) => {
-      if(users.contains("Andrew") &&
-      users.contains("Xiaoyun") &&
-      users.contains("Kyle")) {
-        return false
-      } else {
-        return true
-      }
-    }
 
     return (
       <View style={{flex: 1}}>
@@ -167,6 +168,7 @@ class ListFilter extends Component {
           { this.props.clickableList &&
             <ClickableList
               dataSource={ds.cloneWithRows(this.props.fields)}
+              setField={this.setField.bind(this)}
               isGuest={isGuest(users)}
               navigation={this.props.navigation}/>
           }

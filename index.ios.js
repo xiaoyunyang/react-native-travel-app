@@ -37,6 +37,7 @@ function configureStore(initialState) {
 
 const store = configureStore({});
 
+/*  Enable PersistStore by uncommenting below */
 persistStore(store, {storage: AsyncStorage})
 
 //Wrapping our TravelAppJapan app inside of the Provider
