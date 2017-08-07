@@ -76,10 +76,10 @@ class Calendar extends Component {
     let travelers = this.props.filters.map(f => f.tag)
     let noTravelers = travelers.reduce((a,b) => a+b) == ""
     if(noTravelers) {
-      return <Text>Need to enter at least one traveler for the trip. Go to the Home tab.</Text>
+      return <Text style={[{padding: 40}, styles.textLarge]}>❗Need to enter at least one traveler for the trip. Go to the Info tab.</Text>
     }
     if(this.props.travelDates.length < 4) {
-      return <Text>Need to enter travel dates from the Home tab.</Text>
+      return <Text style={[{padding: 40}, styles.textLarge]}>❗Need to enter travel dates from the Info tab.</Text>
     }
     let travelDates = this.props.travelDates.map(d => DateHelper.dateString2Date(d))
 

@@ -23,7 +23,7 @@ module.exports = {
     ],
     TRANSLATE: [
       {
-        "tag": "dining", "active": true
+        "tag": "travel", "active": true
       }, {
         "tag": "store", "active": true
       }, {

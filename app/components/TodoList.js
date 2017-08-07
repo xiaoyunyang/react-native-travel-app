@@ -9,7 +9,6 @@ import {
   TextInput,
   View,
   ListView,
-  ScrollView,
   Navigator,
   TouchableOpacity,
   TouchableHighLight,
@@ -48,10 +47,10 @@ class TodoList extends Component {
     let travelers = this.props.filters.map(f => f.tag)
     let noTravelers = travelers.reduce((a,b) => a+b) == ""
     if(noTravelers) {
-      return <Text>Need to enter at least one traveler for the trip. Go to the Home tab.</Text>
+      return <Text style={[{padding: 40}, styles.textLarge]}>❗Need to enter at least one traveler for the trip. Go to the Info tab.</Text>
     }
     if(this.props.travelDates.length < 4) {
-      return <Text>Need to enter travel dates from the Home tab.</Text>
+      return <Text style={[{padding: 40}, styles.textLarge]}>❗Need to enter travel dates from the Info tab.</Text>
     }
     return (
       <ListFilter
@@ -67,5 +66,25 @@ class TodoList extends Component {
     );
   }
 }
-
+const styles = StyleSheet.create({
+  containerCenter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e8edf3'
+  },
+  container: {
+    backgroundColor: '#e8edf3',
+    padding: 8
+  },
+  textNormal: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 12
+  },
+  textLarge: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 22
+  }
+})
 module.exports = TodoList;

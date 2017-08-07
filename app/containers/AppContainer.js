@@ -7,6 +7,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Dimensions,
   Button,
   ScrollView,
   StatusBar,
@@ -33,6 +34,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 //This changes the header status icons (the battery and wifi) to white.
 StatusBar.setBarStyle('light-content', true)
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 const FILTERS = [
   {
     tag: "Filter",
@@ -48,7 +52,134 @@ const FIELDS = [
   }
 ]
 
-const HomeScreen = ({ navigation, screenProps }) => (
+const HomeScreen = ( { navigation }) => (
+<ScrollView>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Japan Regions</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth, alignSelf: 'center'}}
+        source={require('../../data/img/japan-regions.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>IC cards by region</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.85, alignSelf: 'center'}}
+        source={require('../../data/img/ic-cards-by-region.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Access Koyasan and KIX</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.85, alignSelf: 'center'}}
+        source={require('../../data/img/access-koyasan.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Tokyo Neighborhoods</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.75, alignSelf: 'center'}}
+        source={require('../../data/img/tokyo-neighborhoods.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Numbers</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*1.32, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-numbers.png')}
+      />
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.88, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-numbers2.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Money</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.5, alignSelf: 'center'}}
+        source={require('../../data/img/money.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Weekdays</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.8, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-weekdays.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Hiragana</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.58, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-hiragana.png')}
+      />
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.47, alignSelf: 'center', marginTop: 5}}
+        source={require('../../data/img/cheatsheet-hiragana2.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Katakana</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.58, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-katakana.png')}
+      />
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.47, alignSelf: 'center', marginTop: 5}}
+        source={require('../../data/img/cheatsheet-katakana2.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Toire (Toilette)</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.9, alignSelf: 'center'}}
+        source={require('../../data/img/toire.png')}
+      />
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.9, alignSelf: 'center'}}
+        source={require('../../data/img/toire2.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Ryokan (hotel)</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*1.08, alignSelf: 'center'}}
+        source={require('../../data/img/ryokan.png')}
+      />
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*0.94, alignSelf: 'center'}}
+        source={require('../../data/img/ryokan2.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Foods</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-foods.png')}
+      />
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-dinner.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Drinks</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-drinks.png')}
+      />
+  </View>
+  <View style={styles.card}>
+    <Text style={styles.textLarge}>Sushi</Text>
+      <Image
+        style={{width: windowWidth*0.96, height: windowWidth*1.13, alignSelf: 'center'}}
+        source={require('../../data/img/cheatsheet-sushi.png')}
+      />
+  </View>
+</ScrollView>
+
+)
+const InfoScreen = ({ navigation, screenProps }) => (
   <ScrollView>
     <HeroText>Step 1</HeroText>
     <View style={styles.section}>
@@ -185,7 +316,21 @@ const TabNav = TabNavigator(
         headerTitleStyle:{ color: '#e8edf3'},
       },
     },
-
+    InfoTab: {
+      screen: InfoScreen,
+      path: '/info',
+      navigationOptions: {
+        title: 'Info',
+        tabBarLabel: 'Info',
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require('../assets/navbar/account.png')}
+            style={[styles.tabBarIcon, {tintColor: tintColor}]}
+          />),
+        headerStyle:{ backgroundColor: '#22264b'},
+        headerTitleStyle:{ color: '#e8edf3'},
+      },
+    },
     TranslateTab: {
       screen: TranslateScreen,
       path: '/translate',
@@ -404,6 +549,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#e8edf3',
     padding: 5,
   },
+  textNormal: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 12
+  },
+  textLarge: {
+    color: '#22264b',
+    fontWeight: 'bold',
+    fontSize: 22
+  },
+  card: {
+    padding: 10,
+    alignItems: 'center'
+  },
 
 });
 

@@ -390,6 +390,9 @@
       }, {
         "title": "West Aoyama Garden",
         "coordinate": {"latitude": 35.666869, "longitude": 139.724679}
+      }, {
+        "title": "Don Quijote Roppongi",
+        "coordinate": {"latitude": 35.662429, "longitude": 139.734632}
       }
     ]
   },
@@ -518,7 +521,7 @@
     ]
   },
   "5.2": {
-    "todo": "Check-in to hotel",
+    "todo": "Check-in to hotel: 16:00 - 20:00 PM. Checkout time is before 10:00.",
     "image": "10-things-to-do-when-in-kyoto",
     "link": null,
     "markers": [
@@ -611,11 +614,14 @@
     ]
   },
   "7": {
-    "todo": "Lantern in Gion -> Nijō Castle (47 min walking)",
+    "todo": "Lantern in Gion -> Nijo Castle (47 min walking)",
     "image": "10-things-to-do-when-in-kyoto",
     "link": null,
     "markers": [
       {
+        "title": "Lantern in Gion",
+        "coordinate": {"latitude": 35.000160, "longitude": 135.776405}
+      },{
         "title": "Nijō Castle",
         "coordinate": {"latitude": 35.014228, "longitude": 135.748220}
       }
@@ -643,6 +649,9 @@
       {
         "title": "Kichi Kichi Omurice",
         "coordinate": {"latitude": 35.007351, "longitude": 135.770832}
+      }, {
+        "title": "Nishiki Market",
+        "coordinate": {"latitude": 35.005054, "longitude": 135.763300}
       }, {
         "title": "Pontocho Alley",
         "coordinate": {"latitude": 35.005083, "longitude": 135.771089}

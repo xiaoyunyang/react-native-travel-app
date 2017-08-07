@@ -107,6 +107,10 @@ The `Details` component gets data from [detail.json](https://github.com/xiaoyuny
 
 ![Details Page](https://github.com/xiaoyunyang/JapanApp/blob/master/docs/detailsPage.png)
 
+## TODO
+- [ ] Allow to play sound in Translator
+
+
 ## Dependencies:
 Before You start react-native run-ios in terminal, install the dependencies:
 

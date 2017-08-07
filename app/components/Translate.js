@@ -8,7 +8,6 @@ import {
   TextInput,
   View,
   ListView,
-  ScrollView,
   Navigator,
   TouchableOpacity,
   TouchableHighLight,
