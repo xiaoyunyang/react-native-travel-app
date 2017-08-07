@@ -3,6 +3,9 @@ package com.traveljapan;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import fm.indiecast.rnaudiostreamer.RNAudioStreamerPackage;
+import com.audioStreaming.ReactNativeAudioStreamingPackage;
+import com.zmxv.RNSound.RNSoundPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +28,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNAudioStreamerPackage(),
+            new ReactNativeAudioStreamingPackage(),
+            new RNSoundPackage(),
             new VectorIconsPackage(),
             new MapsPackage()
       );
