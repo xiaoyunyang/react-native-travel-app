@@ -1,5 +1,5 @@
 {
-  "name": "TravelJapan",
+  "name": "AnotherTravelApp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,34 +7,17 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.0.0-alpha.6",
-    "react-native": "0.44.0",
-    "react-native-carousel": "^0.10.0",
-    "react-native-datepicker": "^1.6.0",
-    "react-native-maps": "^0.15.2",
-    "react-native-markdown": "^0.1.1",
-    "react-native-markdown-view": "^1.0.0",
-    "react-native-material-bottom-navigation": "^0.5.1",
-    "react-native-showdown": "^0.3.0",
-    "react-native-swipe-list-view": "^0.4.1",
-    "react-native-swipeout": "^2.1.1",
-    "react-native-tab-navigator": "^0.3.3",
-    "react-native-textinput-effects": "^0.3.1",
-    "react-native-vector-icons": "^4.1.1",
-    "react-navigation": "^1.0.0-beta.11",
-    "react-redux": "^5.0.5",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "redux-persist": "^4.8.2",
-    "redux-storage": "^4.1.2",
-    "redux-storage-engine-localstorage": "^1.1.4",
-    "redux-thunk": "^2.2.0"
+    "react": "16.6.3",
+    "react-native": "0.57.8",
+    "react-native-gesture-handler": "^1.0.12",
+    "react-native-vector-icons": "^6.2.0",
+    "react-navigation": "^3.0.9"
   },
   "devDependencies": {
-    "babel-jest": "20.0.1",
-    "babel-preset-react-native": "1.9.2",
-    "jest": "20.0.1",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
   },
   "jest": {
     "preset": "react-native"

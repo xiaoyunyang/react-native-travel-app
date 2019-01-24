@@ -1,6 +1,15 @@
 # Travel Japan
 #### Made with React Native
 
+## To run in iOS simulator
+
+```
+$ npm install
+$ react-native link react-native-gesture-handler
+$ react-native link react-native-vector-icons
+$ react-native run-ios
+```
+
 ## Product Specification:
 __App Name__:   Travel Japan
 
