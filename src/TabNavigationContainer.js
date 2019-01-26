@@ -2,8 +2,11 @@ import React from "react";
 
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SettingsScreen from './screens/Settings/Main.js';
-import PlanTripScreen from './screens/PlanTrip/Main.js';
+import SettingsScreen from './screens/searchScreen.js';
+import PlanTripScreen from './screens/planTripScreen.js';
+import SearchScreen from './screens/searchScreen.js';
+import TripsScreen from './screens/tripsScreen.js';
+
 
 // Icons
 import IconWithBadge from './components/IconWithBadge';
@@ -13,22 +16,25 @@ const HomeIconWithBadge = (props) => {
   return <IconWithBadge {...props} badgeCount={3} />;  
 }
 
+
 const navigationOptions = {
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused, horizontal, tintColor }) => {
       const { routeName } = navigation.state;
       let IconComponent = Ionicons;
       let iconName;
-      if (routeName === 'Home') {
+      
+      if (routeName === "Home") {
         iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-        // Sometimes we want to add badges to some icons. 
-        // You can check the implementation below.
-        IconComponent = HomeIconWithBadge; 
-      } else if (routeName === 'Settings') {
-        iconName = `ios-options${focused ? '' : '-outline'}`;
+        IconComponent = HomeIconWithBadge;
+      } else if (routeName ==="Settings") {
+        iconName = "ios-options";
+      } else if (routeName ==="Search") {
+        iconName = "ios-search";
+      } else if (routeName ==="Trips") {
+        iconName = "ios-airplane";
       }
 
-      // You can return any component that you like here!
       return <IconComponent name={iconName} size={25} color={tintColor} />;
     },
   }),
@@ -41,6 +47,8 @@ const navigationOptions = {
 const TabNavigator = createBottomTabNavigator(
   {
     Home: PlanTripScreen,
+    Search: SearchScreen,
+    Trips: TripsScreen,
     Settings: SettingsScreen,
   },
   navigationOptions
