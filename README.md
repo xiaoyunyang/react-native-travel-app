@@ -1,5 +1,6 @@
-# Travel Japan
-#### Made with React Native
+# Travel Planning App
+
+> Made with React Native
 
 ## To run in iOS simulator
 
@@ -10,12 +11,13 @@ $ react-native link react-native-vector-icons
 $ react-native run-ios
 ```
 
-## Product Specification:
+## Product Specification
+
 __App Name__:   Travel Japan
 
 __App Description__:   This app provides a list of things to do for you and your friends traveling together in Japan. You can add up to 3 people to your travel group. Pick which date to start your trip and also how long you plan to stay in Japan. Let the app take care of the rest of the planning
 
-__Additional Info__: 
+__Additional Info__:
 This App is for planning a trip with your friends. It gives you:
 
 * Access to your itinerary via calendar view
@@ -23,13 +25,15 @@ This App is for planning a trip with your friends. It gives you:
 * An integrated to-do-list and a map for the area
 * A quick lookup on the stuff you researched, including travel destination articles and translations for words from the local language to English
 
-![Travel Japan on App Store](https://github.com/xiaoyunyang/JapanApp/blob/master/docs/appStore.png)
+![Travel Japan on App Store](https://github.com/xiaoyunyang/react-native-travel-app/blob/2017-archive/docs/appStore.png?raw=true)
 
 Download Link on App Store:
 [https://itunes.apple.com/us/app/travel-japan/id1260677523?mt=8](https://itunes.apple.com/us/app/travel-japan/id1260677523?mt=8)
 
-## Dev Information:
-### Running the app:
+## Dev Information
+
+### Running the app
+
 * Install ReactNative on your computer - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
 * Download the project from Github - [Git/Github tutorial](https://github.com/xiaoyunyang/xiaoyunyang.github.io/blob/master/assets/md/GitTutorial.md)  
 * Unzip and then `cd [project name]`
@@ -39,8 +43,7 @@ Download Link on App Store:
 *  Running on Devices: [Read the Facebook doc](https://facebook.github.io/react-native/docs/running-on-device.html)
 * The error where Xcode requires a development team - [tutorial](https://stackoverflow.com/questions/37806538/code-signing-is-required-for-product-type-application-in-sdk-ios-10-0-stic)
 
-
-### Components:
+### Components
 
 ``ActivityList``
 
@@ -55,6 +58,7 @@ Download Link on App Store:
 * ``ActivityList`` with a calendar filter. The calendar filter is a ``Carousel`` component.
 
 ### Access Data for The App
+
 The Data used to generate to App is stored here: [japan.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/japan.json)
 
 [japan.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/japan.json) contains `FIELDS`, which is an array of objects:
@@ -114,7 +118,7 @@ The Data used to generate to App is stored here: [japan.json](https://github.com
 
 The `Details` component gets data from [detail.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/detail.json):
 
-![Details Page](https://github.com/xiaoyunyang/JapanApp/blob/master/docs/detailsPage.png)
+![Details Page](https://github.com/xiaoyunyang/react-native-travel-app/blob/2017-archive/docs/detailsPage.png?raw=true)
 
 ## TODO
 - [ ] Allow to play sound in Translator

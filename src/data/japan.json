@@ -1,0 +1,365 @@
+{
+  "FIELDS": [
+    {
+      "id": 0,
+      "date": "Mon Aug 07 2017",
+      "title":"Depart from DCA",
+      "subtitle": "Flight leaves from DC at 09:35. Transfer at Toronto. 15:35 arrive at Haneda Airport.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 1,
+      "date": "Tue Aug 08 2017",
+      "title":"Arrive at Haneda Airport",
+      "subtitle": "Yay Japan! Get a SUICA (best) or Pasmo card and get on the the Keikyu Line to go to Tokyo.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 1.1,
+      "date": "Tue Aug 08 2017",
+      "title":"Check-in: Tokyo Ginza Bay Capsule Hotel 東京銀座BAY HOTELのポイント 🛌",
+      "subtitle": "Ginza is near the Nakagin Capsule Hotel",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 1.2,
+      "date": "Tue Aug 08 2017",
+      "title":"Get a McDonald's (Makudonarudo) Japan Menu Item 🍔",
+      "subtitle": "Ginza",
+      "tags": ["Xiaoyun"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 1.3,
+      "date": "Tue Aug 08 2017",
+      "title":"Buy Shinkansen ticket at Tokyo Station",
+      "subtitle": "Ginza",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 1.4,
+      "date": "Tue Aug 08 2017",
+      "title":"Explore the Shibuya area 🛍️",
+      "subtitle":"Shibuya Crossing and lots of Shopping.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 1.5,
+      "date": "Tue Aug 08 2017",
+      "title":"Get a McDonald's (Makudonarudo) Japan Menu Item 🍔",
+      "subtitle":"Shibuya",
+      "tags": ["Xiaoyun"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2,
+      "date": "Wed Aug 09 2017",
+      "title":"Visit Tsukiji Market 🐟",
+      "subtitle": "Get sushi breakfast at the world's largest Fish Market (Opens: 5AM - 9AM).",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2.1,
+      "date": "Wed Aug 09 2017",
+      "title":"Visit Sensō-ji Temple in Asakusa ⛩️",
+      "subtitle":"Temple open Main hall: 6:00 to 17:00. Temple grounds: Always open.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2.2,
+      "date": "Wed Aug 09 2017",
+      "title":"Get Street Foods around Asakusa 🍡",
+      "subtitle":"Lots of street food to sample around Sensō-ji Temple.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2.3,
+      "date": "Wed Aug 09 2017",
+      "title":"Get a McDonald's (Makudonarudo) Japan Menu Item 🍔",
+      "subtitle":"Asaksa",
+      "tags": ["Xiaoyun"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2.4,
+      "date": "Wed Aug 09 2017",
+      "title":"Get Wifi Router from Wifi Rental Store",
+      "subtitle": "The Wifi Rental Store is on the second floor. Hours: 9:30AM - 6:30PM (Weekdays Only)",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2.5,
+      "date": "Wed Aug 09 2017",
+      "title":"Lunch at a Maid Cafe 💁",
+      "subtitle": "Go to Akihabara for the Maid Cafe.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2.6,
+      "date": "Wed Aug 09 2017",
+      "title":"Visit a Cat Cafe 😺",
+      "subtitle": "Akihabara has a few Cat Cafes. The best one is Cat Cafe MoCHA",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2.7,
+      "date": "Wed Aug 09 2017",
+      "title":"Do some shopping in Akihabara 🛍️",
+      "subtitle":"Souvenir: Coin wallet, pins, fridge magnet.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 2.8,
+      "date": "Wed Aug 09 2017",
+      "title":"Get a McDonald's (Makudonarudo) Japan Menu Item 🍔",
+      "subtitle":"Akihabara",
+      "tags": ["Xiaoyun"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 3,
+      "date": "Thu Aug 10 2017",
+      "title":"Visit Fukagawa Edo Museum 🏛️",
+      "subtitle":"Opens: 9:30AM - 5PM",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 3.1,
+      "date": "Thu Aug 10 2017",
+      "title":"Visit Tokyo Odaiba Oedo Onsen Monogatari ♨️",
+      "subtitle":"Onsen (natural hotspring) with a Edo period theme park. For lunch, there's a Hello Kittie Cafe nearby (Cafe de Miki).",
+      "tags": ["Xiaoyun", "Andrew"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 3.2,
+      "date": "Thu Aug 10 2017",
+      "title":"Visit Tokyo Skytree 📷",
+      "subtitle":"The tallest tower in the world and the second tallest structure after the Burj Khalifa.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 3.3,
+      "date": "Thu Aug 10 2017",
+      "title":"Visit Roppongi Hills Mori Garden Pond",
+      "subtitle":"Roppongi Hills is a huge complex with shopping/dining/entertainment. Go to West Aoyama Garden (good pancakes)",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 3.4,
+      "date": "Thu Aug 10 2017",
+      "title":"Dinner at a Theme Restaurant in Shinjuku 🍴",
+      "subtitle":"Alice in Fantasy Book (best)",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 3.5,
+      "date": "Thu Aug 10 2017",
+      "title":"Explore Tokyo's Nightlife 🍡",
+      "subtitle":"Go to Izakaya restaurants in Golden Gai / Piss Alley",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 4,
+      "date": "Fri Aug 11 2017",
+      "title":"Travel to Mount Fuji by Bus 🚌",
+      "subtitle":"Take the bus (depart at 12:45) from Shinjuku Expressway Bus Terminal to Kawaguchiko Station.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 4.1,
+      "date": "Fri Aug 11 2017",
+      "title":"Check-in: Asafuji Ryokan hotel 富士河口湖温泉 ホテル あさふじ 🛌",
+      "subtitle":"Check in by 6 PM. Pickup service from and to the Kawaguchiko Station",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 4.2,
+      "date": "Fri Aug 11 2017",
+      "title":"Hangout at and around the hotel 🛌 ♨️",
+      "subtitle":"Public hot spring bath.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 4.3,
+      "date": "Fri Aug 11 2017",
+      "title":"Check out areas around Mt. Fuji 📷",
+      "subtitle":"Great View. Take lots of pictures.",
+      "tags": ["Xiaoyun"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 5,
+      "date": "Sat Aug 12 2017",
+      "title":"Travel to Kyoto by Shinkansen 🚅",
+      "subtitle":"Take Shinkansen (Bullet Train) from Tokyo Station. Buy a Icoca Card at Kyoto Station.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 5.1,
+      "date": "Sat Aug 12 2017",
+      "title":"Get a Ekiben at Tokyo Station 🍱",
+      "subtitle":"Ekiben is a bento for travelers sold at train stations",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 5.2,
+      "date": "Sat Aug 12 2017",
+      "title": "Check-in: Kyoto Guesthouse Lantern in Gion hotel らんたん祇園 🛌",
+      "subtitle":"Gion is one of the Geisha Districts in Kyoto.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 5.3,
+      "date": "Sat Aug 12 2017",
+      "title": "Have dinner in Gion 🍱",
+      "subtitle":"Lots of good restaurants.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 6,
+      "date": "Sun Aug 13 2017",
+      "title": "Visit Temples south of Gion ⛩️",
+      "subtitle":"Kiyomizu-dera, Rengeoin Sanjusangen-do",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 6.1,
+      "date": "Sun Aug 13 2017",
+      "title": "Go to the best shrine in Kyoto ⛩️",
+      "subtitle":"Fushimi-Inari-Taisha Shrine",
+      "tags": ["Xiaoyun", "Andrew"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 6.2,
+      "date": "Sun Aug 13 2017",
+      "title": "Go to the second best shrine in Kyoto ⛩️",
+      "subtitle":"Shimogamo-jinja shrine (second best shrine)",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 6.3,
+      "date": "Sun Aug 13 2017",
+      "title": "Explore Temples in Northern Higashiyama ⛩️",
+      "subtitle":"Nanzenji Temple (open 8:40 am - 4:30 pm), the Philosopher's Path",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 7,
+      "date": "Mon Aug 14 2017",
+      "title": "Visit Nijo Castle 🏛️",
+      "subtitle":"Nijō Castle (open 8:45AM - 5PM).",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 7.1,
+      "date": "Mon Aug 14 2017",
+      "title": "Explore Downtown Kyoto",
+      "subtitle":"Nishiki Market. Pontocho Alley (another Geisha District)",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 7.2,
+      "date": "Mon Aug 14 2017",
+      "title": "Get Omurice 🍴",
+      "subtitle":"Kichi Kichi Omurice",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 8,
+      "date": "Tue Aug 15 2017",
+      "title": "Explore Gion and Food Culture 🍱",
+      "subtitle":"Ichibe-Koji and Kaiseki restaurants.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 8.1,
+      "date": "Tue Aug 15 2017",
+      "title": "Arayshiyama Bamboo Forest",
+      "subtitle":"Near the Arashiyama monkey park. Also lots of temples to explore there.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 8.2,
+      "date": "Tue Aug 15 2017",
+      "title": "Visit Famous Gardens in Kyoto ⛩️",
+      "subtitle":"Ryoan-ji Temple (Famous Rock Garden). Kinkaku-ji Temple (the golden paviolion).",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 9,
+      "date": "Wed Aug 16 2017",
+      "title": "Travel to Koyasan 🚆",
+      "subtitle":"Take train to Osaka-Namba. Then take a train to Gokurakubashi station.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 9.1,
+      "date": "Wed Aug 16 2017",
+      "title":"Go to Fudou-in (hotel) 不動院 in Koyasan 🛌",
+      "subtitle":"Fudou-in is a Shukubo (temple lodging). check in time 15:00 - 18:00. Check out by 10:00.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 9.2,
+      "date": "Wed Aug 16 2017",
+      "title":"Explore and hike around in Koyasan",
+      "subtitle":"The whole mountain is full of temples.",
+      "tags": ["Xiaoyun", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 9.3,
+      "date": "Wed Aug 16 2017",
+      "title":"Eat a Shojin Ryori meal 🍱",
+      "subtitle":"The whole mountain is full of temples.",
+      "tags": ["Xiaoyun", "Kyle"],
+      "active": true,
+      "completed": false
+    }, {
+      "id": 10,
+      "date": "Thu Aug 17 2017",
+      "title":"Go Home!",
+      "subtitle":"Takes about 3 hours to get from Fudou-in to KIX.  Flight leaves from Osaka KIX at 16:25. Take the bus back to Osaka from Koyasan.",
+      "tags": ["Xiaoyun", "Andrew", "Kyle"],
+      "active": true,
+      "completed": false
+    }
+  ]
+}
