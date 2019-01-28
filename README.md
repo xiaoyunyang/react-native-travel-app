@@ -35,8 +35,7 @@ Download Link on App Store:
 ### Running the app
 
 * Install ReactNative on your computer - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
-* Download the project from Github - [Git/Github tutorial](https://github.com/xiaoyunyang/xiaoyunyang.github.io/blob/master/assets/md/GitTutorial.md)  
-* Unzip and then `cd [project name]`
+* Fork the project, then download the project from Github
 * run `npm install`
 * To run on simulator, In the terminal: `react-native run-ios`
 * Go to the ios folder and click on the .xcodeproj file to open the project in Xcode
@@ -63,29 +62,29 @@ The Data used to generate to App is stored here: [japan.json](https://github.com
 
 [japan.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/japan.json) contains `FIELDS`, which is an array of objects:
 
-```
+```javascript
 "FIELDS": [
-	{
-		"id": 0,
-		"title":"Arrive at Haneda Airport",
-		"subtitle": "Yay Japan!",
-		"tags": ["Xiaoyun", "Andrew", "Kyle"],
-		"active": true,
-		"date": "Mon Aug 07 2017",
-	}, {
-		"id": 1,
-		"title":"Check into Ginza Bay Capsule Hotel",
-		"subtitle": "Ginza is an area in Tokyo with a lot of shopping",
-		"tags": ["Xiaoyun", "Andrew", "Kyle"],
-		"active": true,
-		"date": "Mon Aug 07 2017",
-	}
-	...
+  {
+    "id": 0,
+    "title":"Arrive at Haneda Airport",
+    "subtitle": "Yay Japan!",
+    "tags": ["Xiaoyun", "Andrew", "Kyle"],
+    "active": true,
+    "date": "Mon Aug 07 2017",
+  }, {
+    "id": 1,
+    "title":"Check into Ginza Bay Capsule Hotel",
+    "subtitle": "Ginza is an area in Tokyo with a lot of shopping",
+    "tags": ["Xiaoyun", "Andrew", "Kyle"],
+    "active": true,
+    "date": "Mon Aug 07 2017",
+  }
 ]
 ```
+
 [detail.json](https://github.com/xiaoyunyang/JapanApp/blob/master/data/detail.json) is a set of objects that looks like this:
 
-```
+```javascript
 {
   "0": {
     "todo": "Take the Keiyu-Kuko (red) Line to Higashi-ginza Station (where the capsule hotel is)",
@@ -139,46 +138,17 @@ Before You start react-native run-ios in terminal, install the dependencies:
  npm install react-native-material-bottom-navigation --save
  ```
 
-##### Vector Icons  
- * [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+##### Dependencies
 
-	```npm install react-native-vector-icons --save```
-
-##### Carousel
- * [React Native Carousel](https://github.com/nick/react-native-carousel)
-
- 	```npm install react-native-carousel --save```
-
-##### Swipeout
+* [React Navigation](https://reactnavigation.org/docs/en/getting-started.html)
+* [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) - comes with [buncled icon sets](https://github.com/oblador/react-native-vector-icons#bundled-icon-sets). We use [ionicons](https://ionicons.com/).
+* [React Native Carousel](https://github.com/nick/react-native-carousel)
 * [react-native-swipeout](https://github.com/dancormier/react-native-swipeout)
-
-	* In terminal:	`npm install react-native-swipeout --save`
-	* In your project:
-	`import Swipeout from 'react-native-swipeout'`
-
-##### React Native Maps
 * [react-native-maps](https://github.com/airbnb/react-native-maps) by Airbnb
-
-	* In terminal:  `npm install react-native-maps --save`
-	* See this [Tutorial](https://egghead.io/lessons/react-create-a-custom-map-marker-with-react-native-maps) from EggHead
-
-
-##### Data Persistence
 * [redux-persist](https://github.com/rt2zz/redux-persist)
-	* In terminal: 'npm install redux-persist --save' 
-
-##### Date Picker
 * [react-native-date-picker](https://github.com/xgfe/react-native-datepicker)
-	* In terminal: 'npm install react-native-datepicker --save' 
-
-##### Native Base
-* [NativeBase](https://nativebase.io/docs/v0.3.0/components#button)
-	* Consider using this in an update to the app to pretty up the UI. 		
-
-##### File Access (Did not use)
-* [react-native-fetch-blob](https://github.com/wkh237/react-native-fetch-blob)
-* How to install: [read this](https://github.com/wkh237/react-native-fetch-blob/issues/84)
-
+* [NativeBase](https://nativebase.io/docs/v0.3.0/components#button) - Consider using this in an update to the app to pretty up the UI.
+* [react-native-fetch-blob](https://github.com/wkh237/react-native-fetch-blob) - How to install: [read this](https://github.com/wkh237/react-native-fetch-blob/issues/84)
 
 ### Useful Resources:
 * Tutorial and API - [React Native Tutorial from Facebook](https://facebook.github.io/react-native/releases/next/docs/getting-started.html)
