@@ -1,0 +1,70 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+# type Activity @model {
+#   id: ID! @isUnique # read-only (managed by Graphcool)
+#   createdAt: DateTime! # read-only (managed by Graphcool)
+#   updatedAt: DateTime! # read-only (managed by Graphcool)
+#   title: String
+#   subtitle: String
+#   description: String
+#   tripActivities: [TripActivity!]! @relation(name: "activitiesOfTrip")
+# }
+
+# type Trip @model {
+#   id: ID! @isUnique
+#   createdAt: DateTime! # read-only (managed by Graphcool)
+#   updatedAt: DateTime! # read-only (managed by Graphcool)
+#   startDate: DateTime!
+#   endDate: DateTime!
+#   participants: [User!]! @relation(name: "userTrips")
+#   tripActivities: [TripActivity!]! @relation(name: "tripActivities")
+# }
+
+# # TripActivity is activity associated with one trip
+# type TripActivity @model {
+#   id: ID! @isUnique # read-only (managed by Graphcool)
+#   createdAt: DateTime! # read-only (managed by Graphcool)
+#   updatedAt: DateTime! # read-only (managed by Graphcool)
+#   date: DateTime
+#   participants: [User!]! @relation(name: "userActivities")
+#   active: Boolean @default(value: true)
+#   activity: Activity @relation(name: "activitiesOfTrip")
+#   trip: Trip @relation(name: "tripActivities")
+#   # Uncomment below - you can declare relations between models like this
+
+#   # posts: [Post!]! @relation(name: "UserPosts")
+# }
+
+# # TODO: User should be mapped to activities. For each activity
+# type User @model {
+#   id: ID! @isUnique
+#   createdAt: DateTime! # read-only (managed by Graphcool)
+#   updatedAt: DateTime! # read-only (managed by Graphcool)
+#   activities: [TripActivity!]! @relation(name: "userActivities")
+#   trips: [Trip!]! @relation(name: "userTrips")
+# }
+
+
+# Uncomment the model below as well
+
+# type Post @model {
+#   id: ID! @isUnique
+#   title: String!
+
+#   # Every relation also required a back-relation (to determine 1:1, 1:n or n:m)
+#   author: User! @relation(name: "UserPosts")
+# }
+
+
+type Post @model {
+  # Required system field
+  id: ID! @isUnique # read-only (managed by Graphcool)
+
+  # Optional system fields (remove if not needed)
+  createdAt: DateTime! # read-only (managed by Graphcool)
+  updatedAt: DateTime! # read-only (managed by Graphcool)
+
+  description: String!
+  imageUrl: String!
+}

@@ -6,6 +6,7 @@ import SettingsScreen from './screens/settingsScreen';
 import ProfileScreen from './screens/profileScreen';
 import SearchScreen from './screens/searchScreen';
 import TripsScreen from './screens/tripsScreen';
+import ListScreen from './screens/listScreen';
 
 // constants
 import { tomato, gray } from './styles/colors';
@@ -34,6 +35,8 @@ const navigationOptions = {
         iconName = 'ios-search';
       } else if (routeName === 'Trips') {
         iconName = 'ios-airplane';
+      } else if (routeName === 'List') {
+        iconName = 'ios-list';
       }
 
       return <IconComponent name={iconName} size={25} color={tintColor} />;
@@ -51,6 +54,7 @@ const TabNavigator = createBottomTabNavigator(
     Search: SearchScreen,
     Me: ProfileScreen,
     Settings: SettingsScreen,
+    List: ListScreen,
   },
   navigationOptions
 );

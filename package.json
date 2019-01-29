@@ -9,7 +9,11 @@
     "lint-fix": "./node_modules/.bin/eslint src --ext .js --fix"
   },
   "dependencies": {
+    "apollo-client-preset": "^1.0.8",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
     "react": "16.6.3",
+    "react-apollo": "^2.4.1",
     "react-native": "0.57.8",
     "react-native-gesture-handler": "^1.0.12",
     "react-native-vector-icons": "^6.2.0",

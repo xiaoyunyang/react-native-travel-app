@@ -1,6 +1,6 @@
 # Travel Planning App
 
-> Made with React Native
+> Made with React Native and GraphQL
 
 ## To run in iOS simulator
 
@@ -10,6 +10,16 @@ $ react-native link react-native-gesture-handler
 $ react-native link react-native-vector-icons
 $ react-native run-ios
 ```
+
+**GraphQL**:
+
+We use [Graphcool](https://www.graph.cool/) for prototyping. The Graphcool service is deployed to this endpoint: [https://api.graph.cool/simple/v1/cjrh62bkka7l501132k2sp85b](https://api.graph.cool/simple/v1/cjrh62bkka7l501132k2sp85b)
+
+To learn more about GraphQL:
+* How to GraphQL: https://www.howtographql.com/
+* ReactNative GraphQL Graphcool [starter project](https://github.com/graphcool-examples/react-native-graphql/tree/master/quickstart-with-apollo)
+* [GraphQL Schema](https://www.apollographql.com/docs/apollo-server/essentials/schema.html)
+* Schema Definition Language [official doc](https://graphql.org/learn/schema/#type-language)
 
 ## Product Specification
 
